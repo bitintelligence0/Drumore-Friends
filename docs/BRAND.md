@@ -23,7 +23,7 @@ Dates display as `12 Oct 1890`, `Oct 1890`, `about 1795`, or an en-dash span. Wh
 
 All views use query parameters so a visitor can enter from anywhere and return to the same context:
 
-`view`, `mode`, `era`, `year`, `event`, `person`, `place`, `story`, `scene`, `post`, `image` (older `focus` links still work)
+`view`, `mode`, `era`, `span`, `year`, `event`, `person`, `place`, `story`, `scene`, `post`, `image` (older `focus` links still work)
 
 Main navigation is Explore · Stories · About. Explore holds Timeline, Family, Map, Imagery and List on one shared selection. Mobile uses a persistent bottom bar for Timeline, Family, Places, Stories.
 

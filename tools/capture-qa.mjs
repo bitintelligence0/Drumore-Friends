@@ -1,8 +1,9 @@
-// Usage: node tools/capture-qa.mjs <absolute path of the built brand book html> <site url, e.g. http://127.0.0.1:8780> <output folder, e.g. docs/qa>
+// Usage: node tools/capture-qa.mjs <absolute path of the built brand book html> <site url, e.g. http://127.0.0.1:8780> <output folder, e.g. docs/qa> [only: comma-separated shot names]
 // Capture brand-book sections and the matching site views as PNGs for side-by-side QA.
 import { spawn } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
-const [,, bookPath, site, outDir] = process.argv;
+const [,, bookPath, site, outDir, only] = process.argv;
+const wanted = only ? new Set(only.split(',')) : null;
 const chrome = spawn('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--remote-debugging-port=9334', '--user-data-dir=/tmp/claude-qa-profile', 'about:blank'], { stdio: 'ignore' });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let targets;
@@ -17,7 +18,8 @@ await send('Page.enable'); await send('Runtime.enable');
 await send('Page.addScriptToEvaluateOnNewDocument', { source: 'try{sessionStorage.setItem("df-desktop-prompt","1")}catch(e){}' });
 const evalJS = async (expr) => (await send('Runtime.evaluate', { expression: expr, returnByValue: true, awaitPromise: true })).result?.result?.value;
 
-async function shot(name, url, { w = 1440, h = 1000, mobile = false, sel = null, js = null, wait = 3500, maxH = 1500 } = {}) {
+async function shot(name, url, { w = 1440, h = 1000, mobile = false, sel = null, js = null, post = null, wait = 3500, maxH = 1500 } = {}) {
+  if (wanted && !wanted.has(name)) return;
   await send('Emulation.setDeviceMetricsOverride', { width: w, height: h, deviceScaleFactor: 1, mobile });
   await send('Page.navigate', { url });
   await sleep(wait);
@@ -27,6 +29,8 @@ async function shot(name, url, { w = 1440, h = 1000, mobile = false, sel = null,
     // scroll the element clear of the site's sticky header, then clip it from the page
     const r = await evalJS(`(() => { const e = document.querySelector(${JSON.stringify(sel)}); if (!e) return null; e.scrollIntoView(); const top = document.querySelector('.top'); if (top) scrollBy(0, -top.offsetHeight); const b = e.getBoundingClientRect(); return { x: b.left + scrollX, y: b.top + scrollY, width: b.width, height: b.height }; })()`);
     await sleep(300);
+    // hover states go on after the scroll, which would otherwise move the pointer off them
+    if (post) { await evalJS(post); await sleep(400); }
     const clip = r ? { ...r, height: Math.min(r.height, maxH), scale: 1 } : { x: 0, y: 0, width: w, height: h, scale: 1 };
     res = await send('Page.captureScreenshot', { format: 'png', clip, captureBeyondViewport: true });
   } else {
@@ -46,7 +50,14 @@ await shot('site-gable', site + '/', { h: 900, sel: '.gable' });
 await shot('site-phone-hero', site + '/', { w: 390, h: 844, mobile: true, js: 'scrollTo(0, 0)' });
 // timeline
 await shot('book-timeline', book, { sel: '#pages .browser' });
-await shot('site-timeline', site + '/?person=wynona-lamborn', { h: 1300, sel: '#workbench', maxH: 1300 });
+// h is tall enough that the sticky Earlier/zoom/Later bar sits at the foot of the field, where it rests on a big screen
+await shot('site-timeline', site + '/?person=wynona-lamborn', { h: 1500, sel: '#workbench', maxH: 1500 });
+await shot('site-timeline-1024', site + '/?person=wynona-lamborn', { w: 1024, h: 1500, sel: '#workbench', maxH: 1500 });
+await shot('site-timeline-all', site + '/?era=all&person=wynona-lamborn', { h: 1600, sel: '.wb-grid', maxH: 1600 });
+await shot('site-timeline-zoom', site + '/?era=diaries&span=1884-1896&person=wynona-lamborn&year=1890', { h: 1200, sel: '.wb-grid', maxH: 1200 });
+const hover = (q, dx, dy) => `(() => { const t = document.querySelector(${JSON.stringify(q)}); const r = t.getBoundingClientRect(); t.dispatchEvent(new PointerEvent('pointerover', { bubbles: true, pointerType: 'mouse', clientX: r.x + ${dx}, clientY: r.y + ${dy} })); })()`;
+await shot('site-timeline-hover', site + '/?person=wynona-lamborn', { h: 1500, sel: '.field', maxH: 560, post: hover('.ln[data-person="thomas-hambleton"] .s', 170, 2) });
+await shot('site-timeline-fade', site + '/?person=wynona-lamborn', { h: 1500, sel: '.field', maxH: 560, post: hover('.ln[data-person="wynona-lamborn"] [data-tip="end"]', 30, 9) });
 // family
 await shot('book-family', book, { sel: '#tree .tree-wrap' });
 await shot('site-family', site + '/?mode=family&person=wynona-lamborn', { h: 1300, sel: '.workbench', maxH: 1000 });
