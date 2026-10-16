@@ -8,7 +8,7 @@ Planning lives in Linear: team **DRU**, project *Drumore Friends Meeting House â
 
 | Folder | What it is |
 |---|---|
-| `site/` | The website: a dependency-free local server (`server.py`), the browser app (`index.html`, `app.js`, `store.js`, `lib.js`, `explore.js`, `map.js`, `family.js`, `reading.js`, `site.css`), the data layer (`content.json`) and the scripts that build and validate it. `site/README.md` has the full data and URL contract. |
+| `site/` | The website: a dependency-free local server (`server.py`), the browser app (`index.html`, `app.js`, `store.js`, `lib.js`, `hero.js`, `explore.js`, `map.js`, `family.js`, `reading.js`, `site.css`), the data layer (`content.json`) and the scripts that build and validate it. `site/README.md` has the full data and URL contract. |
 | `brand-book/` | Brand book v0.2: the editable source (`drumore-brand-book-source.html`), its images (`assets/`), `build.py` to rebuild the one-file book, and the PDF. The website is built from this bookâ€™s components. |
 | `docs/` | `IMPLEMENTATION_MAP.md` (which book component became which site file), `BRAND.md` (rules for developers), `BETH_QUESTIONS.md`, `STORY_EDITORIAL_TEMPLATE.md` (how a story scene is structured), and `QA_COMPARISON.html` with screenshots in `docs/qa/`. |
 | `tools/` | `print-brand-book-pdf.mjs` (prints the book at desktop width through Chrome) and `capture-qa.mjs` (captures the book and the site side by side). |

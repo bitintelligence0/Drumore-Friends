@@ -1,10 +1,11 @@
 // Drumore Friends · app shell. Explore first; Stories and About support it. The URL holds all state.
 import { S, load, parse, go, onChange, select } from './store.js';
-import { esc, faceHTML, fmtDate, isPhone } from './lib.js';
+import { esc, faceHTML, fmtDate, isPhone, reduceMotion } from './lib.js';
 import { mountExplore, updateExplore } from './explore.js';
 import { renderPerson, renderStories, renderAbout, renderViewer } from './reading.js';
 
-const MARK = '<svg viewBox="0 0 64 52" aria-hidden="true"><path d="M1 46 H16 V32.2 L32 19.3 L48 32.2 V46 H63" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="miter"/></svg>';
+import { MARK_FULL } from './hero.js';
+const MARK = `<svg viewBox="0 0 64 48" aria-hidden="true">${MARK_FULL}</svg>`;
 let mounted = null;
 
 await load();
@@ -32,8 +33,10 @@ document.addEventListener('click', (e) => {
   const url = new URL(a.href, location.href);
   if (url.origin !== location.origin || url.pathname !== '/') return;
   e.preventDefault();
+  // an in-page anchor (the cover's "Into the timeline") scrolls without a history entry
+  if (url.hash && url.search === location.search) return document.querySelector(url.hash)?.scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth' });
   if (a.dataset.nav === 'explore' || a.classList.contains('brand')) return go({ view: 'explore', story: null, scene: null, post: null });
-  if (a.dataset.m) { const m = a.dataset.m; return m === 'stories' ? go({ view: 'stories', post: null }) : go({ view: 'explore', mode: m, post: null, fam: m === 'family' ? 'center' : S.state.fam }); }
+  if (a.dataset.m) { const m = a.dataset.m; if (m === 'stories') return go({ view: 'stories', post: null }); go({ view: 'explore', mode: m, post: null, fam: m === 'family' ? 'center' : S.state.fam }); return toWorkbench(); }
   history.pushState(null, '', (url.search || '/') + url.hash);
   const prev = S.state; S.state = parse(location.search); render(S.state, prev);
   if (url.hash) requestAnimationFrame(() => document.querySelector(url.hash)?.scrollIntoView());
@@ -76,8 +79,10 @@ function render(st, prev = {}) {
   const pageKey = st.view === 'explore' ? 'explore' : [st.view, st.story, st.scene, st.person].join('|');
   const viewChanged = pageKey !== mounted;
   if (st.view === 'explore') {
-    if (mounted !== 'explore') { mountExplore(main); mounted = 'explore'; }
+    const fresh = mounted !== 'explore';
+    if (fresh) { mountExplore(main); mounted = 'explore'; }
     updateExplore(st);
+    if (fresh && deepLink(st)) toWorkbench();
     document.title = 'Drumore Friends · Explore';
     schedulePrompt();
   } else if (viewChanged) {
@@ -89,6 +94,10 @@ function render(st, prev = {}) {
   }
   renderViewer(document.getElementById('viewer'), st);
 }
+
+// Explore opens on the cover hero. A link that carries a selection (or Back from a reading page) lands on the workbench instead.
+const deepLink = (st) => !!(st.person || st.event || st.place || st.year || st.mode !== 'timeline' || st.era !== 'diaries');
+function toWorkbench() { document.getElementById('workbench')?.scrollIntoView({ block: 'start' }); }
 
 // phone: a quiet, delayed prompt to continue on a bigger screen (mock only)
 let promptTimer = null;

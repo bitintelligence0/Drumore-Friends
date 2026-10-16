@@ -7,12 +7,14 @@ second column to see the original.
 | Brand-book component | Marker in the book source | Site component | File |
 |---|---|---|---|
 | Color, type and motion tokens | `:root {` | Same tokens, unchanged values | `site.css` |
-| Gable Line mark | `<symbol id="mark">` | Header, footer, favicon | `index.html`, `mark*.svg` |
+| Cover | `COVER`, `.cover {` | Explore’s opening hero: full mark, display wordmark, descriptor, intro, P016 on a Today mat, lifeline strip leading into the timeline | `hero.js`, `site.css` |
+| The mark, chapter 6 | `6 WORDMARK`, `.trace` | Gable Line story under the hero: P014 with the amber trace, the three reasons | `hero.js`, `site.css` |
+| Gable Line mark | `<symbol id="mark">` | Full mark with windows in the hero, header (56px in a 76px bar, 40px in 60px on phones) and footer; windowless `mark-small.svg` only for the favicon | `hero.js` (`MARK_FULL`), `app.js`, `mark*.svg` |
 | Shutter navigation band | `.nav` | Header with Explore · Stories · About | `app.js` |
 | Era selector with planned widths | `.eras`, `axisFig` | Explore era bar; era-weighted time scale | `explore.js` |
 | Lifelines, portrait bubbles, evidence knots, “raised by” links | `Main timeline mock` (`#tlSvg`) | Explore → Timeline | `explore.js` |
 | Docked side panel | `#tlDock` | Selection dock for person, event or place | `explore.js` |
-| Map style study + schematic place view | `Map style study`, `#mapView` | Long shallow map above the timeline; Map mode | `map.js` |
+| Map style study + schematic place view | `Map style study`, `#mapView` | Map mode only (Places on phones), tall, with collision-free labels | `map.js` |
 | Family focus view | `#famView` | Explore → Family, “centered” layout (phone default) | `family.js` |
 | Full family tree | `Family tree, chapter 11` (`#treeSvg`) | Explore → Family, “whole family” layout | `family.js` |
 | List view | `#listView` | Explore → List (events, people, places) | `explore.js` |

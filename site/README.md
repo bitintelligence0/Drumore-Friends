@@ -16,11 +16,11 @@ Open <http://127.0.0.1:8765/> (or `PORT=8780 python3 server.py` for another port
 
 The front end was rebuilt from the working components in `../brand-book/drumore-brand-book-source.html`. `../docs/IMPLEMENTATION_MAP.md` lists each book component and the site file it became. The earlier front end (`style.css`, `story.js`, `mock-site.js` and their CSS) is in the local Git baseline commit and was removed from the working tree.
 
-- **Explore is the landing page.** A long, shallow schematic map sits above an era bar, mode tabs (Timeline, Family, Map, Imagery, List) and a docked panel. One selection of person, event, place, era or year is shared by every mode and kept in the URL; Back restores it. Landing opens on *Diaries and reunions*; *All eras* shows the planned-width axis from 1683 to today.
+- **Explore is the landing page.** It opens on the brand book’s cover as a hero and the Gable Line story (DRU-6), then an era bar, mode tabs (Timeline, Family, Map, Imagery, List) and a docked panel. The map appears only in the Map tab. One selection of person, event, place, era or year is shared by every mode and kept in the URL; Back restores it. Landing opens on *Diaries and reunions*; *All eras* shows the planned-width axis from 1683 to today.
 - **Timeline:** portrait lifelines by family lane, Reported knots, date spans and fades where the record runs out, “1872 or 1874” for Phebe, and parent, marriage and “raised by” links that appear only for the selected person.
 - **Family:** the brand book’s whole tree, plus a Centered layout (the phone default). **Map:** a Drawn schematic with no coordinates that zooms to the selection. **Imagery:** every served archive image with its provenance tab. **List:** events, people and places.
 - **Reading pages:** Wynona’s five reviewed scenes in the book’s “one person’s story” layout, with other dated moments, the return pill, a source viewer with Beth’s local post text, and draft transcriptions with the A/B handwriting switch. Stories and About carry “More context needed” wherever Beth’s words are missing. The newsletter and phone desktop prompt are mock-ups that say they don’t send or keep email.
-- **Files:** `index.html`, `app.js` (shell, routing, search, phone prompt), `store.js` (data, URL state), `lib.js` (dates, portraits, marks), `explore.js`, `map.js`, `family.js`, `reading.js`, `site.css`.
+- **Files:** `index.html`, `app.js` (shell, routing, search, phone prompt), `store.js` (data, URL state), `lib.js` (dates, portraits, marks), `hero.js` (cover hero and Gable Line story), `explore.js`, `map.js`, `family.js`, `reading.js`, `site.css`.
 
 ### Data layer
 
@@ -29,6 +29,15 @@ Run `python3 build_extensions.py` after `build_data.py`. It adds the brand-book 
 ### QA, 16 October 2026
 
 Checked in a browser at 1440×1000 and 390×844: landing, era switching, person, event and place selection across all five modes, the family tree’s whole and centered layouts, map zoom, list tabs, the story scenes, the source viewer and transcription switch, Stories, About, the delayed phone prompt and the bottom bar. There is no horizontal overflow on phones. Browser Back from a story returns to the same person and year. `../docs/QA_COMPARISON.html` puts the book and the site side by side.
+
+### First impression (DRU-6), 16 October 2026
+
+- **Hero:** the book’s cover rebuilt as Explore’s first screen (`hero.js`). Sized to its content, never `100vh`; no animation. The lifeline strip’s “Into the timeline” link scrolls to the workbench without a history entry.
+- **Gable Line story:** chapter 6 in one band: P014 with the amber trace and the three reasons.
+- **Header:** the full mark with windows, 56px in a 76px Shutter bar (40px in 60px on phones), wordmark at 24px. The descriptor hides below 1180px and, on phones, the header’s Explore link (the brand and bottom bar already lead there) so nothing wraps or overflows.
+- **Landing order:** hero → Gable Line story → era bar and workbench → stories and about. At 1440×900 the era bar starts 529px below the hero.
+- **Deep links:** a URL that carries a selection, mode, era or year (and Back from a reading page) lands on the workbench rather than the top of the hero; the phone bottom bar does the same.
+- **Map:** only in the Map tab. Labels are placed on a free side of each marker inside the map and clear of the overlays; one with no room drops its second line, then hides (the marker keeps its accessible name, and the place cards list every place). Background county, river and route names give way to place labels. Markers shrink to 55% when the map is zoomed far out. No overlaps, clipped labels or page overflow at 1440, 1024, 768 and 390px.
 
 Not yet done: full keyboard and screen-reader passes (markers and lifelines are focusable and respond to Enter, but the List view is the accessible equivalent for now); image thumbnails (full scans load in Imagery); self-hosted fonts (Google Fonts for now); the real traced maps. Questions for Beth are in `../docs/BETH_QUESTIONS.md`.
 

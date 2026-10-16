@@ -6,7 +6,7 @@ DATA=json.loads((ROOT/'content.json').read_text())
 ARCHIVE=pathlib.Path(os.environ.get('DRUMORE_ARCHIVE', DATA['archiveSnapshot']['path'])).resolve()
 POSTS={p['id']:p for p in DATA['posts']}
 IMAGES={i['id']:i for i in DATA['images']}
-STATIC={'/':'index.html','/app.js':'app.js','/store.js':'store.js','/lib.js':'lib.js','/explore.js':'explore.js','/map.js':'map.js','/family.js':'family.js','/reading.js':'reading.js','/site.css':'site.css','/content.json':'content.json','/mark.svg':'mark.svg','/mark-small.svg':'mark-small.svg','/favicon.svg':'favicon.svg'}
+STATIC={'/':'index.html','/app.js':'app.js','/store.js':'store.js','/lib.js':'lib.js','/explore.js':'explore.js','/map.js':'map.js','/hero.js':'hero.js','/family.js':'family.js','/reading.js':'reading.js','/site.css':'site.css','/content.json':'content.json','/mark.svg':'mark.svg','/mark-small.svg':'mark-small.svg','/favicon.svg':'favicon.svg'}
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         path=urllib.parse.urlsplit(self.path).path
