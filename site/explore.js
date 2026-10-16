@@ -1,8 +1,9 @@
-// Explore: the long shallow map, the era bar, the five modes and the docked panel, all on one selection.
+// Explore: the cover hero and Gable Line story, the era bar, the five modes and the docked panel, all on one selection.
 import { S, go, select, href, relOf } from './store.js';
 import { svg, el, esc, fmtDate, span, mid, oldStyle, faceHTML, svgFace, cropCSS, media, provTab, eviChip, placeLabel, personName, sourcesHTML, lifeText, isPhone, precisionWord } from './lib.js';
 import { mountMap, focus as mapFocus } from './map.js';
 import { renderFamily } from './family.js';
+import { heroHTML } from './hero.js';
 
 const PERSON_ORDER = ['smedley-lamborn', 'margaret-bolton-lamborn', 'george-lamborn', 'sarah-coates-lamborn', 'will-lamborn', 'phebe-barnard-lamborn', 'wynona-lamborn', 'lib-hambleton', 'thomas-hambleton', 'alice-shoemaker', 'william-shoemaker', 'winona-shoemaker', 'lulu-shoemaker', 'isaac-bolton-shoemaker', 'early-earnhart'];
 const FAMILIES = ['Lamborn', 'Hambleton', 'Shoemaker', 'Earnhart'];
@@ -12,11 +13,12 @@ let R = {}, built = {};
 
 export function mountExplore(main) {
   main.innerHTML = `<div class="explore">
-    <section class="mapstrip" id="mapstrip" aria-label="Map"></section>
-    <section class="workbench gut"><div class="wide" style="display:grid;gap:12px">
+    ${heroHTML()}
+    <section class="workbench gut" id="workbench"><div class="wide" style="display:grid;gap:12px">
       <div class="eras desk" id="eras" role="group" aria-label="Eras"></div>
       <div class="erachips" id="erachips" role="group" aria-label="Eras" hidden></div>
       <div class="wb-tools"><span id="wbStatus"></span><span class="modes" role="tablist" aria-label="View">${MODES.map(([m, l]) => `<button type="button" role="tab" data-mode="${m}">${l}</button>`).join('')}</span></div>
+      <section class="mapstrip" id="mapstrip" aria-label="Map"></section>
       <div class="wb-grid"><div class="field" id="field"></div><aside class="dock" id="dock" aria-live="polite" aria-label="Selected"></aside></div>
     </div></section>
     <section class="below gut" aria-label="Stories and about"><div class="wide below-in" id="below"></div></section>
