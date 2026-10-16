@@ -11,8 +11,8 @@ second column to see the original.
 | The mark, chapter 6 | `6 WORDMARK`, `.trace` | Gable Line story under the hero: P014 with the amber trace, the three reasons | `hero.js`, `site.css` |
 | Gable Line mark | `<symbol id="mark">` | Full mark with windows in the hero, header (56px in a 76px bar, 40px in 60px on phones) and footer; windowless `mark-small.svg` only for the favicon | `hero.js` (`MARK_FULL`), `app.js`, `mark*.svg` |
 | Shutter navigation band | `.nav` | Header with Explore · Stories · About | `app.js` |
-| Era selector with planned widths | `.eras`, `axisFig` | Explore era bar; era-weighted time scale | `explore.js` |
-| Lifelines, portrait bubbles, evidence knots, “raised by” links | `Main timeline mock` (`#tlSvg`) | Explore → Timeline | `explore.js` |
+| Era selector with planned widths | `.eras`, `axisFig` | Explore era bar; era-weighted time scale | `explore.js`, `timeline.js` |
+| Lifelines, portrait bubbles, evidence knots, “raised by” links | `Main timeline mock` (`#tlSvg`) | Explore → Timeline: a window you can move through (Earlier/Later, drag, zoom, keys) | `timeline.js` |
 | Docked side panel | `#tlDock` | Selection dock for person, event or place | `explore.js` |
 | Map style study + schematic place view | `Map style study`, `#mapView` | Map mode only (Places on phones), tall, with collision-free labels | `map.js` |
 | Family focus view | `#famView` | Explore → Family, “centered” layout (phone default) | `family.js` |
@@ -24,7 +24,8 @@ second column to see the original.
 | One person’s story | `.pp`, `.scenes` | Person and story page (Wynona first) | `reading.js` |
 | Return pill | `.back` | “Back to 1890 · timeline” on every reading page | `reading.js` |
 | Phone flows | `.phone` | Phone layout: vertical time, chip era row, bottom bar, desktop prompt | `explore.js`, `app.js`, `site.css` |
-| Selection bus | `Shared people, relationships and one selection` | One state object, kept in the URL | `app.js` |
+| Selection bus | `Shared people, relationships and one selection` | One state object, kept in the URL | `app.js`, `store.js` |
+| Motion tokens | `13 MOTION` | Timeline travel (≤420ms, `--ease`, crossfade under reduced motion), hover and press states | `timeline.js`, `site.css` |
 
 ## Data
 
@@ -36,5 +37,5 @@ Everything it adds is marked `"origin": "brand-book-extension"` and every claim 
 ## URL contract
 
 `view` (`explore` · `person` · `story` · `stories` · `about`), `mode` (`timeline` · `family` · `map` · `imagery` ·
-`list`), `era`, `year`, `event`, `person`, `place`, `story`, `scene`, `post` (source viewer), plus the older
+`list`), `era`, `span` (the timeline’s window when it isn’t exactly one era, e.g. `1884-1896`), `year`, `event`, `person`, `place`, `story`, `scene`, `post` (source viewer), plus the older
 `focus` (read as an era) and `view=timeline|map|event` (read as Explore modes) so earlier links still work.

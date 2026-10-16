@@ -1,7 +1,7 @@
 // Shared data, indexes and the one selection state. The URL is the state.
 export const S = { data: null, idx: {}, state: {}, subs: [] };
 
-const DEFAULTS = { view: 'explore', mode: 'timeline', era: 'diaries', year: null, event: null, person: null, place: null, story: null, scene: null, post: null, image: null, fam: null, list: 'events' };
+const DEFAULTS = { view: 'explore', mode: 'timeline', era: 'diaries', year: null, event: null, person: null, place: null, story: null, scene: null, post: null, image: null, fam: null, list: 'events', span: null };
 const KEYS = Object.keys(DEFAULTS);
 const LEGACY_FOCUS = { all: 'all', early: 'settling', meeting: 'settling', wynona: 'diaries', diary: 'diaries' };
 
@@ -47,6 +47,8 @@ export function parse(search = location.search) {
   if (st.event && !S.idx.events[st.event]) st.event = null;
   if (st.place && !S.idx.places[st.place]) st.place = null;
   if (st.post && !S.idx.posts[st.post]) st.post = null;
+  // the timeline's window when it isn't exactly one era, as whole years: span=1850-1899
+  if (st.span) { const m = /^(\d{4})-(\d{4})$/.exec(st.span), a = m && +m[1], b = m && +m[2]; st.span = m && a >= 1600 && b <= 2026 && b >= a ? `${a}-${b}` : null; }
   if (st.year) st.year = Math.max(1600, Math.min(2026, parseInt(st.year, 10) || 0)) || null;
   if (st.view === 'story') {
     const story = S.idx.stories[st.story] || S.data.stories[0];
