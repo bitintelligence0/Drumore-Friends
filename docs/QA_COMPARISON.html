@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drumore Friends · brand book vs site</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+:root { --limewash:#F1F2EE; --plaster:#FBFBF8; --ink:#1C2321; --shutter:#17302B; --pewter:#59645F; --hair:#D6DBD6; --lamp:#E3A33B; }
+body { margin:0; background:var(--limewash); color:var(--ink); font:15px/1.55 "Public Sans", system-ui, sans-serif; }
+header { background:var(--shutter); color:var(--plaster); padding:28px max(16px, 4vw); }
+header h1 { margin:0; font:400 34px "Gelasio", Georgia, serif; }
+header p { margin:8px 0 0; color:#B4C1BB; max-width:80ch; }
+section { padding:32px max(16px, 4vw); border-top:1px solid var(--hair); }
+section h2 { font:400 26px "Gelasio", Georgia, serif; color:var(--shutter); margin:0 0 6px; }
+.notes { max-width:90ch; color:var(--pewter); margin:0 0 18px; }
+.pair { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px; align-items:start; }
+.pair.phones { grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, .5fr)); }
+figure { margin:0; background:var(--plaster); border:1px solid var(--hair); border-radius:6px; padding:10px; }
+figure img { width:100%; height:auto; display:block; border:1px solid var(--hair); }
+figcaption { font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--pewter); margin-bottom:8px; }
+figcaption b { color:var(--shutter); }
+@media (max-width: 900px) { .pair, .pair.phones { grid-template-columns: minmax(0, 1fr); } }
+</style></head>
+<body>
+<header><h1>Brand book vs site</h1><p>Each pair shows the brand-book page concept (left) beside the implemented site at the same state, captured 16 October 2026 at 1440px desktop and 390px phone. Images are in <code>qa/</code>.</p></header>
+
+<section><h2>Main timeline</h2><p class="notes">Same composition: era bar with planned widths, family lanes, portrait bubbles at the start of each life, evidence knots, the “raised by Lib and Thomas, from 1876” link and the marriage link appearing only for the selected person, and the docked panel. The site adds the long shallow map above it, a Meeting and community lane, and fading ends where a life’s dates are not in the archive (the book drew those as arrows).</p>
+<div class="pair"><figure><figcaption><b>Brand book</b> · chapter 14</figcaption><img src="qa/book-timeline.png" alt="Brand book timeline mockup"></figure><figure><figcaption><b>Site</b> · Explore, Wynona selected</figcaption><img src="qa/site-timeline.png" alt="Site Explore page with map and timeline"></figure></div></section>
+
+<section><h2>Family tree</h2><p class="notes">Same layout and portraits, now drawn from <code>content.json.relationships</code>. Selecting a person in any view selects them here. The site adds a “Centered” layout, which is the default on phones.</p>
+<div class="pair"><figure><figcaption><b>Brand book</b> · chapter 11</figcaption><img src="qa/book-family.png" alt="Brand book family tree"></figure><figure><figcaption><b>Site</b> · Explore → Family</figcaption><img src="qa/site-family.png" alt="Site family tree"></figure></div></section>
+
+<section><h2>Map</h2><p class="notes">The book’s map was a style study of an invented place. The site uses the same style for a schematic of the real geography, from Germantown west to Drumore and Fulton. It is labeled Drawn, keeps direction and order only, and draws no exact pins. The map zooms to the selected person’s, event’s or place’s locations.</p>
+<div class="pair"><figure><figcaption><b>Brand book</b> · chapter 10 style study</figcaption><img src="qa/book-map.png" alt="Brand book map style study"></figure><figure><figcaption><b>Site</b> · Map mode, Wynona selected</figcaption><img src="qa/site-map.png" alt="Site schematic map"></figure></div></section>
+
+<section><h2>One person’s story</h2><p class="notes">Same structure: scene rail with evidence marks and the current scene highlighted, Walnut date line and Reported chip, Gelasio title and prose, quotation, original objects with provenance tabs, sources and the return pill. The site uses Codex’s five reviewed scenes and adds “Other dated moments” for events not yet written as scenes.</p>
+<div class="pair"><figure><figcaption><b>Brand book</b> · chapter 14</figcaption><img src="qa/book-person.png" alt="Brand book person page"></figure><figure><figcaption><b>Site</b> · Wynona’s diary years, scene 2</figcaption><img src="qa/site-person.png" alt="Site story page"></figure></div></section>
+
+<section><h2>Phone</h2><p class="notes">Story first, with the return pill pinned bottom-left. The timeline runs down the screen with lifeline threads at the left, and the family view centers on one person. The source viewer shows the page with its transcription. The bottom bar holds Timeline, Family, Places and Stories.</p>
+<div class="pair phones"><figure><figcaption><b>Brand book</b> · chapter 15</figcaption><img src="qa/book-phones.png" alt="Brand book phone flow"></figure><figure><figcaption><b>Site</b> · story</figcaption><img src="qa/site-phone-story.png" alt="Site phone story"></figure><figure><figcaption><b>Site</b> · timeline</figcaption><img src="qa/site-phone-timeline.png" alt="Site phone timeline"></figure><figure><figcaption><b>Site</b> · family</figcaption><img src="qa/site-phone-family.png" alt="Site phone family"></figure><figure><figcaption><b>Site</b> · source</figcaption><img src="qa/site-phone-source.png" alt="Site phone source viewer"></figure></div></section>
+</body></html>

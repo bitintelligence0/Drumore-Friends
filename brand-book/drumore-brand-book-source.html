@@ -1,0 +1,1965 @@
+<title>Drumore Friends Brand Book</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Dancing+Script:wght@500&family=Gelasio:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&family=Newsreader:opsz,wght@6..72,400&family=Kalam:wght@400&family=Petrona:ital,wght@1,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:wght@400&display=swap">
+<style>
+/* Layout: a printed brand book. Full-width chapter bands (limewash, plaster, shutter green, bench brown), each with a narrow chapter rail and a wide field.
+   The book commits to the brand's own daylight look, so it does not follow the viewer's dark mode. */
+:root {
+  color-scheme: light;
+  /* Core: measured from archive photographs of the meeting house, October 2026 */
+  --limewash: #F1F2EE;   /* page ground; cool limewash, never cream */
+  --plaster:  #FBFBF8;   /* raised surfaces */
+  --ink:      #1C2321;   /* body text */
+  --shutter:  #17302B;   /* brand green: headings, nav, dark bands */
+  --bench:    #3A2A1F;   /* brand brown: the second dark band */
+  --pewter:   #59645F;   /* secondary text */
+  --hair:     #D6DBD6;
+  --mist:     #C9D0CB;
+  /* Meaning */
+  --walnut:   #6E4229;   /* Original */
+  --river:    #2E6273;   /* Drawn */
+  --lamp:     #E3A33B;   /* Selected: fills and lines only */
+  --lamp-ink: #8A5A10;
+  --moss:     #56653A;
+  --rose:     #9B3A2A;   /* avoid / error only */
+  /* Evening: source viewer only */
+  --night: #121816; --night-2: #1C2422; --night-fg: #E7EBE7;
+  /* Map */
+  --m-field: #E4E7DC; --m-field-2: #DCE1D2; --m-woods: #CDD7C4; --m-water: #BCD1D5; --m-road: #FFFFFF; --m-line: #C5CCC2;
+  /* Transcription paper */
+  --paper: #FCFCF9; --rule-blue: #B9CCE0; --rule-red: #D9A3A0; --hand-ink: #27324A;
+  /* Type */
+  --f-serif: "Gelasio", Georgia, "Times New Roman", serif;
+  --f-ui: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-hand: "Kalam", "Bradley Hand", "Segoe Print", cursive;   /* option A: everyday hand */
+  --f-hand-b: "Petrona", Georgia, serif;   /* option B: chancery hand, italic */
+  /* Motion */
+  --ease: cubic-bezier(.2,.7,.2,1); --t-quick: 140ms; --t-move: 240ms; --t-travel: 420ms;
+  --gutter: clamp(16px, 4vw, 56px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; background: var(--limewash); color: var(--ink); font-family: var(--f-ui); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+h1, h2, h3, h4, h5 { margin: 0; text-wrap: balance; font-weight: 400; }
+p { margin: 0; }
+ul, ol { margin: 0; padding-left: 1.2em; }
+a { color: var(--shutter); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--lamp); outline-offset: 2px; border-radius: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .88em; }
+
+/* ---------- Chapter scaffolding ---------- */
+.band { padding-block: clamp(56px, 8vw, 104px); padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); border-top: 1px solid var(--hair); }
+.band.raised { background: var(--plaster); }
+.band.deep, .band.bench { color: var(--plaster); --hair: rgb(255 255 255 / .14); }
+.band :is(.panel, .phone, .plain, .ruled, .mat, .og, .tree-wrap, .browser) { --pewter: #59645F; --hair: #D6DBD6; }
+.band.deep { background: var(--shutter); border-top-color: var(--shutter); --pewter: #B4C1BB; }
+.band.bench { background: var(--bench); border-top-color: var(--bench); --pewter: #B9A898; }
+.wrap { max-width: 1200px; margin-inline: auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 48px; }
+.wrap.wide { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.wrap.wide .rail p { max-width: 64ch; }
+.rail .no { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--pewter); }
+.rail h2 { font-family: var(--f-serif); font-size: 32px; line-height: 1.1; margin-top: 10px; color: var(--shutter); }
+.deep .rail h2, .bench .rail h2 { color: var(--plaster); }
+.rail p { color: var(--pewter); font-size: 14px; margin-top: 14px; max-width: 28ch; }
+.body { display: grid; gap: 44px; min-width: 0; }
+.eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--pewter); }
+.lead { font-family: var(--f-serif); font-size: 21px; line-height: 1.5; max-width: 60ch; }
+.prose { font-family: var(--f-serif); font-size: 17.5px; line-height: 1.62; max-width: 64ch; display: grid; gap: 14px; }
+.note { font-size: 13px; color: var(--pewter); max-width: 72ch; }
+.sub { display: grid; gap: 18px; min-width: 0; }
+.sub > h3 { font-family: var(--f-serif); font-size: 25px; color: var(--shutter); line-height: 1.15; }
+.deep .sub > h3, .bench .sub > h3 { color: var(--plaster); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.panel { background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; padding: 22px; min-width: 0; color: var(--ink); }
+.raised .panel { background: var(--limewash); }
+.panel h4 { font-size: 15px; font-weight: 700; color: var(--shutter); margin-bottom: 6px; }
+.panel p, .panel li { font-size: 14.5px; }
+.panel ul { display: grid; gap: 6px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 7px; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; white-space: nowrap; }
+.chip.arch { background: var(--plaster); color: var(--walnut); border: 1px solid #D9C9BC; }
+.chip.arch::before { content: ""; width: 8px; height: 8px; background: var(--walnut); }
+.chip.study { background: repeating-linear-gradient(135deg, var(--lamp) 0 6px, #EDBE6B 6px 12px); color: var(--ink); }
+@media (max-width: 900px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 26px; } .rail p { max-width: 60ch; } .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); } .lead { font-size: 19px; } }
+
+/* ---------- Cover ---------- */
+.cover { padding-block: clamp(32px, 5vw, 56px) clamp(40px, 6vw, 72px); padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
+.cover-in { max-width: 1200px; margin-inline: auto; display: grid; gap: 40px; }
+.cover-top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--pewter); }
+.cover-main { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 64px); align-items: end; }
+.cover h1 { font-family: var(--f-serif); color: var(--shutter); font-size: clamp(52px, 9vw, 112px); line-height: .95; letter-spacing: -.015em; }
+.cover .mark-lg { width: clamp(88px, 12vw, 132px); color: var(--shutter); margin-bottom: 26px; }
+.cover .descr { margin-top: 22px; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--shutter); }
+.cover .intro { margin-top: 28px; font-family: var(--f-serif); font-size: 20px; line-height: 1.5; max-width: 40ch; }
+.cover-lines { height: 120px; }
+.cover-lines svg { width: 100%; height: 100%; display: block; }
+.strip { background: var(--shutter); color: var(--plaster); padding-block: 14px; padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
+.strip div { max-width: 1200px; margin-inline: auto; display: flex; gap: 10px 28px; flex-wrap: wrap; font-size: 13px; }
+.strip a { color: var(--plaster); text-decoration: none; opacity: .85; }
+.strip a:hover { opacity: 1; text-decoration: underline; }
+@media (max-width: 820px) { .cover-main { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Provenance frames ---------- */
+.fig { margin: 0; display: grid; gap: 10px; min-width: 0; align-content: start; }
+.mat { position: relative; background: var(--plaster); border: 1px solid var(--hair); padding: clamp(10px, 2vw, 18px); }
+.raised .mat { background: var(--limewash); }
+.mat img { width: 100%; height: auto; }
+.mat.drawn { border: 1.5px dashed var(--river); }
+.tab { position: absolute; left: clamp(10px, 2vw, 18px); bottom: 0; transform: translateY(50%); display: inline-flex; align-items: center; gap: 8px; background: var(--plaster); border: 1px solid var(--hair); padding: 4px 10px 4px 8px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); white-space: nowrap; max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis; }
+.tab i { width: 10px; height: 10px; flex: none; background: var(--walnut); }
+.tab.d i { background: none; border: 1.5px dashed var(--river); transform: rotate(45deg); width: 9px; height: 9px; }
+.tab.t i { background: var(--shutter); border-radius: 50%; }
+.tab span { font-weight: 500; letter-spacing: .02em; text-transform: none; color: var(--pewter); }
+.fig figcaption { padding-top: 14px; font-size: 13.5px; color: var(--pewter); line-height: 1.45; }
+.fig figcaption b { color: var(--ink); font-weight: 600; }
+.bench .fig figcaption, .deep .fig figcaption { color: var(--pewter); }
+.bench .fig figcaption b, .deep .fig figcaption b { color: var(--plaster); }
+.initials { display: grid; place-items: center; background: var(--limewash); border: 1px solid var(--hair); font-family: var(--f-serif); color: var(--shutter); }
+
+/* ---------- Findings ---------- */
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); }
+.stats div { background: var(--plaster); padding: 16px 18px; }
+.stats b { display: block; font-family: var(--f-serif); font-size: 34px; color: var(--shutter); line-height: 1; font-weight: 400; }
+.stats span { font-size: 13px; color: var(--pewter); }
+.find { display: grid; border-top: 1px solid var(--hair); }
+.find > div { display: grid; grid-template-columns: 44px minmax(0, 1fr) minmax(0, 1.2fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--hair); }
+.find .n { font-family: var(--f-serif); font-size: 26px; color: var(--shutter); line-height: 1; }
+.find h4 { font-size: 16px; font-weight: 700; color: var(--shutter); }
+.find p { font-size: 14.5px; }
+.find .so { color: var(--pewter); }
+.axis-fig { background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; padding: 18px 18px 10px; }
+.axis-fig svg { width: 100%; height: auto; display: block; }
+@media (max-width: 760px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .find > div { grid-template-columns: 36px minmax(0, 1fr); } .find > div > :last-child { grid-column: 2; } }
+
+/* ---------- Directions ---------- */
+.dirs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.dir { border: 1px solid var(--hair); border-radius: 6px; background: var(--plaster); overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.dir.pick { outline: 3px solid var(--lamp); outline-offset: -1px; }
+.poster { height: 240px; position: relative; overflow: hidden; }
+.dir .meta { padding: 20px; display: grid; gap: 14px; align-content: start; }
+.dir h3 { font-family: var(--f-serif); font-size: 25px; color: var(--shutter); }
+.dir p { font-size: 14.5px; }
+.dir .k { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--pewter); margin-bottom: 4px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips span { width: 34px; height: 34px; border-radius: 3px; border: 1px solid rgb(0 0 0 / .08); }
+.risk { border-top: 1px solid var(--hair); padding-top: 12px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: var(--lamp); color: var(--ink); padding: 3px 8px; border-radius: 2px; }
+.pA { background: var(--limewash); padding: 26px; display: grid; align-content: space-between; }
+.pA .t { font-family: var(--f-serif); font-size: 38px; line-height: .98; color: var(--shutter); }
+.pB { background: #F7F7F3; color: #2E2724; padding: 22px 24px; font-family: "Newsreader", Georgia, serif; background-image: repeating-linear-gradient(transparent 0 27px, #C9D3DC 27px 28px); }
+.pB .rule { position: absolute; top: 0; bottom: 0; left: 64px; width: 1px; background: #B0473A; opacity: .55; }
+.pB .d { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px; color: #6C5F57; padding-left: 52px; line-height: 28px; }
+.pB .h { font-size: 26px; line-height: 28px; padding-left: 52px; margin-top: 28px; }
+.pC { background: radial-gradient(60% 70% at 62% 45%, #2A2618 0%, #0D1012 70%); color: #ECE6DA; padding: 24px; display: grid; align-content: end; }
+.pC .slide { position: absolute; width: 74px; height: 92px; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #F2C46D 0%, #8E6A2C 55%, transparent 72%); opacity: .8; }
+.pC .t { font-family: "Bodoni Moda", Didot, serif; font-style: italic; font-size: 36px; line-height: 1; position: relative; }
+.pC .s { font-family: "Work Sans", Arial, sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #B9AF9D; margin-top: 10px; position: relative; }
+.score { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+.score th, .score td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hair); vertical-align: top; }
+.score th { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--pewter); font-weight: 700; }
+.score td.c { white-space: nowrap; }
+.dot3 { display: inline-flex; gap: 3px; vertical-align: middle; margin-right: 6px; }
+.dot3 i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--shutter); }
+.dot3 i.f { background: var(--shutter); }
+@media (max-width: 980px) { .dirs { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Idea ---------- */
+.idea { font-family: var(--f-serif); font-size: clamp(44px, 7vw, 84px); line-height: 1; color: var(--plaster); }
+.pos { font-family: var(--f-serif); font-size: 21px; line-height: 1.5; max-width: 54ch; color: var(--plaster); }
+.traits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: rgb(255 255 255 / .14); border: 1px solid rgb(255 255 255 / .14); }
+.traits div { background: var(--shutter); padding: 20px; display: grid; gap: 8px; align-content: start; }
+.traits b { font-family: var(--f-serif); font-size: 23px; font-weight: 400; }
+.traits span { font-size: 14px; color: #C9D3CE; }
+.traits em { font-style: normal; font-size: 12.5px; color: #9FB0A8; }
+@media (max-width: 900px) { .traits { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .traits { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Principles ---------- */
+.prin > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, .9fr); gap: 24px; padding: 22px 0; border-top: 1px solid var(--hair); }
+.prin h4 { font-family: var(--f-serif); font-size: 24px; color: var(--shutter); line-height: 1.12; }
+.prin p { font-size: 15px; }
+.prin .test { font-size: 13.5px; color: var(--pewter); border-left: 2px solid var(--lamp); padding-left: 12px; }
+@media (max-width: 860px) { .prin > div { grid-template-columns: minmax(0, 1fr); gap: 10px; } }
+
+/* ---------- Color ---------- */
+.sw-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.sw { border: 1px solid var(--hair); border-radius: 6px; overflow: hidden; background: var(--plaster); min-width: 0; }
+.sw .c { height: 104px; display: flex; align-items: end; padding: 10px 12px; font-size: 12px; font-weight: 600; }
+.sw .info { padding: 12px; display: grid; gap: 3px; font-size: 13px; }
+.sw .info b { font-size: 14.5px; }
+.sw .info code { font-family: var(--f-ui); font-variant-numeric: tabular-nums; font-weight: 600; font-size: 13px; }
+.sw .info span { color: var(--pewter); }
+.ratio { display: grid; grid-template-columns: 56% 14% 10% 8% 4% 4% 4%; height: 54px; border-radius: 4px; overflow: hidden; border: 1px solid var(--hair); }
+.pairs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.pair { border-radius: 6px; padding: 18px; min-height: 124px; display: grid; align-content: space-between; gap: 12px; border: 1px solid var(--hair); }
+.pair .big { font-family: var(--f-serif); font-size: 27px; line-height: 1.05; }
+.pair small { font-size: 12px; font-variant-numeric: tabular-nums; }
+.ctable { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; min-width: 560px; }
+.ctable th, .ctable td { padding: 9px 10px; border-bottom: 1px solid var(--hair); text-align: left; }
+.ctable th { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--pewter); }
+.ctable td .s { display: inline-block; width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; border: 1px solid rgb(0 0 0 / .1); border-radius: 2px; }
+.pass { color: var(--moss); font-weight: 600; } .fail { color: var(--rose); font-weight: 600; }
+.bands-demo { border: 1px solid var(--hair); border-radius: 6px; overflow: hidden; background: var(--limewash); display: grid; }
+.bands-demo > div { padding: 16px 22px; }
+.bands-demo .nv { background: var(--shutter); color: var(--plaster); display: flex; align-items: center; gap: 12px; font-family: var(--f-serif); font-size: 19px; }
+.bands-demo .nv span { margin-left: auto; font-family: var(--f-ui); font-size: 13px; opacity: .85; display: flex; gap: 18px; }
+.bands-demo .era { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.bands-demo .era b { font-family: var(--f-serif); font-weight: 400; font-size: 26px; color: var(--shutter); }
+.bands-demo .q { background: var(--bench); color: var(--plaster); font-family: var(--f-serif); font-style: italic; font-size: 21px; line-height: 1.45; padding-block: 26px; }
+.bands-demo .q small { display: block; font-family: var(--f-ui); font-style: normal; font-size: 12.5px; color: #B9A898; margin-top: 8px; }
+.bands-demo .ft { background: var(--shutter); color: #B4C1BB; font-size: 12.5px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 900px) { .sw-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pairs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Type ---------- */
+.spec { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 28px; padding: 26px 0; border-top: 1px solid var(--hair); align-items: start; }
+.spec .lbl { font-size: 13px; color: var(--pewter); display: grid; gap: 4px; }
+.spec .lbl b { color: var(--ink); font-size: 14px; }
+.s-display { font-family: var(--f-serif); font-size: clamp(44px, 6.5vw, 76px); line-height: 1; color: var(--shutter); }
+.s-text { font-family: var(--f-serif); font-size: 19px; line-height: 1.62; max-width: 62ch; }
+.s-hand { font-family: var(--f-hand); font-size: 22px; line-height: 1.9; color: var(--hand-ink); }
+.scale, .dates, .mtable { width: 100%; border-collapse: collapse; }
+.scale td { padding: 12px 10px; border-bottom: 1px solid var(--hair); vertical-align: baseline; }
+.scale td:first-child { width: 150px; font-size: 12px; color: var(--pewter); white-space: nowrap; }
+.scale td:last-child { width: 210px; font-size: 12px; color: var(--pewter); font-variant-numeric: tabular-nums; }
+.dates { font-size: 14.5px; min-width: 620px; }
+.dates th, .dates td, .mtable th, .mtable td { padding: 10px 12px; border-bottom: 1px solid var(--hair); text-align: left; vertical-align: top; }
+.dates th, .mtable th { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--pewter); }
+.dates td.show { font-weight: 600; color: var(--shutter); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.quote { font-family: var(--f-serif); font-style: italic; font-size: 23px; line-height: 1.45; color: var(--shutter); border-left: 3px solid var(--walnut); padding-left: 20px; max-width: 46ch; margin: 0; }
+.quote cite { display: block; margin-top: 10px; font-family: var(--f-ui); font-style: normal; font-size: 13px; color: var(--pewter); }
+.rules { display: grid; gap: 8px; font-size: 14.5px; }
+.rules li::marker { color: var(--walnut); }
+@media (max-width: 720px) { .spec { grid-template-columns: minmax(0, 1fr); gap: 12px; } .scale td:last-child { display: none; } }
+
+/* ---------- Wordmark ---------- */
+.lockup { display: flex; align-items: center; gap: 16px; color: var(--shutter); }
+.lockup svg { flex: none; }
+.lockup .wm { font-family: var(--f-serif); line-height: .98; }
+.lockup .ds { font-family: var(--f-ui); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 11px; margin-top: 8px; }
+.logo-card { border: 1px solid var(--hair); border-radius: 6px; padding: clamp(24px, 4vw, 44px); display: grid; gap: 26px; align-content: space-between; min-height: 220px; background: var(--plaster); min-width: 0; }
+.logo-card.on-shutter { background: var(--shutter); border-color: var(--shutter); }
+.logo-card.on-bench { background: var(--bench); border-color: var(--bench); }
+.logo-card.on-shutter .lockup, .logo-card.on-bench .lockup { color: var(--plaster); }
+.logo-card.on-lime { background: var(--limewash); }
+.logo-card .cap { font-size: 13px; color: var(--pewter); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.logo-card.on-shutter .cap { color: #B4C1BB; } .logo-card.on-bench .cap { color: #B9A898; }
+.trace { position: relative; }
+.minis { display: flex; gap: 22px; align-items: end; flex-wrap: wrap; }
+.minis div { display: grid; gap: 6px; justify-items: center; font-size: 11px; color: var(--pewter); }
+.no-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.no-list .panel { padding: 16px; display: grid; gap: 10px; }
+.no-list .stage { height: 96px; display: grid; place-items: center; background: var(--limewash); border-radius: 4px; overflow: hidden; }
+.no-list p { font-size: 13px; }
+.no-list p::before { content: "Avoid · "; font-weight: 700; color: var(--rose); }
+@media (max-width: 900px) { .no-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Art direction ---------- */
+.art { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 30px 20px; }
+.art .c4 { grid-column: span 4; } .art .c5 { grid-column: span 5; } .art .c6 { grid-column: span 6; } .art .c7 { grid-column: span 7; } .art .c8 { grid-column: span 8; }
+@media (max-width: 860px) { .art > * { grid-column: 1 / -1 !important; } }
+.capt { background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; padding: 18px; display: grid; gap: 4px; font-size: 14px; }
+.capt .what { font-family: var(--f-serif); font-size: 17px; }
+.capt .meta { color: var(--pewter); font-size: 13px; }
+.capt .lbl { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--walnut); }
+
+/* ---------- Transcription ---------- */
+.tx-pair { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.ruled { position: relative; background: var(--paper); border: 1.5px dashed var(--river); padding: 26px 22px 30px 64px; background-image: linear-gradient(90deg, transparent 50px, var(--rule-red) 50px 51px, transparent 51px), repeating-linear-gradient(transparent 0 37px, var(--rule-blue) 37px 38px); background-position: 0 0, 0 15px; color: var(--hand-ink); }
+.ruled .hand { font-family: var(--f-hand); font-size: 20px; line-height: 38px; }
+.ruled.chancery .hand { font-family: var(--f-hand-b); font-style: italic; font-size: 20px; }
+.handpick { display: inline-flex; border: 1px solid rgb(255 255 255 / .25); border-radius: 999px; overflow: hidden; justify-self: start; }
+.handpick button { all: unset; cursor: pointer; padding: 7px 16px; font-size: 13px; font-weight: 600; color: #DCCFC3; }
+.handpick button[aria-pressed="true"] { background: var(--plaster); color: var(--bench); }
+.handpick button:focus-visible { outline: 3px solid var(--lamp); outline-offset: -3px; }
+.handpick button:nth-child(2) { font-family: var(--f-hand-b); font-style: italic; font-size: 15px; font-weight: 400; }
+.handpick button:nth-child(1) { font-family: var(--f-hand); font-size: 15px; font-weight: 400; }
+.ruled .hand .dt { display: block; text-align: center; }
+.ruled .tab { left: 16px; }
+.plain { background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; padding: 20px 22px; font-family: var(--f-serif); font-size: 17px; line-height: 1.65; color: var(--ink); display: grid; gap: 12px; }
+.plain .dt { font-family: var(--f-ui); font-weight: 600; font-size: 13.5px; color: var(--walnut); font-variant-numeric: tabular-nums; }
+.ed { font-family: var(--f-ui); font-size: .78em; color: var(--river); background: #E3EDF0; border-radius: 3px; padding: 1px 5px; white-space: nowrap; }
+.unc { border-bottom: 1.5px dotted var(--lamp-ink); }
+.conv { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.conv .panel { display: grid; gap: 8px; align-content: start; }
+.conv .ex { font-family: var(--f-serif); font-size: 17px; }
+.hands { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.hands .ruled { padding: 18px 16px 18px 58px; background-position: 0 0, 0 7px; }
+.hands .ruled div { font-size: 18px; line-height: 38px; }
+.hands .verdict { font-size: 13px; color: var(--pewter); margin-top: 18px; }
+.hands .verdict b { color: var(--plaster); }
+@media (max-width: 900px) { .tx-pair { grid-template-columns: minmax(0, 1fr); } .conv { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hands { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Legend ---------- */
+.legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.legend .panel svg { width: 100%; height: auto; display: block; }
+@media (max-width: 760px) { .legend { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Map ---------- */
+.mapwrap { position: relative; border: 1px solid var(--hair); border-radius: 6px; overflow: hidden; background: var(--m-field); }
+.mapwrap svg { display: block; width: 100%; height: auto; }
+.mapwrap .chip { position: absolute; top: 10px; right: 10px; }
+.prompts { display: grid; gap: 10px; counter-reset: pr; }
+.prompts div { background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; padding: 14px 16px 14px 52px; position: relative; font-size: 14px; counter-increment: pr; }
+.prompts div::before { content: counter(pr); position: absolute; left: 16px; top: 12px; font-family: var(--f-serif); font-size: 22px; color: var(--shutter); }
+.prompts b { display: block; font-size: 13px; color: var(--shutter); margin-bottom: 4px; }
+.prompts code { font-family: var(--f-ui); font-size: 13.5px; color: var(--ink); }
+
+/* ---------- Family tree ---------- */
+.tree-wrap { position: relative; background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; min-width: 1100px; }
+.tree-wrap svg { display: block; width: 100%; height: auto; }
+.tree .nd { cursor: pointer; }
+.tree .nd .ring { fill: none; stroke: var(--hair); stroke-width: 2; transition: stroke var(--t-move) var(--ease), stroke-width var(--t-move) var(--ease); }
+.tree .nd.rel .ring { stroke: var(--shutter); stroke-width: 2.5; }
+.tree .nd.sel .ring { stroke: var(--lamp); stroke-width: 5; }
+.tree .nd text { paint-order: stroke; stroke: var(--plaster); stroke-width: 4px; stroke-linejoin: round; }
+.tree .nd .nm { font: 600 12px var(--f-ui); fill: var(--ink); }
+.tree .nd .dd { font: 400 11px var(--f-ui); fill: var(--pewter); }
+.tree .nd.sel .nm { fill: var(--lamp-ink); }
+.tree .ln { fill: none; stroke: var(--mist); stroke-width: 1.6; transition: stroke var(--t-move) var(--ease), stroke-width var(--t-move) var(--ease); }
+.tree .ln.on { stroke: var(--shutter); stroke-width: 2.2; }
+.tree .ln.raise { stroke-dasharray: 5 4; }
+.tree .ln.raise.on { stroke: var(--lamp-ink); }
+.tree .nd:focus-visible { outline: none; }
+.tree .nd:focus-visible .ring { stroke: var(--lamp); stroke-width: 5; }
+.tcard { position: absolute; bottom: 18px; left: 46%; width: 330px; background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; box-shadow: 0 14px 32px rgb(23 48 43 / .12); padding: 16px; display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 14px; }
+.tcard .ph { width: 76px; height: 92px; object-fit: cover; border: 1px solid var(--hair); background: var(--limewash); }
+.tcard .ph.ini { display: grid; place-items: center; font-family: var(--f-serif); font-size: 26px; color: var(--shutter); text-align: center; }
+.tcard h5 { font-family: var(--f-serif); font-size: 20px; line-height: 1.12; color: var(--shutter); }
+.tcard .rel { font-size: 12.5px; font-weight: 600; color: var(--lamp-ink); margin-top: 4px; }
+.tcard .dt { font-size: 13px; color: var(--ink); margin-top: 4px; }
+.tcard .src { font-size: 12px; color: var(--pewter); margin-top: 4px; }
+.tcard .acts { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--hair); padding-top: 10px; font-size: 14px; }
+.tcard .acts a { font-weight: 700; text-decoration: none; }
+.tcard .acts span { color: var(--pewter); font-size: 13px; }
+.tree-legend { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; color: var(--pewter); align-items: center; }
+.tree-legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid var(--shutter); vertical-align: middle; margin-right: 6px; }
+.tree-legend i.r { border-top: 2px dashed var(--lamp-ink); }
+
+/* ---------- Components ---------- */
+.kit { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.kit > .panel { display: grid; gap: 14px; align-content: start; }
+.kit .s2 { grid-column: span 2; } .kit .s3 { grid-column: span 3; } .kit .s4 { grid-column: span 4; } .kit .s6 { grid-column: 1 / -1; }
+.kit .spec-n { font-size: 12.5px; color: var(--pewter); }
+@media (max-width: 900px) { .kit .s2, .kit .s3, .kit .s4 { grid-column: span 3; } }
+@media (max-width: 620px) { .kit > * { grid-column: 1 / -1 !important; } }
+.stage-l { background: var(--limewash); border-radius: 4px; padding: 18px; display: grid; place-items: center; min-height: 120px; overflow: hidden; }
+.nav { display: flex; align-items: center; gap: 22px; padding: 12px 18px; background: var(--shutter); color: var(--plaster); font-size: 15px; flex-wrap: wrap; }
+.nav .brand { display: flex; align-items: center; gap: 10px; color: var(--plaster); font-family: var(--f-serif); font-size: 20px; margin-right: auto; }
+.nav a { text-decoration: none; color: #DCE3DF; padding: 6px 2px; border-bottom: 2px solid transparent; font-weight: 500; }
+.nav a.on { border-bottom-color: var(--lamp); color: var(--plaster); font-weight: 600; }
+.nav .search { border: 1px solid rgb(255 255 255 / .22); border-radius: 999px; padding: 6px 14px; color: #B4C1BB; font-size: 14px; }
+.eras { display: flex; border: 1px solid var(--hair); border-radius: 4px; overflow: hidden; background: var(--plaster); }
+.eras button { all: unset; cursor: pointer; flex: var(--w, 1); padding: 9px 12px; border-right: 1px solid var(--hair); display: grid; gap: 1px; min-width: 0; }
+.eras button:last-child { border-right: 0; }
+.eras button b { font-size: 13.5px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.eras button span { font-size: 12px; color: var(--pewter); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.eras button.on { background: var(--shutter); }
+.eras button.on b, .eras button.on span { color: var(--plaster); }
+.eras button:focus-visible { outline: 3px solid var(--lamp); outline-offset: -3px; }
+.scard { background: var(--plaster); border: 1px solid var(--hair); border-radius: 6px; overflow: hidden; display: grid; grid-template-columns: 124px minmax(0, 1fr); max-width: 540px; }
+.scard .ph { width: 100%; height: 100%; min-height: 160px; object-fit: cover; }
+.scard .tx { padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.scard .when { font-size: 12.5px; font-weight: 600; color: var(--walnut); font-variant-numeric: tabular-nums; }
+.scard h5 { font-family: var(--f-serif); font-size: 21px; color: var(--shutter); line-height: 1.12; }
+.scard p { font-family: var(--f-serif); font-size: 15px; line-height: 1.45; }
+.scard .foot { font-size: 12px; color: var(--pewter); display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; align-items: center; }
+.ptok { display: grid; gap: 8px; justify-items: center; text-align: center; width: 124px; }
+.ptok .face { width: 100px; height: 124px; border: 1px solid var(--hair); background: var(--plaster); padding: 5px; }
+.ptok .face img, .ptok .face .initials { width: 100%; height: 100%; object-fit: cover; }
+.ptok.sel .face { outline: 3px solid var(--lamp); outline-offset: 2px; }
+.ptok b { font-size: 14px; line-height: 1.2; }
+.ptok span { font-size: 12.5px; color: var(--pewter); font-variant-numeric: tabular-nums; }
+.back { display: inline-flex; align-items: center; gap: 10px; background: var(--shutter); color: var(--plaster); border-radius: 999px; padding: 10px 18px 10px 14px; font-size: 15px; font-weight: 600; box-shadow: 0 6px 18px rgb(23 48 43 / .22); border: 0; font-family: var(--f-ui); text-decoration: none; }
+.back small { font-weight: 500; color: #B4C1BB; font-size: 13px; }
+.evi { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--hair); border-radius: 999px; color: var(--ink); background: var(--plaster); }
+.evi i { width: 11px; height: 11px; border-radius: 50%; background: var(--shutter); }
+.evi.rep i { border: 2px solid var(--shutter); background: radial-gradient(circle, var(--shutter) 0 1.6px, var(--plaster) 2.2px); }
+.viewer { background: var(--night); color: var(--night-fg); border-radius: 6px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.viewer .doc { padding: 22px; display: grid; grid-template-rows: auto 1fr auto; gap: 14px; border-right: 1px solid rgb(255 255 255 / .08); }
+.viewer .bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; color: #A9B5AF; flex-wrap: wrap; }
+.viewer .seg { display: inline-flex; border: 1px solid rgb(255 255 255 / .18); border-radius: 999px; overflow: hidden; }
+.viewer .seg span { padding: 5px 12px; font-size: 12.5px; }
+.viewer .seg span.on { background: var(--night-fg); color: var(--night); font-weight: 600; }
+.viewer .doc img { max-height: 520px; width: auto; margin-inline: auto; }
+.viewer .side { padding: 22px; display: grid; gap: 16px; align-content: start; background: var(--night-2); }
+.viewer .side .k { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #8FA19A; }
+.viewer .side .tr { font-family: var(--f-serif); font-size: 16.5px; line-height: 1.62; color: var(--night-fg); margin-top: 6px; }
+.viewer .side .tr s { opacity: .6; }
+.viewer .side dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; font-size: 13.5px; }
+.viewer .side dt { color: #8FA19A; } .viewer .side dd { margin: 0; }
+.viewer .vtab { display: inline-flex; gap: 8px; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--night-fg); }
+.viewer .vtab i { width: 10px; height: 10px; background: #B07A55; }
+@media (max-width: 760px) { .viewer { grid-template-columns: minmax(0, 1fr); } .viewer .doc { border-right: 0; } }
+
+/* ---------- Motion ---------- */
+.mtable { font-size: 14px; min-width: 620px; }
+.mtable code { font-family: var(--f-ui); font-weight: 600; }
+.demo-sel svg { width: 100%; height: auto; display: block; }
+.demo-sel .ln line { transition: stroke var(--t-move) var(--ease), stroke-width var(--t-move) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .demo-sel .ln line, .tl .s, .tree .ln, .tree .ring { transition: none !important; } }
+
+/* ---------- Mocks ---------- */
+.browser { border: 1px solid var(--hair); border-radius: 8px; overflow: hidden; background: var(--plaster); box-shadow: 0 18px 40px rgb(23 48 43 / .08); position: relative; min-width: 1100px; }
+.browser .chrome { height: 30px; display: flex; align-items: center; gap: 6px; padding: 0 12px; background: #E7EAE5; border-bottom: 1px solid var(--hair); }
+.browser .chrome i { width: 10px; height: 10px; border-radius: 50%; background: #C8CEC8; }
+.browser .chrome span { margin-left: 14px; font-size: 11.5px; color: var(--pewter); background: var(--plaster); padding: 2px 12px; border-radius: 999px; }
+.browser > .chip { position: absolute; top: 5px; right: 12px; z-index: 2; }
+.tl-body { display: grid; gap: 12px; padding: 14px 18px 18px; background: var(--limewash); }
+.tl-tools { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13.5px; color: var(--pewter); }
+.tl-tools .tg { display: inline-flex; border: 1px solid var(--hair); border-radius: 999px; overflow: hidden; background: var(--plaster); }
+.tl-tools .tg span { padding: 6px 14px; color: var(--ink); }
+.tl-tools .tg span.on { background: var(--shutter); color: var(--plaster); font-weight: 600; }
+.tl-grid { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 12px; }
+.field { background: var(--plaster); border: 1px solid var(--hair); border-radius: 4px; }
+.field svg { display: block; width: 100%; height: auto; }
+.tl .s { stroke: var(--mist); stroke-width: 2.5; stroke-linecap: round; transition: stroke var(--t-move) var(--ease), stroke-width var(--t-move) var(--ease); }
+.tl .ln { cursor: pointer; }
+.tl .ln.sel .s { stroke: var(--lamp); stroke-width: 4.5; }
+.tl .ln text { font: 500 11.5px var(--f-ui); fill: var(--pewter); paint-order: stroke; stroke: var(--plaster); stroke-width: 4px; }
+.tl .ln.sel text { fill: var(--lamp-ink); font-weight: 700; }
+.tl .ln .bub { stroke: var(--hair); stroke-width: 2; fill: var(--limewash); }
+.tl .ln.sel .bub { stroke: var(--lamp); stroke-width: 3.5; }
+.tl .ln:focus-visible { outline: none; }
+.tl .ln:focus-visible .bub { stroke: var(--lamp); stroke-width: 4; }
+.tl .lk { display: none; }
+.tl .lk.on { display: inline; }
+.dock { background: var(--plaster); border: 1px solid var(--hair); border-radius: 4px; padding: 16px; display: grid; gap: 12px; align-content: start; }
+.dock .ph { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--hair); }
+.dock .ph.ini { display: grid; place-items: center; background: var(--limewash); font-family: var(--f-serif); font-size: 46px; color: var(--shutter); text-align: center; }
+.dock .ph.ini small { display: block; font-family: var(--f-ui); font-size: 12px; color: var(--pewter); margin-top: 6px; }
+.dock h5 { font-family: var(--f-serif); font-size: 23px; color: var(--shutter); line-height: 1.08; }
+.dock .d { font-size: 13.5px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.dock .m { font-size: 13px; color: var(--pewter); }
+.dock .go { border-top: 1px solid var(--hair); padding-top: 10px; font-size: 14.5px; font-weight: 700; }
+.dock .go a { text-decoration: none; }
+.dock .go span { color: var(--pewter); font-weight: 500; font-size: 13px; }
+.pp { display: grid; grid-template-columns: 340px minmax(0, 1fr); min-height: 640px; }
+.pp-side { background: var(--limewash); border-right: 1px solid var(--hair); padding: 24px 18px 24px 18px; display: grid; gap: 18px; align-content: start; }
+.pp-side .who { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; align-items: end; padding-inline: 6px; }
+.pp-side .who img { width: 96px; height: 120px; object-fit: cover; border: 1px solid var(--hair); padding: 4px; background: var(--plaster); }
+.pp-side h3 { font-family: var(--f-serif); font-size: 30px; line-height: 1.02; color: var(--shutter); }
+.pp-side .d { font-size: 13.5px; color: var(--pewter); margin-top: 6px; font-variant-numeric: tabular-nums; }
+.pp-side .bio { font-family: var(--f-serif); font-size: 15px; line-height: 1.5; padding-inline: 6px; }
+.scenes { list-style: none; padding: 0; margin: 0; position: relative; display: grid; }
+.scenes::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: var(--lamp); }
+.scenes li { position: relative; padding: 8px 10px 8px 38px; font-size: 14px; display: grid; border-radius: 6px; }
+.scenes li::before { content: ""; position: absolute; left: 10px; top: 12px; width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--shutter); background: radial-gradient(circle, var(--shutter) 0 2.2px, var(--plaster) 2.8px); }
+.scenes li.r::before { background: var(--shutter); }
+.scenes li.on { background: var(--plaster); box-shadow: inset 0 0 0 1px var(--hair); }
+.scenes li.on::before { box-shadow: 0 0 0 4px rgb(227 163 59 / .55); }
+.scenes li span { font-size: 12.5px; color: var(--pewter); font-variant-numeric: tabular-nums; }
+.scenes li b { font-weight: 600; }
+.pp-main { padding: 30px 40px 40px; display: grid; gap: 22px; align-content: start; background: var(--plaster); }
+.pp-main .when { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.pp-main .when b { font-size: 15px; color: var(--walnut); font-variant-numeric: tabular-nums; }
+.pp-main .when span { font-size: 13px; color: var(--pewter); }
+.pp-main h4 { font-family: var(--f-serif); font-size: 40px; line-height: 1.05; color: var(--shutter); max-width: 20ch; }
+.pp-main .story { font-family: var(--f-serif); font-size: 19px; line-height: 1.62; max-width: 60ch; display: grid; gap: 14px; }
+.pp-main .three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.pp-main .three img { height: 200px; width: 100%; object-fit: cover; }
+.pp-main .nextprev { display: flex; justify-content: space-between; border-top: 1px solid var(--hair); padding-top: 16px; font-size: 14.5px; }
+.pp-main .nextprev b { color: var(--shutter); }
+.phones { display: flex; gap: 22px; flex-wrap: wrap; }
+.phone-wrap { display: grid; width: 270px; align-content: start; }
+.phone { color: var(--ink); width: 270px; border-radius: 30px; border: 8px solid #1E2422; background: var(--plaster); overflow: hidden; box-shadow: 0 16px 34px rgb(23 48 43 / .14); display: grid; grid-template-rows: auto 1fr; height: 560px; position: relative; }
+.phone .sb { height: 26px; display: flex; justify-content: space-between; align-items: center; padding: 0 16px; font-size: 11px; font-weight: 600; background: var(--shutter); color: var(--plaster); }
+.phone .scr { overflow: hidden; position: relative; display: grid; align-content: start; }
+.ph-cap { font-size: 12.5px; color: var(--pewter); margin-top: 10px; }
+.ph-cap b { color: var(--ink); }
+.deep .ph-cap b, .bench .ph-cap b { color: var(--plaster); }
+.ph-nav { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--shutter); font-family: var(--f-serif); font-size: 16px; color: var(--plaster); }
+.ph-nav .m { margin-left: auto; font-family: var(--f-ui); font-size: 12px; color: #B4C1BB; }
+.ph-era { display: flex; gap: 6px; padding: 8px 12px; overflow: hidden; border-bottom: 1px solid var(--hair); background: var(--limewash); }
+.ph-era span { flex: none; font-size: 11.5px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--hair); background: var(--plaster); white-space: nowrap; }
+.ph-era span.on { background: var(--shutter); color: var(--plaster); border-color: var(--shutter); font-weight: 600; }
+.ph-back { position: absolute; left: 12px; bottom: 14px; }
+.ph-back .back { font-size: 13px; padding: 8px 14px 8px 11px; }
+.og { aspect-ratio: 1200 / 630; max-width: 600px; width: 100%; background: var(--limewash); border: 1px solid var(--hair); display: grid; grid-template-columns: 42% minmax(0, 1fr); overflow: hidden; }
+.og img { width: 100%; height: 100%; object-fit: cover; }
+.og .tx { padding: clamp(14px, 3vw, 28px); display: grid; align-content: space-between; gap: 10px; min-width: 0; }
+.og h5 { font-family: var(--f-serif); font-size: clamp(20px, 3.2vw, 32px); line-height: 1.05; color: var(--shutter); }
+.og .d { font-size: clamp(11px, 1.6vw, 14px); color: var(--walnut); font-weight: 600; font-variant-numeric: tabular-nums; }
+.og .b { display: flex; align-items: center; gap: 8px; color: var(--shutter); font-family: var(--f-serif); font-size: clamp(12px, 1.8vw, 16px); }
+.ftree-ph { padding: 14px 12px; display: grid; gap: 8px; justify-items: center; }
+.ftree-ph .row { display: flex; gap: 10px; justify-content: center; }
+.ftree-ph .p { display: grid; justify-items: center; gap: 3px; width: 70px; text-align: center; font-size: 10.5px; line-height: 1.2; }
+.ftree-ph .p img, .ftree-ph .p .initials { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--hair); font-size: 15px; }
+.ftree-ph .p.me img { width: 72px; height: 72px; border: 3px solid var(--lamp); }
+.ftree-ph .lbl { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--pewter); }
+.ftree-ph .vl { width: 2px; height: 14px; background: var(--shutter); }
+.ftree-ph .vl.r { background: none; border-left: 2px dashed var(--lamp-ink); width: 0; }
+
+
+/* focus: SVG and list items show selection with their own ring, never a box */
+svg [tabindex]:focus, svg [tabindex]:focus-visible, .lv tr:focus { outline: none !important; }
+.lv tr:focus-visible td:first-child .lv-f { box-shadow: 0 0 0 3px var(--lamp); }
+.tl-tools .tg button { all: unset; cursor: pointer; padding: 6px 16px; color: var(--ink); font-size: 13.5px; }
+.tl-tools .tg button.on { background: var(--shutter); color: var(--plaster); font-weight: 600; }
+.tl-tools .tg button:focus-visible { outline: 3px solid var(--lamp); outline-offset: -3px; }
+#tlField { min-height: 700px; position: relative; overflow: hidden; }
+#tlField .view { height: 100%; }
+.tl .note { font: 400 11px var(--f-ui); fill: var(--pewter); }
+.ff { display: grid; gap: 0; padding: 26px 20px; justify-items: center; align-content: center; min-height: 700px; }
+.ff-row { display: grid; justify-items: center; gap: 10px; padding: 14px 0; position: relative; }
+.ff-row + .ff-row::before { content: ""; position: absolute; top: -8px; left: 50%; width: 2px; height: 16px; background: var(--shutter); }
+.ff-row.r + .ff-row::before, .ff-row + .ff-row.r::before { background: none; border-left: 2px dashed var(--lamp-ink); width: 0; }
+.ff-l { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--pewter); }
+.ff-row.r .ff-l { color: var(--lamp-ink); }
+.ff-g { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.ff-p { all: unset; cursor: pointer; display: grid; justify-items: center; gap: 4px; width: calc(var(--s) + 48px); text-align: center; }
+.ff-p img, .ff-p i { width: var(--s); height: var(--s); border-radius: 50%; object-fit: cover; border: 2px solid var(--hair); display: grid; place-items: center; font-style: normal; font-family: var(--f-serif); font-size: calc(var(--s) * .34); color: var(--shutter); background: var(--limewash); transition: border-color var(--t-quick) var(--ease); }
+.ff-p:hover img, .ff-p:hover i { border-color: var(--shutter); }
+.ff-p:focus-visible img, .ff-p:focus-visible i { border-color: var(--lamp); }
+.ff-p.sel img, .ff-p.sel i { border: 4px solid var(--lamp); }
+.ff-p.inf i { border-style: dashed; }
+.ff-p b { font-size: 13px; line-height: 1.2; }
+.ff-p.sel b { font-family: var(--f-serif); font-weight: 400; font-size: 21px; color: var(--shutter); }
+.ff-p span { font-size: 11.5px; color: var(--pewter); }
+.ff-p.more { cursor: default; }
+.ff-m { font-size: 11.5px; color: var(--pewter); align-self: center; margin-bottom: 30px; }
+.ff-none { font-size: 13px; color: var(--pewter); font-style: italic; }
+.ff-row.sm .ff-p b { font-size: 12px; font-weight: 500; }
+.mv { position: relative; height: 100%; }
+.mapv { display: block; width: 100%; height: 100%; min-height: 700px; }
+.mchip { position: absolute; top: 12px; right: 12px; z-index: 1; }
+.mapv .pl { transition: opacity var(--t-move) var(--ease); }
+.mapv .pl.dim { opacity: .35; }
+.mapv .halo { fill: var(--lamp); opacity: 0; }
+.mapv .pl.on .halo { opacity: .45; }
+.mapv .pin { fill: var(--shutter); }
+.mapv .pinl { stroke: var(--shutter); }
+.mapv .area { fill: rgb(23 48 43 / .06); stroke: var(--shutter); stroke-dasharray: 4 4; }
+.mapv .pl.on .area { fill: rgb(227 163 59 / .25); stroke: var(--lamp-ink); }
+.mapv .pn { font: 600 13px var(--f-ui); fill: var(--ink); paint-order: stroke; stroke: var(--m-field); stroke-width: 4px; }
+.mapv .ps { font: 400 11.5px var(--f-ui); fill: var(--pewter); paint-order: stroke; stroke: var(--m-field); stroke-width: 4px; }
+.mapv .pl.on .ps { fill: var(--lamp-ink); }
+.mapv .mnote { font: italic 15px var(--f-serif); fill: var(--pewter); }
+.lvw { padding: 10px 14px; max-height: 700px; overflow-y: auto; }
+.lv { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.lv th { text-align: left; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--pewter); padding: 8px; border-bottom: 1px solid var(--hair); }
+.lv td { padding: 6px 8px; border-bottom: 1px solid var(--hair); vertical-align: middle; }
+.lv tr[data-k] { cursor: pointer; }
+.lv tr[data-k]:hover td { background: var(--limewash); }
+.lv tr.sel td { background: #FBF3E3; }
+.lv tr.sel b { color: var(--lamp-ink); }
+.lv-f { display: inline-grid; width: 30px; height: 30px; border-radius: 50%; overflow: hidden; border: 2px solid var(--hair); place-items: center; background: var(--limewash); }
+.lv-f img { width: 100%; height: 100%; object-fit: cover; }
+.lv-f i { font-style: normal; font-family: var(--f-serif); font-size: 11px; color: var(--shutter); }
+.lv tr.sel .lv-f { border-color: var(--lamp); }
+/* ---------- Do / avoid ---------- */
+.da { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.da .panel { padding: 24px; }
+.da h4 { font-family: var(--f-serif); font-size: 27px; margin-bottom: 12px; }
+.da .do h4 { color: var(--moss); } .da .av h4 { color: var(--rose); }
+.da ul { display: grid; gap: 9px; font-size: 14.5px; }
+.da .do li::marker { content: "✓  "; color: var(--moss); font-weight: 700; }
+.da .av li::marker { content: "✕  "; color: var(--rose); font-weight: 700; }
+@media (max-width: 760px) { .da { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Tokens ---------- */
+.code { position: relative; background: var(--night); color: var(--night-fg); border-radius: 6px; padding: 20px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.6; overflow-x: auto; white-space: pre; }
+.copy { position: absolute; top: 12px; right: 12px; font: 600 12px var(--f-ui); background: var(--night-fg); color: var(--night); border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.needs { display: grid; list-style: none; padding: 0; counter-reset: n; }
+.needs li { counter-increment: n; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-top: 1px solid var(--hair); font-size: 15px; }
+.needs li::before { content: counter(n); font-family: var(--f-serif); font-size: 22px; color: var(--shutter); line-height: 1; }
+.needs li b { color: var(--shutter); }
+.colophon { font-size: 12.5px; color: var(--pewter); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+@page { size: 1440px 2036px; margin: 0; }
+@media print {
+  body { width: 1440px; }
+  .copy, .handpick { display: none; }
+  *, *::before, *::after { box-shadow: none !important; }
+  .tcard, .dock, .preview { border-color: #C9D0CB !important; }
+  .scroll-x { overflow: visible; }
+  .sub, .panel, .fig, .phone-wrap, .browser, .tree-wrap, .viewer, .da .panel { break-inside: avoid; }
+  .band { break-inside: auto; }
+}
+</style>
+
+<!-- image library for scripted figures -->
+<script type="application/json" id="imgs">{"wynona":"{{f-wynona}}","early":"{{f-early}}","lib":"{{f-lib}}","thomas":"{{f-thomas}}","alice":"{{f-alice}}","william":"{{f-william}}","george":"{{f-george}}","sarah":"{{f-sarah}}","lucretia":"{{f-lucretia}}","winona":"{{f-winona}}","lulu":"{{f-lulu}}","harry":"{{f-harry}}","margaret":"{{f-margaret}}"}</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 64 52">
+      <path d="M1 46 H16 V32.2 L32 19.3 L48 32.2 V46 H63" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter"/>
+      <rect x="24.2" y="35" width="3.6" height="6.4" fill="currentColor"/>
+      <rect x="36.2" y="35" width="3.6" height="6.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="mark-s" viewBox="0 0 64 52">
+      <path d="M1 46 H16 V32.2 L32 19.3 L48 32.2 V46 H63" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="miter"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ======================= COVER ======================= -->
+<header class="cover">
+  <div class="cover-in">
+    <div class="cover-top"><span>Brand book · working draft v0.2</span><span>October 2026</span></div>
+    <div class="cover-main">
+      <div>
+        <svg class="mark-lg" viewBox="0 0 64 52" aria-hidden="true"><use href="#mark"/></svg>
+        <h1>Drumore<br>Friends</h1>
+        <div class="descr">Meeting House · Drumore Township · Lancaster County, PA</div>
+        <p class="intro">A visual system for a lasting home for Beth’s stories: the people of the Drumore Friends Meeting House, the families behind them, and the places they lived.</p>
+      </div>
+      <figure class="fig">
+        <div class="mat"><img src="{{P016-0}}" alt="The white clapboard Drumore Friends Meeting House under a large tree, with flowering dogwood and green lawn."><div class="tab t"><i></i>Today <span>· 2025 photograph</span></div></div>
+        <figcaption><b>The meeting house in spring.</b> Archive post P016. The brand’s colors were measured from this building.</figcaption>
+      </figure>
+    </div>
+    <div class="cover-lines" id="coverLines" aria-hidden="true"></div>
+  </div>
+</header>
+<nav class="strip" aria-label="Chapters"><div>
+  <a href="#code">Code</a><a href="#archive">The archive</a><a href="#directions">Directions</a><a href="#idea">Idea</a><a href="#color">Color</a><a href="#type">Type</a><a href="#wordmark">Mark</a><a href="#art">Images</a><a href="#transcribe">Handwriting</a><a href="#language">Time &amp; doubt</a><a href="#map">Maps</a><a href="#tree">Family tree</a><a href="#components">Components</a><a href="#pages">Page concepts</a><a href="#sample">Wynona’s story</a><a href="#rules">Do / avoid</a><a href="#tokens">Tokens</a>
+</div></nav>
+
+<main>
+
+<!-- ======================= READ FIRST: CODE GUIDE ======================= -->
+<section class="band deep" id="code">
+  <div class="wrap">
+    <div class="rail"><div class="no">Read this first</div><h2>Where the code lives</h2><p>Everything in this book is working HTML, CSS and JavaScript. Here is where to find it.</p></div>
+    <div class="body">
+      <div class="grid2">
+        <div class="panel"><h4>The files</h4><ul>
+          <li><b>Folder:</b> <code>Genealogy Project/Drumore Friends Brand Book v0.2/</code></li>
+          <li><b><code>Drumore-Friends-Brand-Book-v0.2.html</code></b>: the whole book in one file. Open it in a browser to click through the interactive parts.</li>
+          <li><b><code>drumore-brand-book-source.html</code></b>: the same book with readable code. Images appear as <code>&#123;&#123;name&#125;&#125;</code> placeholders.</li>
+          <li><b><code>assets/</code></b>: the photographs and portrait crops those placeholders point to.</li>
+          <li><b><code>build.py</code></b>: run <code>python3 build.py</code> after editing the source to rebuild the one-file book.</li>
+          <li><b>The website</b> built from this book lives in <code>Genealogy Project/Drumore History Prototype/</code>.</li>
+        </ul></div>
+        <div class="panel"><h4>Find a piece of the code</h4><p style="margin-bottom:8px">Open the source file and search for these markers:</p><ul>
+          <li><code>:root {</code>: every color, font and motion token.</li>
+          <li><code>Shared people, relationships and one selection</code>: the people, couples, families, “raised by,” places, and the <code>select()</code> function that keeps every view on the same person.</li>
+          <li><code>Main timeline mock: four views, one selection</code>: lifelines, Family, Map and List tabs, and the docked side panel.</li>
+          <li><code>Family tree, chapter 11</code>: the full interactive tree.</li>
+          <li><code>Map style study</code> and <code>Handwriting switch</code>: the map drawing and the A/B transcription fonts.</li>
+          <li>Page markup: <code>#tlSvg</code>, <code>#famView</code>, <code>#mapView</code>, <code>#listView</code>, <code>#tlDock</code>, <code>#treeSvg</code>, <code>#txCard</code>.</li>
+        </ul></div>
+      </div>
+      <p class="note" style="color:#B4C1BB">In a PDF, the interactive views show their starting state: Wynona selected, Timeline tab open. Open the HTML file to switch between Timeline, Family, Map and List, select other people, and switch the handwriting options.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= THE ARCHIVE ======================= -->
+<section class="band raised" id="archive">
+  <div class="wrap">
+    <div class="rail"><div class="no">Before we start</div><h2>What the archive says about the brief</h2><p>The brief was written before anyone looked at the material. The archive changes several of its assumptions.</p></div>
+    <div class="body">
+      <p class="lead">These findings come from the Facebook archive captured on 14–15 October 2026 and the curation notes made from it. They shape everything that follows.</p>
+      <div class="stats">
+        <div><b class="num">140</b><span>posts, June 2025 – Oct 2026</span></div>
+        <div><b class="num">513</b><span>photographs and scans</span></div>
+        <div><b class="num">37</b><span>dated event candidates</span></div>
+        <div><b class="num">1683</b><span>earliest dated event</span></div>
+        <div><b class="num">16 of 37</b><span>dated to the day; the rest are months, years, ranges or “about”</span></div>
+      </div>
+      <div class="find">
+        <div><span class="n">1</span><div><h4>The name is Drumore, and “Friends” means Quakers.</h4><p class="so">The brief says “Drewmore Friends.”</p></div><p>The sign at the meeting house reads “Drumore Friends Meeting House, Established 1816.” Friends here are members of the Religious Society of Friends, so this is a meeting’s history, not a “friends of” society. Beth’s posts use both “Meeting House” (56 times) and “Meetinghouse” (66). This book follows the sign until she chooses.</p></div>
+        <div><span class="n">2</span><div><h4>The record runs 1683–1916, with today attached.</h4><p class="so">The brief says roughly 1600 to the present.</p></div><p>A straight 1600–2026 axis would put most of the screen over empty years and squeeze the dense diary years into a sliver. The timeline uses <b>eras of planned width</b>, with visible folds where time is compressed.</p></div>
+        <div><span class="n">3</span><div><h4>Quaker dates need their own rules.</h4><p class="so">The brief treats dates as plain numbers.</p></div><p>Minutes are dated like “9th of 11th month, 1811.” Before 1752 the year began in March, so “9th month” meant November. Beth explains this in one of her own posts. Every date keeps <b>what was written</b> beside the modern reading.</p></div>
+        <div><span class="n">4</span><div><h4>The story starts somewhere else.</h4><p class="so">The brief asks for a tightly focused local map.</p></div><p>Twelve of the 37 events happen in Germantown, Chester County or Gwynedd before the families reach Drumore. The system has <b>two map scales</b>: a detailed Drumore map and a schematic journey map.</p></div>
+        <div><span class="n">5</span><div><h4>Visitors arrive from Facebook, on phones.</h4><p class="so">The brief’s references are desktop showpieces.</p></div><p>Beth’s readers tap a link in their feed. The phone is the <b>primary</b> layout, with time running down the screen, and every story needs a good link preview.</p></div>
+        <div><span class="n">6</span><div><h4>The archive is rich in people and pictures.</h4><p class="so">The brief wants Histography’s density.</p></div><p>Thirty-seven dots would look empty. The density comes from <b>people</b>. Each life is drawn as a line with a portrait at its start, and the family tree shows how those lives connect.</p></div>
+        <div><span class="n">7</span><div><h4>Nothing is verified yet, and some sources disagree.</h4><p class="so">The brief asks us not to imply certainty.</p></div><p>Some of Beth’s posts disagree. One says Wynona’s mother died “when she was 3,” and another says 1874. A reunion photo is captioned 1910 while the event list says 1912. The design shows <b>both readings</b> until the record settles them.</p></div>
+      </div>
+      <div class="sub">
+        <h3>Why the timeline can’t be a straight ruler</h3>
+        <div class="axis-fig"><svg id="axisFig" viewBox="0 0 1000 250" role="img" aria-label="Two timelines compared. Top: a straight axis from 1600 to 2026 where the 37 archive events crowd into the middle third. Bottom: the proposed era axis, where events spread evenly."></svg></div>
+        <p class="note">Real data: the 37 dated event candidates in <code>curation/timeline-events.json</code>. Era names are a first draft for Beth to rename.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 1 DIRECTIONS ======================= -->
+<section class="band" id="directions">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 1</div><h2>Three directions</h2><p>Three different answers to the brief, then one recommendation.</p></div>
+    <div class="body">
+      <div class="dirs">
+        <article class="dir pick">
+          <div class="poster pA" aria-hidden="true">
+            <svg viewBox="0 0 64 52" style="width:58px;color:var(--shutter)"><use href="#mark"/></svg>
+            <div><div class="t">Held in<br>the Light</div>
+            <svg viewBox="0 0 300 54" style="width:100%;margin-top:14px"><g fill="none" stroke-linecap="round"><path d="M10 8H210" stroke="#C9D0CB" stroke-width="2"/><path d="M60 20H290" stroke="#E3A33B" stroke-width="3"/><path d="M0 32H150" stroke="#C9D0CB" stroke-width="2"/><path d="M120 44H260" stroke="#C9D0CB" stroke-width="2"/></g><circle cx="140" cy="20" r="5" fill="#17302B"/><circle cx="220" cy="20" r="5" fill="#FBFBF8" stroke="#17302B" stroke-width="2"/></svg></div>
+          </div>
+          <div class="meta">
+            <div><span class="badge">Recommended</span></div>
+            <h3>A · Plain Light</h3>
+            <p>The Quaker idea of plainness, used as a working design method rather than a costume. The site feels like the meeting house on an open-house morning: limewashed walls, daylight, walnut benches and dark green shutters. The interface stays quiet and exact, so the photographs and documents carry all the age and texture. Each person’s life is a fine line through time that lights up in lamp amber when you follow it.</p>
+            <div><div class="k">Palette</div><div class="chips"><span style="background:#F1F2EE"></span><span style="background:#17302B"></span><span style="background:#3A2A1F"></span><span style="background:#6E4229"></span><span style="background:#2E6273"></span><span style="background:#E3A33B"></span></div></div>
+            <div><div class="k">Type</div><p>Gelasio, a sturdy Georgia-style serif, for everything that is read. Public Sans for every control and date.</p></div>
+            <div><div class="k">Defining device</div><p>Lifelines: one line per person, a portrait at its start, knots for events and a fade where the record runs out.</p></div>
+            <div class="risk"><div class="k">Main risk</div><p>Restraint can turn into blandness. It depends on good photographs, confident scale and the dark green and brown bands to give the page rhythm.</p></div>
+          </div>
+        </article>
+        <article class="dir">
+          <div class="poster pB" aria-hidden="true"><div class="rule"></div><div class="d">9th of 11th month, 1811</div><div class="h">The request of some members of Little Britain…</div><div class="d" style="margin-top:28px">→ minute 4 · folio 212</div></div>
+          <div class="meta">
+            <h3>B · The Minute Book</h3>
+            <p>The meeting’s minute book becomes the interface. Everything is a numbered entry in a ruled ledger: the date in Quaker form, the minute, the clerk’s hand. Stories grow as new minutes are added under old ones. It is honest and scholarly, and the clearest of the three about sources.</p>
+            <div><div class="k">Palette</div><div class="chips"><span style="background:#F7F7F3"></span><span style="background:#2E2724"></span><span style="background:#7C93A6"></span><span style="background:#B0473A"></span><span style="background:#C9D3DC"></span></div></div>
+            <div><div class="k">Type</div><p>Newsreader for entries, IBM Plex Mono for dates and folio numbers.</p></div>
+            <div><div class="k">Defining device</div><p>The ruled entry: a date column, a margin rule and a numbered minute.</p></div>
+            <div class="risk"><div class="k">Main risk</div><p>It is the research dashboard the brief rules out, and ruled paper drifts toward the faux-parchment look. It rewards scholars and loses the Facebook visitor.</p></div>
+          </div>
+        </article>
+        <article class="dir">
+          <div class="poster pC" aria-hidden="true"><div class="slide" style="left:40px;top:30px"></div><div class="slide" style="left:150px;top:18px;opacity:.5"></div><div class="slide" style="left:230px;top:60px;opacity:.35"></div><div class="t">Wynona, 1890</div><div class="s">Lantern slide 14 of 513</div></div>
+          <div class="meta">
+            <h3>C · Lantern Show</h3>
+            <p>A darkened room and a magic-lantern evening. Photographs glow out of a deep field as you drift through time, closest in spirit to Histography. Selecting a photograph brings it forward, and its story is read beneath it like a lecture caption. It would have the most impact on first view.</p>
+            <div><div class="k">Palette</div><div class="chips"><span style="background:#0D1012"></span><span style="background:#F2C46D"></span><span style="background:#5A7FA0"></span><span style="background:#ECE6DA"></span></div></div>
+            <div><div class="k">Type</div><p>Bodoni Moda italic for names, Work Sans for captions.</p></div>
+            <div><div class="k">Defining device</div><p>The glowing plate: photographs lit from behind in a dark field.</p></div>
+            <div class="risk"><div class="k">Main risk</div><p>Darkness reads as a memorial and is hard on older eyes. Warm glow on black drifts into sepia nostalgia, and it is the hardest to make comfortable on a phone.</p></div>
+          </div>
+        </article>
+      </div>
+      <div class="sub">
+        <h3>Why Plain Light</h3>
+        <div class="prose"><p>It is the only direction that comes from this specific place. Quaker plainness is a real testimony of simplicity, and the meeting house is a white building with green shutters, not a museum. Restraint here is the subject’s own aesthetic. Plain Light also handles the brief’s two hardest demands: someone arriving from Facebook understands it at once, and it can show uncertainty without looking broken.</p></div>
+        <div class="scroll-x"><table class="score">
+          <thead><tr><th>What the brief needs</th><th>A · Plain Light</th><th>B · Minute Book</th><th>C · Lantern Show</th></tr></thead>
+          <tbody>
+            <tr><td>Rewards curiosity in the first seconds</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i></i></span>Good</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i class="f"></i></span>Strong</td></tr>
+            <tr><td>Clear for someone new to interactive sites</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i class="f"></i></span>Strong</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i></i></span>Good</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td></tr>
+            <tr><td>Separates record from interpretation</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i class="f"></i></span>Strong</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i class="f"></i></span>Strong</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td></tr>
+            <tr><td>Works on a phone, from a Facebook link</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i class="f"></i></span>Strong</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i></i></span>Good</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td></tr>
+            <tr><td>Looks finished with a story of three photos</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i class="f"></i></span>Strong</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i></i></span>Good</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td></tr>
+            <tr><td>Avoids “old-timey” and AI-generic looks</td><td class="c"><span class="dot3"><i class="f"></i><i class="f"></i><i></i></span>Good</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td><td class="c"><span class="dot3"><i class="f"></i><i></i><i></i></span>Weak</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 2 IDEA ======================= -->
+<section class="band deep" id="idea">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 2</div><h2>Brand idea</h2><p>The idea, the personality and the positioning.</p></div>
+    <div class="body">
+      <p class="idea">Held in the Light</p>
+      <div class="prose" style="color:#DCE3DF">
+        <p>Friends speak of “holding someone in the Light,” meaning to keep them in mind with care. The site does the same for every person in the archive. Each life is drawn plainly, kept in view and treated with care. Where the record is dark, we say so.</p>
+        <p class="note" style="color:#9FB0A8">This phrase has religious meaning for Friends. Ask Beth, and the meeting if she thinks it right, whether it is welcome as a public line. If not, keep it as an internal idea and use the positioning statement publicly.</p>
+      </div>
+      <div class="sub">
+        <div class="eyebrow" style="color:#9FB0A8">Positioning</div>
+        <p class="pos">Drumore Friends is the lasting home for the stories of the Drumore Friends Meeting House and the families connected to it: a timeline you can walk through, from the Germantown ancestors to the people who still open its doors. Every photograph and date says where it came from.</p>
+      </div>
+      <div class="traits">
+        <div><b>Plain</b><span>Says it once, in ordinary words, at a comfortable size.</span><em>Not austere, not minimal for show.</em></div>
+        <div><b>Warm</b><span>Talks like Beth at the open house: “Here’s Nonie at about 10 or 11.”</span><em>Not folksy, not sentimental.</em></div>
+        <div><b>Exact</b><span>Dates, names and sources are precise, and so are the gaps.</span><em>Not academic or hedging.</em></div>
+        <div><b>Unhurried</b><span>Lets a photograph be looked at. Nothing pulls at you.</span><em>Not slow to load or slow to read.</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3 PRINCIPLES ======================= -->
+<section class="band raised" id="principles">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 3</div><h2>Visual principles</h2><p>What must always be true across the site. Each has a test to apply to a screen.</p></div>
+    <div class="body"><div class="prin">
+      <div><h4>Daylight, not age</h4><p>The interface is limewash, plaster and daylight, with dark green and brown bands for rhythm. It never imitates paper, sepia or wear. Only the photographs and documents carry age.</p><p class="test">Test: hide every image. If the screen still looks like 1890, it is wearing a costume.</p></div>
+      <div><h4>The record is the ornament</h4><p>No flourishes, borders or textures. A cabinet card’s mount, a minute book’s ruling and a diary’s handwriting are the decoration, shown whole and at a generous size.</p><p class="test">Test: any decorative element that did not come from the archive should go.</p></div>
+      <div><h4>Show the edges of what we know</h4><p>Every date shows its precision and every claim shows its evidence. Lines fade where the record runs out. Uncertainty is drawn with the same care as fact.</p><p class="test">Test: can a visitor tell “recorded,” “reported” and “family story” apart without reading a help page?</p></div>
+      <div><h4>One room, many doors</h4><p>Timeline, family tree, person, story and place are views of the same things. Moving between them never loses your place, and there is always a single way back.</p><p class="test">Test: from any screen, can you get back to the year you started from in one tap?</p></div>
+      <div><h4>Plain speech</h4><p>Controls say what they do: “Follow her life,” “See the original,” “Where was this?”</p><p class="test">Test: would Beth’s oldest reader know what every button does?</p></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ======================= 4 COLOR ======================= -->
+<section class="band" id="color">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 4</div><h2>Color</h2><p>Measured from the meeting house: limewash, shutters, benches, the river and lamp light.</p></div>
+    <div class="body">
+      <div class="sub">
+        <h3>Core</h3>
+        <div class="sw-row">
+          <div class="sw"><div class="c" style="background:#F1F2EE;color:#1C2321">Page ground</div><div class="info"><b>Limewash</b><code>#F1F2EE</code><span>Every page. A cool, slightly green white. Never cream.</span></div></div>
+          <div class="sw"><div class="c" style="background:#FBFBF8;color:#1C2321">Surfaces</div><div class="info"><b>Plaster</b><code>#FBFBF8</code><span>Story column, cards, image mats.</span></div></div>
+          <div class="sw"><div class="c" style="background:#17302B;color:#FBFBF8">Brand · dark band</div><div class="info"><b>Shutter</b><code>#17302B</code><span>Wordmark, headings, nav bar, era headers, footer. Measured from the shutters.</span></div></div>
+          <div class="sw"><div class="c" style="background:#3A2A1F;color:#FBFBF8">Second dark band</div><div class="info"><b>Bench</b><code>#3A2A1F</code><span>Quotation and diary bands, the story-end band. From the walnut benches.</span></div></div>
+          <div class="sw"><div class="c" style="background:#1C2321;color:#FBFBF8">Text</div><div class="info"><b>Ink</b><code>#1C2321</code><span>Body text, with Pewter <code style="font-weight:500">#59645F</code> for captions.</span></div></div>
+        </div>
+      </div>
+      <div class="sub">
+        <h3>Meaning</h3>
+        <p class="note" style="font-size:14.5px">These colors carry information, so they are never decorative. Each is always paired with a shape or a word.</p>
+        <div class="sw-row">
+          <div class="sw"><div class="c" style="background:#6E4229;color:#FBFBF8">■ Original</div><div class="info"><b>Walnut</b><code>#6E4229</code><span>Marks originals: photographs and documents from the time. Scene dates.</span></div></div>
+          <div class="sw"><div class="c" style="background:#2E6273;color:#FBFBF8">◇ Drawn</div><div class="info"><b>River</b><code>#2E6273</code><span>Marks new work: illustrations, transcriptions, diagrams. Water on maps.</span></div></div>
+          <div class="sw"><div class="c" style="background:#E3A33B;color:#1C2321">● Selected</div><div class="info"><b>Lamp</b><code>#E3A33B</code><span>The one person or year you’re following. Fills and lines only.</span></div></div>
+          <div class="sw"><div class="c" style="background:#C9D0CB;color:#1C2321">Dimmed</div><div class="info"><b>Mist</b><code>#C9D0CB</code><span>Unselected lifelines and tree links.</span></div></div>
+          <div class="sw"><div class="c" style="background:#121816;color:#E7EBE7">Viewer</div><div class="info"><b>Night</b><code>#121816</code><span>Only behind the source viewer, so scans read true.</span></div></div>
+        </div>
+      </div>
+      <div class="sub">
+        <h3>Bands break up the page</h3>
+        <p class="note" style="font-size:14.5px;max-width:64ch">The site is light, but not all white. Dark bands mark the frame and the special moments. Shutter green holds the navigation, era headers and footer. Bench brown is saved for words from the past: a diary line, a letter, a minute.</p>
+        <div class="bands-demo">
+          <div class="nv"><svg viewBox="0 0 64 52" width="30" style="color:var(--plaster)"><use href="#mark-s"/></svg>Drumore Friends<span><b>Timeline</b>Family<span>Places</span></span></div>
+          <div class="era"><b>Diaries and reunions</b><span class="note num">1866–1916 · 14 stories · 31 people</span></div>
+          <div class="q">“How time flies! In a few years I may read this over, and refresh my memory.”<small>Wynona Lamborn, diary, 12 Oct 1890</small></div>
+          <div style="font-family:var(--f-serif);font-size:16.5px;line-height:1.6;max-width:64ch">Wynona started her diary on her twenty-second birthday and wrote in it every day until May 1891…</div>
+          <div class="ft"><span>Drumore Friends Meeting House · Drumore Township, PA</span><span>About the archive · Suggest a correction</span></div>
+        </div>
+      </div>
+      <div class="sub">
+        <h3>Proportion on a typical screen</h3>
+        <div class="ratio" aria-label="Color proportion: limewash 56 percent, plaster 14, ink 10, shutter 8, bench 4, walnut and river 4, lamp 4.">
+          <div style="background:#F1F2EE"></div><div style="background:#FBFBF8;border-left:1px solid #D6DBD6"></div><div style="background:#1C2321"></div><div style="background:#17302B"></div><div style="background:#3A2A1F"></div><div style="background:linear-gradient(90deg,#6E4229 50%,#2E6273 50%)"></div><div style="background:#E3A33B"></div>
+        </div>
+        <p class="note">Lamp is the smallest share on purpose. If more than one thing on a screen is amber, the screen has lost its focus.</p>
+      </div>
+      <div class="sub">
+        <h3>Pairings</h3>
+        <div class="pairs">
+          <div class="pair" style="background:#F1F2EE;color:#17302B"><span class="big">1816</span><small>Shutter on Limewash · 12.5 : 1</small></div>
+          <div class="pair" style="background:#17302B;color:#FBFBF8;border-color:#17302B"><span class="big">Follow her life</span><small>Plaster on Shutter · 13.6 : 1</small></div>
+          <div class="pair" style="background:#3A2A1F;color:#FBFBF8;border-color:#3A2A1F"><span class="big" style="font-style:italic">“How time flies!”</span><small style="color:#B9A898">Plaster on Bench · 13.2 : 1</small></div>
+          <div class="pair" style="background:#17302B;color:#E3A33B;border-color:#17302B"><span class="big">You are here</span><small>Lamp on Shutter · 6.4 : 1</small></div>
+        </div>
+      </div>
+      <div class="sub">
+        <h3>Contrast</h3>
+        <div class="scroll-x"><table class="ctable">
+          <thead><tr><th>Foreground</th><th>on Limewash</th><th>on Plaster</th><th>Use</th></tr></thead>
+          <tbody>
+            <tr><td><span class="s" style="background:#1C2321"></span>Ink</td><td>14.2 <span class="pass">AAA</span></td><td>15.4 <span class="pass">AAA</span></td><td>All body text</td></tr>
+            <tr><td><span class="s" style="background:#17302B"></span>Shutter</td><td>12.5 <span class="pass">AAA</span></td><td>13.6 <span class="pass">AAA</span></td><td>Headings, links, buttons</td></tr>
+            <tr><td><span class="s" style="background:#6E4229"></span>Walnut</td><td>7.6 <span class="pass">AAA</span></td><td>8.2 <span class="pass">AAA</span></td><td>Scene dates, Original labels</td></tr>
+            <tr><td><span class="s" style="background:#2E6273"></span>River</td><td>6.0 <span class="pass">AA</span></td><td>6.5 <span class="pass">AA</span></td><td>Drawn labels</td></tr>
+            <tr><td><span class="s" style="background:#59645F"></span>Pewter</td><td>5.5 <span class="pass">AA</span></td><td>5.9 <span class="pass">AA</span></td><td>Captions at 13px and up</td></tr>
+            <tr><td><span class="s" style="background:#E3A33B"></span>Lamp</td><td>1.9 <span class="fail">fails</span></td><td>2.1 <span class="fail">fails</span></td><td>Never text on light. Lines, halos, fills. On Shutter 6.4 and on Bench 6.3 it passes.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 5 TYPE ======================= -->
+<section class="band raised" id="type">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 5</div><h2>Typography</h2><p>One sturdy serif, one plain sans, and a readable handwriting face used only for transcriptions. All are free (SIL Open Font License) and on Google Fonts.</p></div>
+    <div class="body">
+      <div>
+        <div class="spec"><div class="lbl"><b>Gelasio</b>Names, titles, stories, quotations: everything that is read. Regular for display, Medium for small headings. Never thin at any size.<span>Fallback: Georgia</span></div><div class="s-display">Jessie Wynona Lamborn</div></div>
+        <div class="spec"><div class="lbl"><b>Gelasio · text</b>19px on 1.62 for stories, 60–66 characters a line. True italics for quotations.</div><div class="s-text">Gelasio was drawn to match Georgia’s proportions, the serif Beth’s readers already see in every email and newspaper site. It has even strokes, open letters and no hairlines, so it stays easy to read at any size and on any phone. And because it matches Georgia, the page doesn’t jump when the web font arrives.</div></div>
+        <div class="spec"><div class="lbl"><b>Public Sans</b>Every control, label, date and caption. Tabular figures for dates.<span>Fallback: system UI</span></div><div style="font-size:17px">Follow her life &nbsp;·&nbsp; See the original &nbsp;·&nbsp; <span class="num">12 Oct 1890</span> &nbsp;·&nbsp; Back to <span class="num">1890</span></div></div>
+        <div class="spec"><div class="lbl"><b>Kalam</b>Only on Drawn transcription cards, beside the original (chapter 8). Option B is Petrona Italic. Never for interface or headings.<span>Fallback: cursive</span></div><div class="s-hand">To-day has been dull and rainy, the leaves falling.</div></div>
+      </div>
+      <div class="sub">
+        <h3>Scale</h3>
+        <div class="scroll-x"><table class="scale" style="min-width:520px">
+          <tr><td>Display · Gelasio 400</td><td style="font-family:var(--f-serif);font-size:54px;line-height:1;color:var(--shutter)">Wynona Lamborn</td><td>54 / 1.0 · phone 38</td></tr>
+          <tr><td>Title · Gelasio 400</td><td style="font-family:var(--f-serif);font-size:36px;line-height:1.05;color:var(--shutter)">The diary begins</td><td>36 / 1.05 · phone 28</td></tr>
+          <tr><td>Section · Gelasio 500</td><td style="font-family:var(--f-serif);font-size:24px;font-weight:500;color:var(--shutter)">Scenes from her life</td><td>24 / 1.15</td></tr>
+          <tr><td>Story · Gelasio 400</td><td style="font-family:var(--f-serif);font-size:19px">She lived with Aunt Alice during the week and went home to Fernglen on weekends.</td><td>19 / 1.62 · 60–66 characters</td></tr>
+          <tr><td>UI · Public Sans 500</td><td style="font-size:16px;font-weight:500">Timeline · Family · Places · Stories</td><td>16 / 1.4</td></tr>
+          <tr><td>Date · Public Sans 600</td><td style="font-size:15px;font-weight:600;color:var(--walnut)" class="num">12 Oct 1890</td><td>15 · tabular · Walnut</td></tr>
+          <tr><td>Caption · Public Sans</td><td style="font-size:14px;color:var(--pewter)">Cabinet card, about 1890. Archive post P045.</td><td>14 / 1.45 · Pewter</td></tr>
+          <tr><td>Label · Public Sans 700</td><td style="font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Original · Drawn · Today</td><td>11.5 · +0.14em caps</td></tr>
+        </table></div>
+        <p class="note">Minimum sizes: stories 18px on phones, captions 14px, labels 11.5px in tracked capitals only. Many of Beth’s readers are older, so when in doubt go a step larger. Avoid high-contrast display serifs (Caslon Display, Playfair, Didone faces). Their hairlines disappear at small sizes.</p>
+      </div>
+      <div class="sub">
+        <h3>Writing dates</h3>
+        <div class="scroll-x"><table class="dates">
+          <thead><tr><th>What we know</th><th>Show</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>The day</td><td class="show">12 Oct 1890</td><td>Day, short month, year. No ordinals, no weekday.</td></tr>
+            <tr><td>Written in Quaker form</td><td class="show">9 Nov 1811</td><td>Then, in the viewer and on hover: <i>as written: “9th of 11th month, 1811.”</i> Always keep the original.</td></tr>
+            <tr><td>Before 1752 (Old Style)</td><td class="show">19 Sept 1746 ⚑</td><td>Flag until checked. Before 1752, “9th month” meant November.</td></tr>
+            <tr><td>Month or year only</td><td class="show">Nov 1890 · 1816</td><td>Never pad to a fake day like “1 Jan 1816.”</td></tr>
+            <tr><td>Approximate</td><td class="show">about 1870</td><td>Write “about,” not “c.”</td></tr>
+            <tr><td>A span</td><td class="show">1861–1865</td><td>En dash, no spaces. Uncertain bounds: “between 1853 and 1858.”</td></tr>
+            <tr><td>Sources disagree</td><td class="show">1872 or 1874</td><td>Show both and link each source.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="grid2">
+        <div class="sub">
+          <h3>Quotations</h3>
+          <blockquote class="quote">“Let thy religion be simple, plain, and full of love for thy fellow mortals.”<cite>Will Lamborn to his daughter, 1873, as quoted in archive post P035.</cite></blockquote>
+          <p class="note">Keep the original spelling and punctuation. Don’t add [sic]. A quotation always links to its scan.</p>
+        </div>
+        <div class="sub">
+          <h3>Long stories</h3>
+          <ul class="rules">
+            <li>One column, 60–66 characters a line, 19px. Never multiple columns.</li>
+            <li>Break the story into scenes at every new date, each with a Walnut date line.</li>
+            <li>A picture, quotation or source card every three to five paragraphs.</li>
+            <li>Plain Gelasio headings. No drop caps or ornaments.</li>
+            <li>Footnotes become source cards in the margin on desktop and tappable markers on phones.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 6 WORDMARK ======================= -->
+<section class="band" id="wordmark">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 6</div><h2>The mark</h2><p>The Gable Line. Approved in direction; refine only line weights and the smallest sizes.</p></div>
+    <div class="body">
+      <p class="lead">One line runs along the ground, rises into the meeting house roof and runs on, like a building standing on a timeline. The two small windows are the gable-end shutters. It is traced from the building itself, so it is the meeting house, simplified until it could be drawn with one stroke.</p>
+      <div class="grid2">
+        <figure class="fig">
+          <div class="mat trace"><img src="{{P014-0}}" alt="Gable end of the meeting house with two green-shuttered windows and the sign reading Drumore Friends Meeting House, Established 1816.">
+            <svg viewBox="0 0 900 900" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:clamp(10px,2vw,18px);width:calc(100% - 2*clamp(10px,2vw,18px));height:calc(100% - 2*clamp(10px,2vw,18px))"><path d="M0 752 H248 V478 L555 222 L882 478 V752 H900" fill="none" stroke="#E3A33B" stroke-width="7"/><rect x="410" y="530" width="72" height="132" fill="none" stroke="#E3A33B" stroke-width="5"/><rect x="642" y="530" width="74" height="132" fill="none" stroke="#E3A33B" stroke-width="5"/></svg>
+            <div class="tab t"><i></i>Today <span>· profile photo, traced</span></div></div>
+          <figcaption><b>How it was found.</b> The amber line traces the photograph: ground, walls, roof, the two shuttered windows. Wall height is 0.43 of the width and the roof rise is 0.81 of the half-width (about a 39° pitch).</figcaption>
+        </figure>
+        <div class="logo-card on-lime" style="align-content:center;justify-items:center">
+          <svg viewBox="0 0 64 52" style="width:min(300px,80%);color:var(--shutter)" role="img" aria-label="The Gable Line mark"><use href="#mark"/></svg>
+          <div class="minis">
+            <div><svg viewBox="0 0 64 52" width="64" style="color:var(--shutter)"><use href="#mark"/></svg>64px</div>
+            <div><svg viewBox="0 0 64 52" width="40" style="color:var(--shutter)"><use href="#mark"/></svg>40px</div>
+            <div><svg viewBox="0 0 64 52" width="24" style="color:var(--shutter)"><use href="#mark-s"/></svg>24px, no windows</div>
+            <div><svg viewBox="0 0 64 52" width="16" style="color:var(--shutter)"><use href="#mark-s"/></svg>favicon</div>
+          </div>
+        </div>
+      </div>
+      <div class="grid3">
+        <div class="panel"><h4>Why it works</h4><p>It’s literal without being a picture. Anyone who has stood at the gable end recognizes it, and anyone who hasn’t still reads “a plain building on a line through time.”</p></div>
+        <div class="panel"><h4>Why the windows matter</h4><p>Two windows give the house a face. That small bit of personality makes it friendly rather than corporate, and it’s what makes it this meeting house rather than any house.</p></div>
+        <div class="panel"><h4>Why one line</h4><p>The ground line continues past the house on both sides. It is the same line as the timeline, so the logo already says what the site does.</p></div>
+      </div>
+      <div class="grid2">
+        <div class="logo-card"><div class="lockup"><svg viewBox="0 0 64 52" width="62"><use href="#mark"/></svg><div><div class="wm" style="font-size:40px">Drumore Friends</div><div class="ds">Meeting House · Drumore Township, PA</div></div></div><div class="cap"><b>Primary lockup</b><span>Shutter on Plaster or Limewash</span></div></div>
+        <div class="logo-card on-shutter"><div class="lockup"><svg viewBox="0 0 64 52" width="62"><use href="#mark"/></svg><div><div class="wm" style="font-size:40px">Drumore Friends</div><div class="ds">Meeting House · Drumore Township, PA</div></div></div><div class="cap"><b>Reversed on Shutter</b><span>Nav bar, footer, social avatar</span></div></div>
+        <div class="logo-card on-bench"><div class="lockup" style="flex-direction:column;align-items:flex-start;gap:14px"><svg viewBox="0 0 64 52" width="60"><use href="#mark"/></svg><div><div class="wm" style="font-size:48px">Drumore<br>Friends</div><div class="ds">Meeting House</div></div></div><div class="cap"><b>Stacked on Bench</b><span>Posters, the open-house banner</span></div></div>
+        <div class="logo-card"><div class="lockup"><svg viewBox="0 0 64 52" width="36"><use href="#mark-s"/></svg><div class="wm" style="font-size:24px">Drumore Friends</div></div><div class="cap"><b>Site header, small</b><span>Simple mark from 32px down</span></div></div>
+      </div>
+      <div class="sub">
+        <h3>Rules</h3>
+        <div class="grid3">
+          <div class="panel"><h4>Clear space</h4><p>Keep space equal to the roof rise on every side. Only Shutter, Plaster, Limewash or Bench behind it.</p></div>
+          <div class="panel"><h4>“Established 1816”</h4><p>The sign carries it, but the curation notes still ask for its source. Add it to the lockup once Beth confirms.</p></div>
+          <div class="panel"><h4>Name check</h4><p>Confirm “Meeting House” or “Meetinghouse,” and whether the site is simply “Drumore Friends,” before final artwork or a domain.</p></div>
+        </div>
+        <div class="no-list">
+          <div class="panel"><div class="stage"><svg viewBox="0 0 160 60" width="150" aria-hidden="true"><path d="M20 30q10-18 20 0t20 0" fill="none" stroke="#6E4229" stroke-width="2"/><text x="66" y="38" font-family="Gelasio" font-size="20" fill="#6E4229">Drumore</text><path d="M66 46q40 8 80 0" fill="none" stroke="#6E4229"/></svg></div><p>Quills, scrolls, flourishes, swashes.</p></div>
+          <div class="panel"><div class="stage" style="background:#D8C29A"><span style="font-family:var(--f-serif);font-size:22px;color:#4A3524">Drumore Friends</span></div><p>Parchment, sepia or aged textures behind it.</p></div>
+          <div class="panel"><div class="stage"><span style="font-family:var(--f-serif);font-size:22px;color:#E3A33B">Drumore Friends</span></div><p>Lamp amber. Amber means “selected.”</p></div>
+          <div class="panel"><div class="stage"><svg viewBox="0 0 64 52" width="70" style="color:var(--shutter)"><use href="#mark"/><path d="M32 4v12M27 9h10" stroke="#17302B" stroke-width="2.5"/></svg></div><p>A cross, steeple or dove. Friends meeting houses have none.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 7 ART DIRECTION ======================= -->
+<section class="band raised" id="art">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 7</div><h2>Photographs and documents</h2><p>Show originals whole and true. Mark anything new as new.</p></div>
+    <div class="body">
+      <div class="sub">
+        <h3>The provenance tab</h3>
+        <p class="prose" style="font-size:16.5px">Every image sits on a plain mat with a small tab on its lower edge. The tab answers one question before any caption: <b>what am I looking at?</b></p>
+        <div class="grid3">
+          <div class="panel" style="display:grid;gap:8px"><div class="tab" style="position:static;transform:none;justify-self:start"><i></i>Original</div><p>A photograph, document or object from the time, shown as found. Solid frame. Square Walnut marker.</p></div>
+          <div class="panel" style="display:grid;gap:8px"><div class="tab d" style="position:static;transform:none;justify-self:start"><i></i>Drawn</div><p>Anything made now: illustrations, transcriptions, reconstructions, maps. Dashed River frame. Always says who made it and from what.</p></div>
+          <div class="panel" style="display:grid;gap:8px"><div class="tab t" style="position:static;transform:none;justify-self:start"><i></i>Today</div><p>Recent photographs: open houses, the cemetery, preservation work. Round Shutter marker. Always dated.</p></div>
+        </div>
+      </div>
+      <div class="art">
+        <figure class="fig c4">
+          <div class="mat"><img src="{{wynona}}" alt="Studio portrait of Jessie Wynona Lamborn as a young woman, hair pulled back, high collar."><div class="tab"><i></i>Original <span>· photograph</span></div></div>
+          <figcaption><b>Portraits: show the whole card.</b> The mount, studio name and edge wear are evidence of date and place. Crop to the face only in small tokens. Archive P045, Jessie “Wynona” Lamborn.</figcaption>
+        </figure>
+        <figure class="fig c8">
+          <div class="mat"><img src="{{P080-1}}" alt="Large outdoor group photograph of a Lamborn family reunion in front of a porch."><div class="tab"><i></i>Original <span>· photograph · 1910 or 1912</span></div></div>
+          <figcaption><b>Group photographs: let people be found.</b> Show the full frame, then a numbered key of who is identified. Mark tentative identifications separately. Archive P080: the caption says 1910 and the event list says 1912, so both are shown.</figcaption>
+        </figure>
+        <figure class="fig c5">
+          <div class="mat"><img src="{{P035-0}}" alt="First page of a handwritten letter beginning My Dearly beloved daughter in ornamental lettering."><div class="tab"><i></i>Original <span>· letter, 1873</span></div></div>
+          <figcaption><b>Documents: the whole page first, then the detail.</b> Pair every handwritten page with a transcription (chapter 8). Archive P035, Will Lamborn’s letter to his daughter.</figcaption>
+        </figure>
+        <div class="c7" style="display:grid;gap:30px;align-content:start">
+          <figure class="fig">
+            <div class="mat"><img src="{{P029-0}}" alt="A ledger page headed Burials with handwritten names and dates in columns."><div class="tab"><i></i>Original <span>· minute book</span></div></div>
+            <figcaption><b>Scan straight, light evenly, keep the color.</b> Don’t push contrast until the paper turns white. Archive P029, Little Britain Monthly Meeting burials.</figcaption>
+          </figure>
+          <figure class="fig">
+            <div class="mat"><img src="{{P107-0}}" alt="Interior of the meeting house: plain wooden benches, white walls, a tall window and framed portraits along a bench."><div class="tab t"><i></i>Today <span>· open house, 2026</span></div></div>
+            <figcaption><b>Today photographs: natural color and light.</b> They are the living end of every timeline. No filters or black-and-white conversions. Archive P107.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="sub">
+          <h3>Caption pattern</h3>
+          <div class="capt"><span class="lbl">Original · photograph</span><span class="what">Wynona Lamborn and Early Earnhart on their wedding day</span><span class="meta">8 Dec 1892 · Studio portrait · Archive post P064 · Both identified by Beth</span></div>
+          <p class="note">Order: what it shows · when · what kind of object · where it is held · how sure the identification is. Captions stay live text.</p>
+        </div>
+        <div class="sub">
+          <h3>No portrait? No invented face.</h3>
+          <div style="display:flex;gap:16px;align-items:end;flex-wrap:wrap">
+            <div style="width:110px"><div class="initials" style="aspect-ratio:4/5;font-size:40px">WL</div><p class="note" style="margin-top:6px">Will Lamborn: initials</p></div>
+            <div style="width:110px"><div class="initials" style="aspect-ratio:4/5;font-size:13px;font-family:var(--f-ui);padding:10px;text-align:center;line-height:1.35;color:var(--pewter)">No photograph identified yet</div><p class="note" style="margin-top:6px">Said plainly</p></div>
+          </div>
+          <p class="note">Never generate a likeness with AI, never colorize and never use AI face upscaling. Upscalers invent eyes, mouths and age.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 8 HANDWRITING ======================= -->
+<section class="band bench" id="transcribe">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 8</div><h2>Handwriting and transcription</h2><p>Every handwritten page appears beside a version anyone can read.</p></div>
+    <div class="body">
+      <p class="lead" style="color:var(--plaster)">Wynona’s diary and Will’s letter are the heart of the archive, and most visitors can’t read 1890s cursive. So the original always sits next to a transcription: a drawn card on ruled paper in a modern handwriting face, and a plain-text version for reading, searching and screen readers.</p>
+      <div class="tx-pair">
+        <figure class="fig">
+          <div class="mat"><img src="{{diary-spread}}" alt="Open pages of Wynona Lamborn's 1890 diary, handwritten in pencil and ink on ruled paper, entries for October 12 to 15."><div class="tab"><i></i>Original <span>· diary, Oct 1890</span></div></div>
+          <figcaption><b>Wynona’s diary, 12–15 Oct 1890.</b> Archive post P045. The book now belongs to the Solanco Historical Society (P074).</figcaption>
+        </figure>
+        <figure class="fig">
+          <div class="handpick" role="group" aria-label="Handwriting style for transcription cards"><button type="button" aria-pressed="true" data-hand="a">A · Everyday hand</button><button type="button" aria-pressed="false" data-hand="b">B · Chancery hand</button></div>
+          <div class="ruled" id="txCard"><div class="hand">… to keep. To-day has been dull and rainy, the leaves falling, covering the ground, as a reminder that winter is approaching. All hail! To Autumn, in which there is something so expressive to me. Uncle, Aunt and I, home all day, till evening I came down to Uncle Will’s. Had a dark and rainy drive, but not a lonesome one.<span class="dt">Oct. 14.</span>Just came home from school. Cleared about noon to-day, with wind in West, having a clear, bracing feeling in the air. The new book-case arrived at the school-house. Cost $6.00.</div><div class="tab d"><i></i>Drawn <span>· transcription, 2026</span></div></div>
+          <figcaption><b>Transcription card.</b> Blue-ruled paper with a red margin, echoing her notebook, and text that sits on the lines. Switch between the two handwriting options above. Always labeled Drawn.</figcaption>
+        </figure>
+      </div>
+      <div class="sub">
+        <h3>Plain text, with the editor visible</h3>
+        <div class="plain">
+          <span class="dt">12 Oct 1890 · continued</span>
+          <p>… Uncle, Aunt <span class="ed">Thomas and Lib Hambleton</span> and I, home all day, till evening I came down to Uncle Will’s <span class="ed">William L. Shoemaker</span>. Had a dark and rainy drive, but not a lonesome one. This evening the first I spent in their new house. They moved in on Oct. 11. As far as a nice home goes, they have every advantage.</p>
+          <span class="dt">13 Oct 1890</span>
+          <p>Nothing particular happened to-day. Had my regular school duties to attend to. Learned this wk. of <span class="unc">Groff’s</span> Mill being burned on Oct. 8, about 8 P.M. Much damage done.</p>
+        </div>
+        <div class="conv">
+          <div class="panel"><h4>Her words</h4><p class="ex">“Uncle Will’s”</p><p class="note">Gelasio, exactly as written: spelling, capitals, “to-day.”</p></div>
+          <div class="panel"><h4>Our notes</h4><p class="ex"><span class="ed">William L. Shoemaker</span></p><p class="note">Editorial additions use a River tag in sans, never brackets that look like hers.</p></div>
+          <div class="panel"><h4>Unsure reading</h4><p class="ex"><span class="unc">Groff’s</span> Mill</p><p class="note">Dotted underline. Hover or tap shows the other possible readings.</p></div>
+          <div class="panel"><h4>Crossed out</h4><p class="ex">and <s>and</s> be abundantly</p><p class="note">Strike-through, kept. A slip of the pen is part of the page.</p></div>
+        </div>
+      </div>
+      <div class="sub">
+        <h3>Choosing the handwriting face</h3>
+        <div class="hands">
+          <div><div class="ruled" style="border-style:solid;border-color:var(--hair)"><div style="font-family:var(--f-hand)">All hail! To Autumn, in which there is something so expressive to me.</div></div><p class="verdict"><b>A · Everyday hand (Kalam).</b> A relaxed, slanted print hand. The easiest to read, and the friendliest. Recommended.</p></div>
+          <div><div class="ruled b" style="border-style:solid;border-color:var(--hair)"><div style="font-family:var(--f-hand-b);font-style:italic">All hail! To Autumn, in which there is something so expressive to me.</div></div><p class="verdict"><b>B · Chancery hand (Petrona Italic).</b> A pen-drawn italic, closer to a 19th-century copybook, with no thin hairlines. For Beth to compare.</p></div>
+          <div><div class="ruled c" style="border-style:solid;border-color:var(--hair)"><div style="font-family:'Dancing Script',cursive">All hail! To Autumn, in which there is something so expressive to me.</div></div><p class="verdict"><b>Avoid · joined script.</b> Looks the most “old,” but loops and joins slow every reader down. The originals already show the real hand.</p></div>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="panel"><h4>How transcriptions get made</h4><ul>
+          <li>Claude reads the scan and drafts the transcription, marking any word it isn’t sure of.</li>
+          <li>Beth checks the draft against the page and resolves the marked words.</li>
+          <li>Names get editorial tags linking to the person’s page and family tree.</li>
+          <li>Each transcription records who checked it and when.</li>
+        </ul></div>
+        <div class="panel"><h4>Tested on this archive</h4><p>Claude transcribed the diary spread above and Will’s 1873 letter. On the diary, its reading matched the transcription Beth posted in P045 word for word, except for one word she had dropped (“moved in <b>on</b> Oct. 11”). Clear 1890s hands transcribe well. Faded pencil, 1700s minutes and damaged pages will need more of Beth’s eye.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 9 LANGUAGE ======================= -->
+<section class="band" id="language">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 9</div><h2>Time, people, places and doubt</h2><p>One visual vocabulary for events, lives, connections and uncertainty, shared by the timeline, the family tree and the map.</p></div>
+    <div class="body">
+      <div class="legend">
+        <div class="panel"><div class="eyebrow" style="margin-bottom:10px">How sure: the marker</div>
+          <svg viewBox="0 0 420 175" role="img" aria-label="Evidence markers: solid circle for recorded, ring with dot for reported, dashed ring for family story, and a lamp halo for selected.">
+            <g font-family="Public Sans, sans-serif" font-size="13" fill="#1C2321">
+              <circle cx="22" cy="24" r="8" fill="#17302B"/><text x="44" y="22" font-weight="600">Recorded</text><text x="44" y="38" fill="#59645F" font-size="12">An original we have seen: minute, diary, deed, census</text>
+              <circle cx="22" cy="68" r="8" fill="#FBFBF8" stroke="#17302B" stroke-width="2.4"/><circle cx="22" cy="68" r="3" fill="#17302B"/><text x="44" y="66" font-weight="600">Reported</text><text x="44" y="82" fill="#59645F" font-size="12">From an account: Beth’s posts, a county history, an obituary</text>
+              <circle cx="22" cy="112" r="8" fill="#FBFBF8" stroke="#17302B" stroke-width="2" stroke-dasharray="3 2.6"/><text x="44" y="110" font-weight="600">Family story</text><text x="44" y="126" fill="#59645F" font-size="12">Remembered and passed down, no record found yet</text>
+              <circle cx="22" cy="155" r="13" fill="#E3A33B" opacity=".5"/><circle cx="22" cy="155" r="8" fill="#17302B"/><text x="44" y="159" font-weight="600">Selected</text><text x="112" y="159" fill="#59645F" font-size="12">Lamp halo, any marker</text>
+            </g>
+          </svg>
+        </div>
+        <div class="panel"><div class="eyebrow" style="margin-bottom:10px">How precise: the span</div>
+          <svg viewBox="0 0 420 200" role="img" aria-label="Date precision: a dot for a day, a short bar for a month or year, a fading bar for about, an end-capped bar for between, a one-sided fade for before, and two linked markers when sources disagree.">
+            <defs>
+              <linearGradient id="fadeBoth" x1="0" x2="1"><stop offset="0" stop-color="#17302B" stop-opacity="0"/><stop offset=".35" stop-color="#17302B"/><stop offset=".65" stop-color="#17302B"/><stop offset="1" stop-color="#17302B" stop-opacity="0"/></linearGradient>
+              <linearGradient id="fadeL" x1="0" x2="1"><stop offset="0" stop-color="#17302B" stop-opacity="0"/><stop offset="1" stop-color="#17302B"/></linearGradient>
+            </defs>
+            <g font-family="Public Sans, sans-serif" font-size="12.5" fill="#1C2321">
+              <circle cx="80" cy="18" r="5" fill="#17302B"/><text x="160" y="22">12 Oct 1890 · the day</text>
+              <rect x="66" y="45" width="28" height="5" rx="2.5" fill="#17302B"/><circle cx="80" cy="47.5" r="5" fill="#17302B"/><text x="160" y="52">Nov 1890 · 1879 · month or year</text>
+              <rect x="30" y="75" width="100" height="5" rx="2.5" fill="url(#fadeBoth)"/><text x="160" y="82">about 1870</text>
+              <path d="M40 105v10M120 105v10" stroke="#17302B" stroke-width="2"/><rect x="40" y="107.5" width="80" height="5" fill="#17302B"/><text x="160" y="114">between 1853 and 1858</text>
+              <rect x="20" y="137.5" width="100" height="5" fill="url(#fadeL)"/><path d="M120 133v14" stroke="#17302B" stroke-width="2"/><text x="160" y="144">before 1816</text>
+              <circle cx="60" cy="178" r="5" fill="#17302B"/><circle cx="100" cy="178" r="5" fill="#17302B"/><path d="M60 172 Q80 160 100 172" fill="none" stroke="#17302B" stroke-width="1.4" stroke-dasharray="2 2"/><text x="76" y="163" font-size="10" fill="#59645F">or</text><text x="160" y="182">1872 or 1874 · sources disagree</text>
+            </g>
+          </svg>
+        </div>
+        <div class="panel"><div class="eyebrow" style="margin-bottom:10px">People: lifelines and links</div>
+          <svg viewBox="0 0 420 200" role="img" aria-label="Lifelines: Will's line ends in 1876; a dotted drop shows he is Wynona's parent; Wynona's selected line in amber; a dashed amber link shows Lib raised her from 1876.">
+            <g font-family="Public Sans, sans-serif" font-size="12" fill="#59645F">
+              <line x1="20" y1="36" x2="190" y2="36" stroke="#C9D0CB" stroke-width="2.5" stroke-linecap="round"/><text x="20" y="24">Will · died 1876</text>
+              <line x1="20" y1="132" x2="400" y2="132" stroke="#C9D0CB" stroke-width="2.5" stroke-linecap="round"/><text x="20" y="152">Lib Hambleton</text>
+              <line x1="70" y1="84" x2="400" y2="84" stroke="#E3A33B" stroke-width="4.5" stroke-linecap="round"/><text x="222" y="74" fill="#8A5A10" font-weight="700">Wynona (selected)</text>
+              <path d="M70 36 V84" stroke="#17302B" stroke-width="1.2" stroke-dasharray="2 2"/><text x="78" y="62" fill="#1C2321">daughter</text>
+              <path d="M190 132 V84" stroke="#8A5A10" stroke-width="1.6" stroke-dasharray="5 4"/><text x="198" y="114" fill="#8A5A10">raised by, from 1876</text>
+              <circle cx="190" cy="84" r="5" fill="#FBFBF8" stroke="#17302B" stroke-width="2"/><circle cx="190" cy="84" r="1.8" fill="#17302B"/>
+              <text x="20" y="182" fill="#1C2321">Line = a life · knot = an event · dotted = parent · dashed = raised by. Links appear only for the person you select.</text>
+            </g>
+          </svg>
+        </div>
+        <div class="panel"><div class="eyebrow" style="margin-bottom:10px">Places: how exact the location is</div>
+          <svg viewBox="0 0 420 175" role="img" aria-label="Place precision: a solid pin for a building, an outlined area for a parcel, a soft circle for a community, and a hatched area for a region.">
+            <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V6" stroke="#2E6273" stroke-width="1" opacity=".55"/></pattern></defs>
+            <g font-family="Public Sans, sans-serif" font-size="12.5" fill="#1C2321">
+              <path d="M30 10c-7 0-12 5-12 12 0 9 12 20 12 20s12-11 12-20c0-7-5-12-12-12z" fill="#17302B"/><circle cx="30" cy="22" r="4" fill="#FBFBF8"/><text x="70" y="26">Building · the meeting house, Fernglen Store</text>
+              <path d="M16 56 L48 52 L50 78 L20 82 Z" fill="#17302B" fill-opacity=".08" stroke="#17302B" stroke-width="1.6"/><text x="70" y="72">Parcel · a farm from a deed or survey</text>
+              <circle cx="32" cy="112" r="17" fill="#17302B" fill-opacity=".08" stroke="#17302B" stroke-dasharray="3 3"/><text x="70" y="116">Community · “near Liberty Square”</text>
+              <rect x="14" y="140" width="38" height="26" fill="url(#hatch)" stroke="#2E6273"/><text x="70" y="157">Region · “somewhere in Fulton Township”</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 10 MAP ======================= -->
+<section class="band raised" id="map">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 10</div><h2>Maps</h2><p>The timeline laid flat: same markers, same amber, same rules about certainty.</p></div>
+    <div class="body">
+      <div class="mapwrap">
+        <span class="chip study">Style study · not a real place</span>
+        <svg id="mapSvg" viewBox="0 0 900 520" role="img" aria-label="A style study of the local map: a quilt of pale fields with hedgerows, woods, a river and streams, white roads, farmsteads, and markers at four levels of precision with one person's places in amber."></svg>
+      </div>
+      <div class="grid3">
+        <div class="panel"><h4>Styling</h4><ul>
+          <li>Fields in two near tones (<span class="num">#E4E7DC</span>, <span class="num">#DCE1D2</span>) with hedgerow edges. The farmland is the texture.</li>
+          <li>Woods <span class="num">#CDD7C4</span>, water <span class="num">#BCD1D5</span>. Flat, with no terrain shading or satellite imagery.</li>
+          <li>Water names in Gelasio italic, everything else in Public Sans.</li>
+        </ul></div>
+        <div class="panel"><h4>Time on the map</h4><p>The map always says which year it shows and what the base map is. Historic maps are opt-in overlays labeled Original with their date. Moving the year only changes features that have a source for that year.</p></div>
+        <div class="panel"><h4>Map and timeline share</h4><p>The same evidence markers, the same amber for the selected person’s places, and one “Showing 1890” chip that drives both. Opening the map from a scene shows the return pill.</p></div>
+      </div>
+      <div class="grid2" style="align-items:start">
+        <figure class="fig">
+          <div class="mat"><img src="{{map1864}}" alt="Section of the 1864 Drumore Township map showing roads, property owners' names and buildings."><div class="tab"><i></i>Original <span>· Drumore map, 1864</span></div></div>
+          <figcaption><b>The real source.</b> Beth already has the 1864, 1875 and 1899 Drumore maps (P140). The site’s maps are traced from these and the county GIS, not invented.</figcaption>
+        </figure>
+        <div class="sub">
+          <h3>Making the real maps</h3>
+          <ol class="rules">
+            <li><b>Geography from records.</b> In Figma, trace roads, streams and township lines from Lancaster County GIS. Place historic features from the 1864, 1875 and 1899 maps.</li>
+            <li><b>Style from prompts.</b> Use image generation only for texture and illustration style (field patterns, tree clusters, building pictograms), never for where things are.</li>
+            <li><b>Apply the tokens.</b> Swap every color to the map tokens and export one SVG layer per era.</li>
+            <li><b>Label it Drawn.</b> Every map carries a Drawn tab: “Drawn 2026, from the 1864 Bridgens map and county GIS.”</li>
+          </ol>
+        </div>
+      </div>
+      <div class="sub">
+        <h3>Image prompts for map art</h3>
+        <div class="prompts">
+          <div><b>Field texture</b><code>Top-down flat illustration of rolling southeastern Pennsylvania farmland, irregular field quilt in two very pale sage tones (#E4E7DC, #DCE1D2), thin darker hedgerow lines between fields, no roads, no labels, no text, no shading, no perspective, quiet museum wayfinding style, seamless tile.</code></div>
+          <div><b>Woods and trees</b><code>Set of small flat top-down woodland clusters and single trees for a map, soft muted green #CDD7C4 with slightly darker #B9C6AE edges, simple organic shapes, no outlines, no shadows, transparent background, consistent scale.</code></div>
+          <div><b>Building pictograms</b><code>Set of tiny single-weight line pictograms in #2E6273 on white: a plain gable-roof meeting house with two windows, a general store with porch, a farmhouse with bank barn, a one-room schoolhouse, a grist mill by a stream. 2px line, square ends, no fill, no shading, consistent 48px grid.</code></div>
+          <div><b>River edge</b><code>Flat top-down illustration of a wide river edge with gentle wooded banks, water in pale blue-grey #BCD1D5, banks in #CDD7C4, no ripples, no highlights, no boats, no text, calm and minimal.</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 11 FAMILY TREE ======================= -->
+<section class="band" id="tree">
+  <div class="wrap wide">
+    <div class="rail"><div class="no">Chapter 11</div><h2>Family tree</h2><p>The tree is the timeline’s twin: the same people, arranged by relationship instead of by year. Select anyone to see how they connect to Wynona. Every relationship comes from Beth’s posts and still needs checking.</p></div>
+    <div class="body">
+      <div class="scroll-x"><div class="tree-wrap" id="treeWrap">
+        <span class="chip arch" style="position:absolute;left:16px;top:14px;z-index:1">Archive example · as described in Beth’s posts</span>
+        <svg id="treeSvg" class="tree" viewBox="0 0 1100 790" role="group" aria-label="Family tree centered on Wynona Lamborn. Select a person to highlight their relationships."></svg>
+        <div class="tcard" id="tCard" aria-live="polite"></div>
+      </div></div>
+      <div class="tree-legend"><span><i></i>parent and child, or married</span><span><i class="r"></i>raised by, not born to</span><span>Faces are archive portraits. Initials mean no photograph has been identified.</span></div>
+      <div class="grid3">
+        <div class="panel"><h4>Real families aren’t tidy</h4><p>Wynona was raised by her aunt and uncle, and Alice by the Cutlers. “Raised by” is its own dashed link, never forced into a parent line.</p></div>
+        <div class="panel"><h4>Large families fold</h4><p>Smedley and Margaret had eleven children. The tree shows the four Wynona writes about most, and “7 more” opens the rest.</p></div>
+        <div class="panel"><h4>Gaps are shown</h4><p>The child Alice lost as an infant appears as a small dashed node: “name not yet in the archive.” Missing people stay visible.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 12 COMPONENTS ======================= -->
+<section class="band raised" id="components">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 12</div><h2>Core interface elements</h2><p>Built here in HTML and CSS with the book’s tokens, using archive material.</p></div>
+    <div class="body">
+      <div class="kit">
+        <div class="panel s6"><div class="eyebrow">Navigation · Shutter band</div>
+          <div class="scroll-x"><div class="nav" style="min-width:640px;border-radius:4px"><span class="brand"><svg viewBox="0 0 64 52" width="32"><use href="#mark-s"/></svg>Drumore Friends</span><a class="on" href="#components">Timeline</a><a href="#components">Family</a><a href="#components">Places</a><a href="#components">Stories</a><span class="search">Search names, places, years</span></div></div>
+          <p class="spec-n">Four nouns and search, on a Shutter band. On phones the nouns become a labeled bottom bar, never a hamburger menu.</p>
+        </div>
+        <div class="panel s6"><div class="eyebrow">Era selector</div>
+          <div class="scroll-x"><div class="eras" role="tablist" aria-label="Eras" style="min-width:820px">
+            <button role="tab" style="--w:.7"><b>Before the record</b><span>to 1682</span></button>
+            <button role="tab" style="--w:1.2"><b>Ancestors</b><span>1683–1794</span></button>
+            <button role="tab" style="--w:1"><b>Settling Drumore</b><span>1795–1816</span></button>
+            <button role="tab" style="--w:1"><b>The meeting grows</b><span>1817–1860</span></button>
+            <button role="tab" style="--w:.8"><b>War years</b><span>1861–1865</span></button>
+            <button role="tab" class="on" aria-selected="true" style="--w:1.4"><b>Diaries and reunions</b><span>1866–1916</span></button>
+            <button role="tab" style="--w:1"><b>Remembering</b><span>1917–today</span></button>
+          </div></div>
+          <p class="spec-n">Segment width equals the era’s width on the timeline. Draft eras for Beth to rename. Arrow keys move and Enter travels.</p>
+        </div>
+        <div class="panel s2"><div class="eyebrow">Event marker</div>
+          <div class="stage-l"><svg viewBox="0 0 220 90" width="220" role="img" aria-label="Event marker states: rest, hover, selected.">
+            <path d="M0 45H220" stroke="#C9D0CB" stroke-width="2.5"/>
+            <circle cx="40" cy="45" r="6" fill="#FBFBF8" stroke="#17302B" stroke-width="2"/><circle cx="40" cy="45" r="2" fill="#17302B"/>
+            <circle cx="110" cy="45" r="9" fill="#FBFBF8" stroke="#17302B" stroke-width="2.4"/><circle cx="110" cy="45" r="3" fill="#17302B"/><rect x="70" y="8" width="80" height="22" rx="3" fill="#17302B"/><text x="110" y="23" text-anchor="middle" font-family="Public Sans" font-size="11" fill="#FBFBF8" font-weight="600">1890 · diary</text>
+            <circle cx="180" cy="45" r="15" fill="#E3A33B" opacity=".5"/><circle cx="180" cy="45" r="8" fill="#FBFBF8" stroke="#17302B" stroke-width="2.4"/><circle cx="180" cy="45" r="3" fill="#17302B"/>
+            <g font-family="Public Sans" font-size="10.5" fill="#59645F" text-anchor="middle"><text x="40" y="78">rest</text><text x="110" y="78">hover / focus</text><text x="180" y="78">selected</text></g>
+          </svg></div>
+          <p class="spec-n">12px mark in a 44px hit area. Shape carries evidence; these are “Reported.”</p>
+        </div>
+        <div class="panel s2"><div class="eyebrow">Person portrait</div>
+          <div class="stage-l" style="display:flex;gap:16px;justify-content:center">
+            <div class="ptok sel"><div class="face"><img src="{{f-wynona}}" alt="Wynona Lamborn"></div><b>Wynona Lamborn</b><span>born 1868</span></div>
+            <div class="ptok"><div class="face"><div class="initials" style="font-size:30px;border:0">WL</div></div><b>Will Lamborn</b><span>died 1876</span></div>
+          </div>
+          <p class="spec-n">Married women show their full name on their page. Initials when no photograph is identified.</p>
+        </div>
+        <div class="panel s2"><div class="eyebrow">Return to timeline</div>
+          <div class="stage-l" style="min-height:150px"><a class="back" href="#pages"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>Back to <span class="num">1890</span> <small>· Wynona</small></a></div>
+          <p class="spec-n">Always bottom-left. Names the year and person you came from, and restores the same zoom and selection.</p>
+        </div>
+        <div class="panel s4"><div class="eyebrow">Story card</div>
+          <div class="scard"><img class="ph" src="{{diary-title}}" alt="Title page of the diary reading Diary Book, Wynona Lamborn, Liberty Square, afterwards Fernglen."><div class="tx"><span class="when">12 Oct 1890 – 12 May 1891</span><h5>Wynona’s diary year</h5><p>Every day for seven months: school at Conowingo, weekends at Fernglen, and the people of southern Lancaster County.</p><div class="foot"><span class="evi rep"><i></i>Reported</span><span>9 scenes · 14 posts</span></div></div></div>
+          <p class="spec-n">The doorway into a story wherever it appears. Fixed parts: date in Walnut, Gelasio title, one sentence, evidence chip, counts.</p>
+        </div>
+        <div class="panel s2"><div class="eyebrow">Map pin</div>
+          <div class="stage-l"><svg viewBox="0 0 200 90" width="200" role="img" aria-label="Map pin states: recorded, reported, family story, selected.">
+            <g transform="translate(30 58)"><path d="M0 -38c-9 0-15 6-15 15 0 11 15 25 15 25s15-14 15-25c0-9-6-15-15-15z" fill="#17302B"/><circle cy="-23" r="5" fill="#FBFBF8"/></g>
+            <g transform="translate(78 58)"><path d="M0 -38c-9 0-15 6-15 15 0 11 15 25 15 25s15-14 15-25c0-9-6-15-15-15z" fill="#FBFBF8" stroke="#17302B" stroke-width="2.4"/><circle cy="-23" r="4" fill="#17302B"/></g>
+            <g transform="translate(126 58)"><path d="M0 -38c-9 0-15 6-15 15 0 11 15 25 15 25s15-14 15-25c0-9-6-15-15-15z" fill="#FBFBF8" stroke="#17302B" stroke-width="2" stroke-dasharray="3 2.5"/></g>
+            <g transform="translate(172 58)"><circle cy="-21" r="21" fill="#E3A33B" opacity=".5"/><path d="M0 -38c-9 0-15 6-15 15 0 11 15 25 15 25s15-14 15-25c0-9-6-15-15-15z" fill="#17302B"/><circle cy="-23" r="5" fill="#FBFBF8"/></g>
+            <g font-family="Public Sans" font-size="10" fill="#59645F" text-anchor="middle"><text x="30" y="80">recorded</text><text x="78" y="80">reported</text><text x="126" y="80">family</text><text x="172" y="80">selected</text></g>
+          </svg></div>
+          <p class="spec-n">Only building-level places get a pin.</p>
+        </div>
+        <div class="panel s6"><div class="eyebrow">Source viewer</div>
+          <div class="viewer">
+            <div class="doc">
+              <div class="bar"><span class="vtab"><i></i>Original · letter</span><span class="seg"><span>Page</span><span class="on">Both</span><span>Text</span></span></div>
+              <img src="{{P035-0}}" alt="Page one of Will Lamborn's 1873 letter to his daughter, in ink on ruled paper.">
+              <div class="bar"><span>Pinch or scroll to zoom</span><span>Page 1 of 3</span></div>
+            </div>
+            <div class="side">
+              <div><div class="k">Transcription</div><div class="tr">My Dearly beloved daughter thy fathers and Mothers lives are just wearing out, and ere many months pass away, the Sun of their lives will have set; and thee will behold them no more on Earth in their material forms; and dear Child, knowing that I am poor in what is called worldly possessions &amp; the probabilities are that I cannot bequeath to thee any property of that nature, I feel greatful that there is a wealth which I can and will cheerfully give to thee, that thee may use it daily during thy natural life and <s>and</s> be abundantly rewarded …</div></div>
+              <dl><dt>From</dt><dd>William Lewis “Will” Lamborn to Wynona</dd><dt>Date</dt><dd class="num">1873, as given in post P035</dd><dt>Source</dt><dd>Archive post P035, page 1 of 3</dd><dt>Status</dt><dd>Draft by Claude · awaiting Beth’s check</dd></dl>
+              <div><div class="k">What it adds</div><div style="font-size:14px;margin-top:4px">He writes of both parents’ lives “wearing out.” If the letter is from 1873, Phebe was still living then, which fits the 1874 death date in P057 better than “when she was 3” in P035.</div></div>
+            </div>
+          </div>
+          <p class="spec-n">The only Night surface in the system, so scans read true. Image and transcription side by side on desktop; on phones the transcription is a sheet that slides up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 13 MOTION & DEVICES ======================= -->
+<section class="band" id="motion">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 13</div><h2>Motion, desktop and phone</h2><p>Movement explains where you are. The phone layout comes first.</p></div>
+    <div class="body">
+      <div class="grid2">
+        <div class="sub">
+          <h3>What moves, and why</h3>
+          <ul class="rules">
+            <li><b>Selection.</b> The chosen lifeline or tree branch brightens to Lamp and the rest fade to Mist.</li>
+            <li><b>Travel.</b> Jumping to a year pans the field there, capped at 420ms.</li>
+            <li><b>Opening.</b> A card grows into its story from where it sat and shrinks back on return.</li>
+            <li><b>Nothing else.</b> No parallax, scroll-triggered reveals, autoplay or Ken Burns pans on photographs.</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <h3>Try it</h3>
+          <div class="panel demo-sel"><svg id="demoSel" viewBox="0 0 440 150" role="group" aria-label="Lifeline selection demo. Activate a line to select that person."></svg><p class="note" style="margin-top:8px">Tap a line, or use Tab and Enter. With reduced motion on, the change is instant.</p></div>
+        </div>
+      </div>
+      <div class="scroll-x"><table class="mtable">
+        <thead><tr><th>Token</th><th>Duration</th><th>Used for</th><th>Reduced motion</th></tr></thead>
+        <tbody>
+          <tr><td><code>--t-quick</code></td><td class="num">140ms</td><td>Hover, focus, pressed</td><td>Instant</td></tr>
+          <tr><td><code>--t-move</code></td><td class="num">240ms</td><td>Selection, dimming, panels</td><td>Instant</td></tr>
+          <tr><td><code>--t-travel</code></td><td class="num">420ms max</td><td>Panning to a year or era</td><td>Cut with a 120ms crossfade</td></tr>
+          <tr><td><code>--ease</code></td><td>cubic-bezier(.2,.7,.2,1)</td><td>Everything, eased out, no bounce</td><td>n/a</td></tr>
+        </tbody>
+      </table></div>
+      <div class="grid2">
+        <div class="panel"><h4>Phone · 360–767px</h4><ul>
+          <li><b>Time runs down the screen.</b> Lifelines are vertical threads at the left edge, with cards in one column.</li>
+          <li>The era selector is a sticky chip row. The current era stays visible.</li>
+          <li>The family tree shows one person at a time: parents above, children below.</li>
+          <li>Stories open full-screen with real URLs, and the return pill sits bottom-left.</li>
+          <li>Bottom bar: Timeline · Family · Places · Stories. Tap targets are 44px or larger.</li>
+        </ul></div>
+        <div class="panel"><h4>Desktop · 1024px and up</h4><ul>
+          <li><b>Time runs across.</b> Family lanes are labeled at the left, with the selected person’s card docked at the right.</li>
+          <li>“Follow her life” opens the person page beside a narrowed timeline.</li>
+          <li>The whole family tree is visible, with the card docked in a corner.</li>
+          <li>Stories are a 64-character column with sources in the margin.</li>
+          <li>The map can split the screen with the timeline, with one year chip driving both.</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 14 PAGE CONCEPTS ======================= -->
+<section class="band raised" id="pages">
+  <div class="wrap wide">
+    <div class="rail"><div class="no">Chapter 14</div><h2>Two page concepts</h2><p>The main timeline and one person’s story, built from Wynona Lamborn’s thread in Beth’s posts. Click a lifeline or portrait to follow someone else. “Follow her life” jumps to her page.</p></div>
+    <div class="body">
+      <div class="sub">
+        <h3>The main timeline, zoomed to one era</h3>
+        <div class="scroll-x"><div class="browser">
+          <div class="chrome"><i></i><i></i><i></i><span>drumorefriends.org/timeline/1866-1916</span></div>
+          <span class="chip arch">Archive example · draft</span>
+          <div class="nav"><span class="brand"><svg viewBox="0 0 64 52" width="32"><use href="#mark-s"/></svg>Drumore Friends</span><a class="on" href="#pages">Timeline</a><a href="#tree">Family</a><a href="#map">Places</a><a href="#pages">Stories</a><span class="search">Search names, places, years</span></div>
+          <div class="tl-body">
+            <div class="eras" aria-label="Eras">
+              <button style="--w:.7"><b>Before the record</b><span>to 1682</span></button><button style="--w:1.2"><b>Ancestors</b><span>1683–1794</span></button><button style="--w:1"><b>Settling Drumore</b><span>1795–1816</span></button><button style="--w:1"><b>The meeting grows</b><span>1817–1860</span></button><button style="--w:.8"><b>War years</b><span>1861–1865</span></button><button class="on" style="--w:1.4"><b>Diaries and reunions</b><span>1866–1916</span></button><button style="--w:1"><b>Remembering</b><span>1917–today</span></button>
+            </div>
+            <div class="tl-tools"><span>Showing <b style="color:var(--ink)">1866–1916</b> · 8 lifelines · 12 events · one person selected across every view</span><span class="tg" id="tlTabs" role="tablist"><button type="button" role="tab" data-v="timeline" class="on" aria-selected="true">Timeline</button><button type="button" role="tab" data-v="family" aria-selected="false">Family</button><button type="button" role="tab" data-v="map" aria-selected="false">Map</button><button type="button" role="tab" data-v="list" aria-selected="false">List</button></span></div>
+            <div class="tl-grid">
+              <div class="field" id="tlField">
+                <div class="view" data-view="timeline"><svg id="tlSvg" class="tl" viewBox="0 0 800 685" role="group" aria-label="Timeline 1866 to 1916 with lifelines for Wynona Lamborn's family."></svg></div>
+                <div class="view" data-view="family" hidden><div id="famView"></div></div>
+                <div class="view" data-view="map" hidden><div class="mv"><span class="chip arch mchip">Schematic · positions approximate</span><svg id="mapView" class="mapv" viewBox="0 -70 800 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Schematic map of places connected to the selected person."></svg></div></div>
+                <div class="view" data-view="list" hidden><div id="listView" class="lvw"></div></div>
+              </div>
+              <aside class="dock" id="tlDock" aria-live="polite"></aside>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="sub" id="person">
+        <h3>One person’s story</h3>
+        <div class="scroll-x"><div class="browser">
+          <div class="chrome"><i></i><i></i><i></i><span>drumorefriends.org/people/wynona-lamborn/the-diary-begins</span></div>
+          <span class="chip arch">Archive example · draft</span>
+          <div class="nav"><span class="brand"><svg viewBox="0 0 64 52" width="32"><use href="#mark-s"/></svg>Drumore Friends</span><a href="#pages">Timeline</a><a class="on" href="#tree">Family</a><a href="#map">Places</a><a href="#pages">Stories</a><span class="search">Search names, places, years</span></div>
+          <div class="pp">
+            <aside class="pp-side">
+              <div class="who"><img src="{{wynona}}" alt="Portrait of Wynona Lamborn"><div><h3>Wynona Lamborn</h3><div class="d">born 12 Oct 1868<br>married Early Earnhart, 1892</div></div></div>
+              <p class="bio">Jessie Wynona “Nonie” Lamborn. Raised at the Fernglen Store by her aunt and uncle after her parents died. A teacher, diarist and musician.</p>
+              <ol class="scenes">
+                <li><span>12 Oct 1868</span><b>Born</b></li>
+                <li><span>1873</span><b>Her father writes her a letter</b></li>
+                <li><span>5 Jul 1876</span><b>Her father dies; she goes to Fernglen</b></li>
+                <li><span>1879</span><b>Starts an autograph book</b></li>
+                <li class="on"><span>12 Oct 1890</span><b>Begins her diary</b></li>
+                <li><span>Nov 1890</span><b>A week at the Institute, Millersville</b></li>
+                <li><span>Feb 1891</span><b>Tiddlywinks reaches Drumore</b></li>
+                <li><span>8 Dec 1892</span><b>Marries Early Earnhart</b></li>
+              </ol>
+              <a class="back" href="#pages" style="justify-self:start;margin-left:6px"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>Back to <span class="num">1890</span> <small>· timeline</small></a>
+            </aside>
+            <article class="pp-main">
+              <div class="when"><b>12 Oct 1890</b><span class="evi rep"><i></i>Reported</span><span>Scene 5 of 8 · Fernglen and Fulton Township</span></div>
+              <h4>On her twenty-second birthday, Wynona begins a diary</h4>
+              <div class="story">
+                <p>She had finished teacher training at Millersville and was teaching at the one-room Conowingo School in Fulton Township. That was too far to travel every day, so during the week she lived with Aunt Alice and Uncle Will Shoemaker. On weekends she went home to Aunt Lib and Uncle Thomas at Fernglen.</p>
+                <p>Her first entry is the longest she ever wrote. “How time flies!” she begins. She kept it up every day until 12 May 1891.</p>
+              </div>
+              <div class="three">
+                <figure class="fig"><div class="mat" style="padding:8px"><img src="{{diary-title}}" alt="Diary title page: Diary Book, Wynona Lamborn, Liberty Square, afterwards Fernglen."><div class="tab" style="left:8px"><i></i>Original <span>· diary</span></div></div><figcaption>The title page. <b style="color:var(--shutter)">See the original →</b></figcaption></figure>
+                <figure class="fig"><div class="mat" style="padding:8px"><img src="{{fernglen}}" alt="The Fernglen Store and the Hambleton home in Drumore Township."><div class="tab" style="left:8px"><i></i>Original <span>· photograph</span></div></div><figcaption>Home: the Fernglen Store, Drumore. <b style="color:var(--shutter)">Open the map →</b></figcaption></figure>
+                <figure class="fig"><div class="mat" style="padding:8px"><img src="{{millersville}}" alt="Postcard of the Millersville State Normal School."><div class="tab" style="left:8px"><i></i>Original <span>· postcard</span></div></div><figcaption>Where she trained: Millersville.</figcaption></figure>
+              </div>
+              <blockquote class="quote" style="font-size:20px">“This being my twenty-second birthday, I thought it would be a good time to start a diary.”<cite>Diary, 12 Oct 1890 · <a href="#transcribe">Read the page and transcription</a></cite></blockquote>
+              <div class="nextprev"><span style="color:var(--pewter)">← 1879 · Starts an autograph book</span><b>Nov 1890 · A week at the Institute →</b></div>
+            </article>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 15 SAMPLE ======================= -->
+<section class="band deep" id="sample">
+  <div class="wrap wide">
+    <div class="rail"><div class="no">Chapter 15</div><h2>Wynona’s story, end to end</h2><p>A visit from Facebook to the source and back, on a phone. Built from Beth’s posts so the system can be judged with real material. The dates and relationships are as she reported them and still need checking.</p></div>
+    <div class="body">
+      <div class="grid2" style="align-items:start">
+        <div class="sub">
+          <h3>1 · The link preview on Facebook</h3>
+          <div class="og"><img src="{{diary-title}}" alt="Diary title page"><div class="tx"><div><div class="d">12 Oct 1890</div><h5>Wynona begins her diary</h5></div><div class="b"><svg viewBox="0 0 64 52" width="26"><use href="#mark-s"/></svg>Drumore Friends</div></div></div>
+          <p class="note">Each story generates a 1200 × 630 card: photo left, date in Walnut, title in Gelasio, mark bottom-left.</p>
+        </div>
+        <div class="sub">
+          <h3>Why phones first</h3>
+          <p class="prose" style="color:#DCE3DF;font-size:16.5px">Nearly every visit starts with a tap in the Facebook app. The phone flow has to be complete: story, timeline, source and family, each one tap from the next, with the same way back.</p>
+        </div>
+      </div>
+      <div class="phones">
+        <div class="phone-wrap"><div class="phone"><div class="sb"><span>9:41</span><span>●●●</span></div><div class="scr">
+          <div class="ph-nav"><svg viewBox="0 0 64 52" width="24"><use href="#mark-s"/></svg>Drumore Friends<span class="m">Menu</span></div>
+          <div style="padding:14px 16px;display:grid;gap:10px">
+            <div style="font-size:12.5px;font-weight:600;color:var(--walnut)">12 Oct 1890 · <span style="color:var(--pewter);font-weight:500">Scene 5 of 8</span></div>
+            <div style="font-family:var(--f-serif);font-size:25px;line-height:1.08;color:var(--shutter)">Wynona begins her diary</div>
+            <div class="mat" style="padding:7px;background:var(--limewash)"><img src="{{diary-title}}" alt="" style="height:150px;object-fit:cover"><div class="tab" style="left:7px;font-size:9.5px"><i></i>Original</div></div>
+            <p style="font-family:var(--f-serif);font-size:15px;line-height:1.55;margin-top:6px">“How time flies!” she wrote on her twenty-second birthday, and kept writing every day until May.</p>
+          </div>
+          <div class="ph-back"><span class="back">← See 1890 on the timeline</span></div>
+        </div></div><p class="ph-cap"><b>Arrive.</b> The story opens directly, with no splash page.</p></div>
+        <div class="phone-wrap"><div class="phone"><div class="sb"><span>9:42</span><span>●●●</span></div><div class="scr">
+          <div class="ph-nav"><svg viewBox="0 0 64 52" width="24"><use href="#mark-s"/></svg>Timeline<span class="m">Family · Map</span></div>
+          <div class="ph-era"><span>War years</span><span class="on">Diaries and reunions</span><span>Remembering</span></div>
+          <div style="position:relative;height:440px">
+            <svg viewBox="0 0 254 440" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+              <g stroke-linecap="round"><path d="M18 0V160" stroke="#C9D0CB" stroke-width="2.5"/><path d="M30 0V440" stroke="#E3A33B" stroke-width="4"/><path d="M42 0V440" stroke="#C9D0CB" stroke-width="2.5"/></g>
+              <circle cx="30" cy="66" r="6" fill="#FBFBF8" stroke="#17302B" stroke-width="2"/><circle cx="30" cy="196" r="11" fill="#E3A33B" opacity=".5"/><circle cx="30" cy="196" r="6" fill="#FBFBF8" stroke="#17302B" stroke-width="2"/><circle cx="30" cy="340" r="6" fill="#FBFBF8" stroke="#17302B" stroke-width="2"/>
+            </svg>
+            <div style="position:absolute;left:58px;right:10px;top:40px;display:grid;gap:10px">
+              <div class="panel" style="padding:10px"><div style="font-size:11px;color:var(--walnut);font-weight:600">1879</div><div style="font-family:var(--f-serif);font-size:15px;color:var(--shutter)">The autograph book</div></div>
+              <div class="panel" style="padding:10px;margin-top:46px;outline:2px solid var(--lamp)"><div style="display:flex;gap:8px;align-items:center"><img src="{{f-wynona}}" alt="" style="width:30px;height:30px;border-radius:50%"><div><div style="font-size:11px;color:var(--walnut);font-weight:600">12 Oct 1890</div><div style="font-family:var(--f-serif);font-size:15px;color:var(--shutter)">The diary begins</div></div></div><div style="font-size:11px;color:var(--pewter);margin-top:4px">You came from here</div></div>
+              <div class="panel" style="padding:10px;margin-top:52px"><div style="font-size:11px;color:var(--walnut);font-weight:600">8 Dec 1892</div><div style="font-family:var(--f-serif);font-size:15px;color:var(--shutter)">Marries Early Earnhart</div></div>
+            </div>
+          </div>
+        </div></div><p class="ph-cap"><b>Look around.</b> The timeline opens at 1890 with Wynona already selected.</p></div>
+        <div class="phone-wrap"><div class="phone" style="background:var(--night)"><div class="sb" style="background:var(--night)"><span>9:43</span><span>●●●</span></div><div class="scr" style="background:var(--night);color:var(--night-fg)">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;font-size:12px"><span style="display:inline-flex;gap:6px;align-items:center;font-weight:700;letter-spacing:.1em;font-size:10px;text-transform:uppercase"><i style="width:9px;height:9px;background:#B07A55;display:inline-block"></i>Original · diary</span><span style="color:#A9B5AF">Close ✕</span></div>
+          <img src="{{diary-spread}}" alt="" style="margin:2px 10px;width:calc(100% - 20px);height:200px;object-fit:cover;object-position:0 0">
+          <div style="margin-top:12px;background:var(--night-2);border-radius:14px 14px 0 0;padding:14px 16px;display:grid;gap:8px;min-height:250px">
+            <div style="width:36px;height:4px;border-radius:2px;background:#4A5551;justify-self:center"></div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8FA19A">Transcription · 12 Oct 1890</div>
+            <div style="font-family:var(--f-serif);font-size:14.5px;line-height:1.55">To-day has been dull and rainy, the leaves falling, covering the ground, as a reminder that winter is approaching. All hail! To Autumn…</div>
+          </div>
+        </div></div><p class="ph-cap"><b>Check the source.</b> The scan first, the transcription in a sheet. Closing returns to the exact scene.</p></div>
+        <div class="phone-wrap"><div class="phone"><div class="sb"><span>9:44</span><span>●●●</span></div><div class="scr">
+          <div class="ph-nav"><svg viewBox="0 0 64 52" width="24"><use href="#mark-s"/></svg>Family<span class="m">Timeline</span></div>
+          <div class="ftree-ph">
+            <span class="lbl">Parents</span>
+            <div class="row"><div class="p"><div class="initials">WL</div>Will<br>died 1876</div><div class="p"><div class="initials">PB</div>Phebe<br>died 1872 or 1874</div></div>
+            <div class="vl"></div>
+            <div class="p me"><img src="{{f-wynona}}" alt=""><b style="font-size:13px">Wynona</b>born 1868</div>
+            <div class="vl r"></div>
+            <span class="lbl">Raised by, from 1876</span>
+            <div class="row"><div class="p"><img src="{{f-lib}}" alt="">Aunt Lib</div><div class="p"><img src="{{f-thomas}}" alt="">Uncle Thomas</div></div>
+            <span class="lbl" style="margin-top:6px">Married 1892</span>
+            <div class="row"><div class="p"><img src="{{f-early}}" alt="">Early Earnhart</div></div>
+            <span class="lbl" style="margin-top:6px">Children</span>
+            <div class="row"><div class="p"><div class="initials">HE</div>Harold</div><div class="p"><div class="initials">RE</div>Raymond</div></div>
+          </div>
+        </div></div><p class="ph-cap"><b>Meet the family.</b> On phones the tree centers on one person. Tap anyone to move the center.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 16 ACCESS ======================= -->
+<section class="band raised" id="access">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 16</div><h2>Accessibility and performance</h2><p>A public history site is for everyone in the family, including the oldest members on the slowest phones.</p></div>
+    <div class="body"><div class="grid2">
+      <div class="panel"><h4>Accessibility · WCAG 2.2 AA minimum</h4><ul>
+        <li>Text meets AA everywhere and AAA for body text. Lamp is never text on light grounds.</li>
+        <li>Evidence, precision and provenance are always a shape plus a word.</li>
+        <li>The timeline and family tree each have a “Browse as a list” equivalent with real headings.</li>
+        <li>Keyboard: Tab through people in order, arrows move along a life or branch, Enter opens, Esc goes back. Focus is a 3px Lamp ring.</li>
+        <li>Every handwritten page has a plain-text transcription. It is the accessible version and the searchable one.</li>
+        <li>Text enlarges to 200% without breaking. Stories are at least 18px.</li>
+        <li>Living people appear only with consent, and each person page links to “Suggest a correction.”</li>
+      </ul></div>
+      <div class="panel"><h4>Performance · a mid-range phone on 4G</h4><ul>
+        <li>Every person, story and place has a real server-rendered URL with link-preview tags.</li>
+        <li>Largest content shown within 2.5s. First screen under 300 KB before photographs.</li>
+        <li>Responsive AVIF or WebP images. Portrait bubbles about 8 KB, timeline thumbnails about 30 KB, full scans as zoom tiles in the viewer only.</li>
+        <li>Fonts: Gelasio and Public Sans subset to Latin, about 120 KB. The handwriting face loads only on transcription pages.</li>
+        <li>Timeline and tree in SVG up to about 1,500 marks, Canvas beyond that. No WebGL needed.</li>
+        <li>TIFF masters live in an archive store, separate from web copies. The website is not the archive.</li>
+      </ul></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ======================= 17 DO / AVOID ======================= -->
+<section class="band" id="rules">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 17</div><h2>Do and avoid</h2><p>For future designers and AI-assisted implementation. Paste this page into prompts.</p></div>
+    <div class="body"><div class="da">
+      <div class="panel do"><h4>Do</h4><ul>
+        <li>Spell it <b>Drumore</b>. Use “Meeting House” as on the sign until Beth decides.</li>
+        <li>Use Gelasio for everything read, Public Sans for everything operated.</li>
+        <li>Use Limewash grounds with Shutter and Bench bands for rhythm.</li>
+        <li>Show every original whole, in its own color, with an Original tab.</li>
+        <li>Put a transcription beside every handwritten page.</li>
+        <li>Label every new image, map and transcription Drawn, with its maker and sources.</li>
+        <li>Give every date its precision and its “as written” form.</li>
+        <li>Draw people as lifelines with portraits, and fade them where the record ends.</li>
+        <li>Show “raised by” as its own link in the family tree.</li>
+        <li>Show conflicts (“1872 or 1874”) and link each source.</li>
+        <li>Keep one amber thing per screen.</li>
+        <li>Design for the phone first. Leave a way back on every screen.</li>
+      </ul></div>
+      <div class="panel av"><h4>Avoid</h4><ul>
+        <li>Sepia, parchment, paper textures, torn edges, wax seals, distressed fonts.</li>
+        <li>High-contrast display serifs with hairlines (Caslon Display, Playfair, Didone faces).</li>
+        <li>Handwriting fonts in the interface, or on anything not labeled Drawn.</li>
+        <li>Cream grounds with a terracotta accent. That is the generic AI look.</li>
+        <li>Colorizing, AI-upscaling faces, generating portraits or historical scenes.</li>
+        <li>AI-generated geography. Prompts are for map style only.</li>
+        <li>Ken Burns pans, parallax, scroll-jacking, autoplay.</li>
+        <li>Exact pins for places known only approximately.</li>
+        <li>Padding partial dates or silently converting Quaker dates.</li>
+        <li>Color coding families. Use labeled lanes and the tree instead.</li>
+        <li>Crosses, steeples, doves or quills in the mark.</li>
+        <li>Treating Facebook posts as the unit of history. Posts are sources for stories.</li>
+      </ul></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ======================= 18 TOKENS ======================= -->
+<section class="band raised" id="tokens">
+  <div class="wrap">
+    <div class="rail"><div class="no">Chapter 18</div><h2>Tokens and next steps</h2><p>Starter CSS for the prototype, and what this pass still needs.</p></div>
+    <div class="body">
+      <div class="code" id="tokenCode"><button class="copy" type="button" id="copyBtn">Copy</button>:root {
+  /* Core */
+  --limewash: #F1F2EE;  --plaster: #FBFBF8;  --ink: #1C2321;
+  --shutter: #17302B;   /* brand green, dark band */
+  --bench: #3A2A1F;     /* brand brown, second dark band */
+  --pewter: #59645F;    --hair: #D6DBD6;   --mist: #C9D0CB;
+  /* Meaning */
+  --walnut: #6E4229;    /* Original */
+  --river: #2E6273;     /* Drawn */
+  --lamp: #E3A33B;      /* Selected: fills and lines only */
+  --lamp-ink: #8A5A10;
+  /* Source viewer */
+  --night: #121816;  --night-2: #1C2422;  --night-fg: #E7EBE7;
+  /* Map */
+  --m-field: #E4E7DC;  --m-field-2: #DCE1D2;  --m-woods: #CDD7C4;
+  --m-water: #BCD1D5;  --m-road: #FFFFFF;   --m-line: #C5CCC2;
+  /* Transcription paper */
+  --paper: #FCFCF9;  --rule-blue: #B9CCE0;  --rule-red: #D9A3A0;  --hand-ink: #27324A;
+  /* Type */
+  --f-serif: "Gelasio", Georgia, serif;
+  --f-ui: "Public Sans", system-ui, sans-serif;
+  --f-hand: "Kalam", cursive;            /* Drawn transcriptions only, option A */
+  --f-hand-b: "Petrona", Georgia, serif; /* option B, set in italic */
+  --fs-display: clamp(38px, 6vw, 54px);
+  --fs-title: clamp(28px, 4vw, 36px);
+  --fs-story: clamp(18px, 1.2vw + 12px, 19px);
+  --lh-story: 1.62;  --measure: 64ch;
+  /* Shape and motion */
+  --radius: 6px;  --hit: 44px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --t-quick: 140ms;  --t-move: 240ms;  --t-travel: 420ms;
+}</div>
+      <div class="sub">
+        <h3>What would sharpen this next</h3>
+        <ol class="needs">
+          <li><div><b>Beth checks the family tree and Wynona’s scenes.</b> Every relationship here comes from her posts, so she is the first reviewer.</div></li>
+          <li><div><b>Original scans</b> at 600 dpi of the diary, the letter, the key portraits and the 1864 map. The Facebook copies are compressed to about 1000px.</div></li>
+          <li><div><b>The name:</b> “Meeting House” or “Meetinghouse,” and whether “Established 1816” can be cited.</div></li>
+          <li><div><b>Whether “Held in the Light” is welcome</b> as a public phrase.</div></li>
+          <li><div><b>Real maps in Figma</b>, traced from county GIS and the 1864, 1875 and 1899 maps, styled with the prompts in chapter 10.</div></li>
+          <li><div><b>Transcriptions:</b> draft the rest of the diary and the letter, then Beth checks them.</div></li>
+          <li><div><b>Rights and credits</b> for the images that open the site, including the Solanco Historical Society’s diary.</div></li>
+          <li><div><b>A reading test.</b> Beth and three older descendants try the phone flow on their own phones.</div></li>
+        </ol>
+      </div>
+      <div class="colophon"><span>Drumore Friends brand book · working draft v0.2 · October 2026</span><span>Archive images: Drumore Friends Meeting House Facebook page. Shown for design review; credits and rights to confirm before public use.</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function () {
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, parent, text) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (text != null) n.textContent = text; if (parent) parent.appendChild(n); return n; };
+  const C = { shutter: '#17302B', lamp: '#E3A33B', lampInk: '#8A5A10', mist: '#C9D0CB', pewter: '#59645F', ink: '#1C2321', hair: '#D6DBD6', walnut: '#6E4229', plaster: '#FBFBF8', lime: '#F1F2EE', river: '#2E6273' };
+  const font = 'Public Sans, sans-serif';
+  const reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  let IMG = {}; try { IMG = JSON.parse(document.getElementById('imgs').textContent); } catch (e) {}
+  let clipN = 0;
+  function portrait(parent, cx, cy, r, key, initials) {
+    const g = el('g', {}, parent);
+    if (key && IMG[key]) {
+      const id = 'clp' + (clipN++);
+      const cp = el('clipPath', { id }, g); el('circle', { cx, cy, r }, cp);
+      el('image', { href: IMG[key], x: cx - r, y: cy - r, width: 2 * r, height: 2 * r, 'clip-path': `url(#${id})`, preserveAspectRatio: 'xMidYMid slice' }, g);
+    } else {
+      el('circle', { cx, cy, r, fill: C.lime }, g);
+      el('text', { x: cx, y: cy + r * 0.3, 'text-anchor': 'middle', 'font-family': 'Gelasio, Georgia, serif', 'font-size': r * 0.78, fill: C.shutter }, g, initials || '');
+    }
+    return g;
+  }
+
+  /* ---------- Cover lifelines ---------- */
+  (function () {
+    const host = document.getElementById('coverLines'); if (!host) return;
+    const svg = el('svg', { viewBox: '0 0 1200 120', preserveAspectRatio: 'none' }, host);
+    let s = 7; const r = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 13; i++) { const y = 8 + i * 8, a = r() * 900, w = 160 + r() * 420; el('rect', { x: a, y, width: w, height: 1.6, fill: C.mist, opacity: .75 }, svg); }
+    el('rect', { x: 140, y: 64, width: 1000, height: 3, rx: 1.5, fill: C.lamp }, svg);
+    [300, 520, 705, 930].forEach((x, i) => { el('circle', { cx: x, cy: 65.5, r: 5, fill: i === 2 ? C.plaster : C.shutter, stroke: C.shutter, 'stroke-width': 2 }, svg); });
+  })();
+
+  /* ---------- Axis comparison (real archive data) ---------- */
+  (function () {
+    const svg = document.getElementById('axisFig'); if (!svg) return;
+    const ev = [[1683],[1686],[1688],[1708],[1711],[1722],[1746.7],[1757.8],[1768.9],[1776.3],[1777.7],[1780.4],[1795,0,'about'],[1801],[1806.9],[1811.85],[1812.03],[1816],[1822.2],[1824.05],[1828],[1853,1858],[1861,1865],[1864,1865],[1868.8],[1870.05],[1876.5],[1879],[1890.8],[1890.85],[1890.95,1891.15],[1891.1],[1891.3],[1896.1],[1912],[1914],[1916.75]];
+    const L = 60, R = 980, lin = y => L + (y - 1600) / 426 * (R - L);
+    const eras = [['Before the record',1600,1682,.55],['Ancestors',1683,1794,1.3],['Settling Drumore',1795,1816,1],['The meeting grows',1817,1860,1],['War years',1861,1865,.6],['Diaries and reunions',1866,1916,1.6],['Remembering',1917,2026,.75]];
+    const tot = eras.reduce((a, e) => a + e[3], 0); let acc = L;
+    const segs = eras.map(e => { const w = e[3] / tot * (R - L); const sg = { n: e[0], a: e[1], b: e[2], x: acc, w }; acc += w; return sg; });
+    const fol = y => { const sg = segs.find(s => y >= s.a && y < s.b + 1) || segs[segs.length - 1]; return sg.x + (y - sg.a) / (sg.b + 1 - sg.a) * sg.w; };
+    function row(y0, fx, title, folded) {
+      el('text', { x: 0, y: y0 - 34, 'font-family': font, 'font-size': 13, 'font-weight': 600, fill: C.shutter }, svg, title);
+      if (folded) segs.forEach((s, i) => { el('rect', { x: s.x + 1, y: y0 - 24, width: s.w - 2, height: 48, fill: i % 2 ? C.lime : C.plaster }, svg); el('text', { x: s.x + 4, y: y0 + 40, 'font-family': font, 'font-size': 10.5, fill: C.pewter }, svg, s.n.length * 5.4 > s.w ? s.n.split(' ')[0] : s.n); });
+      else { [1600, 1700, 1800, 1900, 2000].forEach(t => { el('line', { x1: lin(t), x2: lin(t), y1: y0 - 4, y2: y0 + 4, stroke: C.pewter }, svg); el('text', { x: lin(t), y: y0 + 22, 'text-anchor': 'middle', 'font-family': font, 'font-size': 11, fill: C.pewter }, svg, t); }); }
+      el('line', { x1: L, x2: R, y1: y0, y2: y0, stroke: C.hair, 'stroke-width': 1.5 }, svg);
+      ev.forEach((e, i) => { const yy = y0 - 12 + (i % 3) * 12;
+        if (e[1] > e[0]) el('rect', { x: fx(e[0]), y: yy - 2.5, width: Math.max(4, fx(e[1]) - fx(e[0])), height: 5, rx: 2.5, fill: C.shutter }, svg);
+        else if (e[2]) { el('rect', { x: fx(e[0]) - 8, y: yy - 2.5, width: 16, height: 5, rx: 2.5, fill: C.shutter, opacity: .45 }, svg); el('circle', { cx: fx(e[0]), cy: yy, r: 3.5, fill: C.plaster, stroke: C.shutter, 'stroke-width': 1.5 }, svg); }
+        else el('circle', { cx: fx(e[0]), cy: yy, r: 3.5, fill: C.shutter }, svg); });
+    }
+    row(62, lin, 'A straight ruler, 1600–2026: the events crowd into the middle third', false);
+    row(182, fol, 'Eras of planned width: the same 37 events, spread so each can be selected', true);
+  })();
+
+  /* ---------- Map style study ---------- */
+  (function () {
+    const svg = document.getElementById('mapSvg'); if (!svg) return;
+    const W = 900, H = 520; let s = 11; const r = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    const defs = el('defs', {}, svg);
+    const pat = el('pattern', { id: 'mhatch', width: 7, height: 7, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(45)' }, defs); el('path', { d: 'M0 0V7', stroke: C.river, 'stroke-width': 1, opacity: .45 }, pat);
+    el('rect', { width: W, height: H, fill: '#E4E7DC' }, svg);
+    // field quilt
+    const cols = 15, rows = 9, cw = W / cols, ch = H / rows, P = [];
+    for (let j = 0; j <= rows; j++) { P[j] = []; for (let i = 0; i <= cols; i++) { const ex = i === 0 || i === cols, ey = j === 0 || j === rows; P[j][i] = [i * cw + (ex ? 0 : (r() - .5) * cw * .55), j * ch + (ey ? 0 : (r() - .5) * ch * .55)]; } }
+    const tones = ['#E4E7DC', '#DCE1D2', '#E8EADF', '#DFE4D6'];
+    const fg = el('g', { stroke: '#C9D1C0', 'stroke-width': 1.1 }, svg);
+    for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) { const a = P[j][i], b = P[j][i + 1], c = P[j + 1][i + 1], d = P[j + 1][i]; el('path', { d: `M${a}L${b}L${c}L${d}Z`, fill: tones[Math.floor(r() * 4)] }, fg); }
+    // contours
+    const cg = el('g', { fill: 'none', stroke: '#D3D8CC', 'stroke-width': 1 }, svg);
+    for (let k = 0; k < 4; k++) el('path', { d: `M${520 + k * 26} 0 C ${560 + k * 30} 120 ${470 + k * 30} 230 ${560 + k * 26} 330 S ${690 + k * 20} 470 ${660 + k * 24} 520` }, cg);
+    // woods
+    const woods = [[300, 70, 70, 40], [470, 300, 90, 52], [760, 110, 80, 50], [180, 420, 70, 36], [640, 440, 60, 34]];
+    woods.forEach(([x, y, rx, ry]) => { let d = ''; for (let a = 0; a <= 12; a++) { const t = a / 12 * Math.PI * 2, k = .78 + r() * .35; d += (a ? 'L' : 'M') + (x + Math.cos(t) * rx * k).toFixed(1) + ' ' + (y + Math.sin(t) * ry * k).toFixed(1); } el('path', { d: d + 'Z', fill: '#CDD7C4', stroke: '#BCC8B2', 'stroke-width': 1 }, svg); });
+    // river + streams
+    el('path', { d: 'M0 0 H92 C130 90 76 170 112 250 C140 320 92 410 120 520 H0 Z', fill: '#BCD1D5' }, svg);
+    const st = el('g', { fill: 'none', stroke: '#9FBFC6', 'stroke-width': 2, 'stroke-linecap': 'round' }, svg);
+    el('path', { d: 'M112 250 C190 236 240 270 300 250 S 420 200 470 214 S 560 240 600 220' }, st);
+    el('path', { d: 'M300 250 C320 300 290 350 320 400 S 360 480 340 520', 'stroke-width': 1.5 }, st);
+    el('path', { d: 'M470 214 C500 170 480 120 520 80', 'stroke-width': 1.4 }, st);
+    el('text', { x: 30, y: 300, transform: 'rotate(-80 30 300)', 'font-family': 'Gelasio, Georgia, serif', 'font-style': 'italic', 'font-size': 16, fill: C.river }, svg, 'Broad River');
+    el('text', { x: 380, y: 226, 'font-family': 'Gelasio, Georgia, serif', 'font-style': 'italic', 'font-size': 12.5, fill: C.river }, svg, 'Fishing Run');
+    // roads
+    const roads = ['M120 380 C250 350 340 300 470 296 S 700 250 900 236', 'M420 0 C410 120 440 220 470 296 S 520 430 500 520', 'M470 296 C560 330 640 380 720 520'];
+    roads.forEach(d => el('path', { d, fill: 'none', stroke: '#C5CCC2', 'stroke-width': 8, 'stroke-linecap': 'round' }, svg));
+    roads.forEach(d => el('path', { d, fill: 'none', stroke: '#FFFFFF', 'stroke-width': 5, 'stroke-linecap': 'round' }, svg));
+    el('text', { x: 690, y: 236, 'font-family': font, 'font-size': 10.5, fill: C.pewter, 'letter-spacing': 1.2 }, svg, 'GLEN ROAD');
+    el('text', { x: 432, y: 70, transform: 'rotate(84 432 70)', 'font-family': font, 'font-size': 10.5, fill: C.pewter, 'letter-spacing': 1.2 }, svg, 'RIVER ROAD');
+    // farmsteads
+    [[250, 330], [330, 300], [560, 280], [610, 330], [700, 190], [780, 300], [380, 140], [560, 420], [240, 170], [820, 420]].forEach(([x, y]) => { el('rect', { x, y, width: 9, height: 6, fill: '#B9BEB2' }, svg); el('rect', { x: x + 12, y: y - 2, width: 12, height: 8, fill: '#C6CABF' }, svg); });
+    // precision shapes
+    el('rect', { x: 250, y: 400, width: 140, height: 80, fill: 'url(#mhatch)', stroke: C.river }, svg);
+    el('path', { d: 'M600 130 L690 118 L700 186 L612 198 Z', fill: C.lamp, 'fill-opacity': .22, stroke: C.lamp, 'stroke-width': 2.5 }, svg);
+    el('circle', { cx: 300, cy: 190, r: 38, fill: C.shutter, 'fill-opacity': .06, stroke: C.shutter, 'stroke-dasharray': '4 4' }, svg);
+    const pin = el('g', { transform: 'translate(470 286)' }, svg); el('circle', { r: 22, fill: C.lamp, opacity: .5 }, pin); el('path', { d: 'M0 -32c-9 0-15 6-15 15 0 11 15 25 15 25s15-14 15-25c0-9-6-15-15-15z', fill: C.shutter, transform: 'translate(0 6)' }, pin); el('circle', { cy: -11, r: 5, fill: C.plaster }, pin);
+    const lab = (x, y, a, b, bc) => { const g = el('g', { 'font-family': font }, svg); const w = Math.max(a.length * 7.2, b.length * 6.2) + 20; el('rect', { x, y, width: w, height: 40, rx: 3, fill: C.plaster, stroke: C.hair }, g); el('text', { x: x + 10, y: y + 16, 'font-size': 12.5, 'font-weight': 600, fill: C.ink }, g, a); el('text', { x: x + 10, y: y + 32, 'font-size': 11.5, fill: bc || C.pewter }, g, b); };
+    lab(492, 296, 'The store', 'Building · selected person', C.lampInk);
+    lab(620, 72, 'The farm', 'Parcel · 1864 survey', C.lampInk);
+    lab(232, 120, 'The crossroads', 'Community');
+    lab(258, 352, 'Her schools', 'Region · exact sites unknown');
+    const chip = el('g', { transform: 'translate(130 16)', 'font-family': font, 'font-size': 11 }, svg); el('rect', { width: 210, height: 34, rx: 17, fill: C.shutter }, chip); el('text', { x: 16, y: 21.5, fill: C.plaster, 'font-weight': 600 }, chip, 'Showing 1890'); el('text', { x: 104, y: 21.5, fill: '#B4C1BB' }, chip, '· base map today');
+    const sc = el('g', { transform: 'translate(800 498)', 'font-family': font, 'font-size': 10, fill: C.pewter }, svg); el('path', { d: 'M0 0H70M0 -4V4M70 -4V4', stroke: C.pewter, 'stroke-width': 1.5 }, sc); el('text', { x: 18, y: -6 }, sc, '½ mile');
+  })();
+
+  /* ---------- Shared people, relationships and one selection (from Beth's posts) ---------- */
+  const N = {
+      smedley: [500, 80, 'Smedley|Lamborn', 'died 1851', 'SL', 'Smedley Lamborn', 'Grandfather', 'Died 1851, long before Wynona was born.', 'P057, P067'],
+      margaret: [600, 80, 'Margaret Bolton|Lamborn', 'died 1855', 'MB', 'Margaret Bolton Lamborn', 'Grandmother', 'Died 1855. Her ten surviving children were 4 to 24.', 'P057, P067'],
+      george: [100, 255, 'George S.|Lamborn', 'eldest of 11', 'GL', 'George Smedley Lamborn', '“Uncle George”', 'Eldest of the eleven. Married Sarah Walker Coates, May 1856.', 'P067, P085'],
+      sarah: [190, 255, 'Sarah W. Coates|Lamborn', '“Aunt Sallie”', 'SC', 'Sarah Walker Coates Lamborn', 'Aunt by marriage', 'One of several women Wynona calls “Aunt Sallie.”', 'P085'],
+      will: [320, 255, 'Will|Lamborn', 'died 1876', 'WL', 'William Lewis “Will” Lamborn', 'Father', 'Fifth of eleven. Discharged from the Union Army with tuberculosis. Died 5 Jul 1876. No photograph identified yet.', 'P034, P035, P057'],
+      phebe: [410, 255, 'Phebe Barnard|Lamborn', 'died 1872 or 1874', 'PB', 'Phebe Barnard Lamborn', 'Mother', 'Died 1874 (P057), or when Wynona was 3 (P035). Sources disagree.', 'P035, P057'],
+      lib: [545, 255, 'Lib Lamborn|Hambleton', 'raised Wynona', 'LH', 'Mary Elizabeth “Lib” Lamborn Hambleton', 'Aunt who raised her', 'Took Wynona in after Will’s death, at the Fernglen Store.', 'P034, P045'],
+      thomas: [635, 255, 'Thomas B.|Hambleton', 'raised Wynona', 'TH', 'Thomas Benton Hambleton', 'Uncle who raised her', 'Teacher, Civil War veteran (79th Pennsylvania), keeper of the Fernglen Store and post office.', 'P034, P048, P072'],
+      alice: [775, 255, 'Alice Lamborn|Shoemaker', 'married 1870', 'AS', 'Alice Lamborn Shoemaker', 'Aunt', 'Married 20 Jan 1870. Wynona boarded with her family while teaching.', 'P045, P067'],
+      william: [865, 255, 'William L.|Shoemaker', 'born 1843', 'WS', 'William Lukens Shoemaker', '“Uncle Will,” uncle by marriage', 'Born 1843. Will Lamborn died at his home in 1876.', 'P034, P045, P067'],
+      more: [1010, 255, '7 more|children', '', '+7', 'Seven more Lamborn children', 'Aunts and uncles', 'Including Emeline, Elwood, Sarah Ellen, Lydia and Lucy. One died young.', 'P057, P067'],
+      linneaus: [70, 440, 'Linneaus|Lamborn', '', 'LL', 'Linneaus Lamborn', 'Cousin', 'Planned a surprise for his sister Lucretia in spring 1891.', 'P099'],
+      lucretia: [170, 440, 'Lucretia Mott|Lamborn', '', 'LM', 'Lucretia Mott Lamborn', 'Cousin', 'Linneaus’s sister.', 'P051, P099'],
+      wynona: [320, 440, 'Wynona|Lamborn', 'born 1868', 'WL', 'Jessie Wynona “Nonie” Lamborn Earnhart', 'Born 12 Oct 1868', 'Teacher and diarist. Married Early Earnhart 8 Dec 1892.', 'P045, P048, P064'],
+      early: [410, 440, 'Early|Earnhart', 'married 1892', 'EE', 'Early Earnhart', 'Husband', 'Married Wynona 8 Dec 1892. Named Early “because he arrived early.”', 'P064'],
+      winona: [700, 440, 'Winona|Shoemaker', 'about 1870', 'WS', 'Winona “Nonie” Shoemaker Drennan', 'Cousin, two years younger', 'Also called Nonie, which is why Beth calls our Nonie “Wynona.”', 'P045, P067, P071'],
+      harry: [790, 440, 'Harry|Drennan', '', 'HD', 'Harry Drennan', 'Cousin’s husband', 'Married Winona Shoemaker.', 'P071'],
+      lulu: [890, 440, 'Lula May|Shoemaker', 'about 1888', 'LS', 'Lula May “Lulu” Shoemaker Ulrich', 'Cousin', 'The toddler in Wynona’s diary.', 'P045, P058, P085'],
+      infant: [985, 440, 'A child', 'died as an infant', '', 'A child of Alice and William', 'Cousin', 'Died as an infant. Name not yet in the archive.', 'P067'],
+      harold: [320, 610, 'Harold|Earnhart', '', 'HE', 'Harold Earnhart', 'Son', 'Played in the Earnhart Family Orchestra.', 'P064, P112'],
+      raymond: [420, 610, 'Raymond|Earnhart', '', 'RE', 'Raymond Earnhart', 'Son', 'Played in the Earnhart Family Orchestra.', 'P064']
+    };
+  const COUPLES = [['smedley', 'margaret'], ['george', 'sarah'], ['will', 'phebe'], ['lib', 'thomas'], ['alice', 'william'], ['wynona', 'early'], ['winona', 'harry']];
+  const FAMS = [{ p: ['smedley', 'margaret'], k: ['george', 'will', 'lib', 'alice', 'more'], bar: 185 }, { p: ['george', 'sarah'], k: ['linneaus', 'lucretia'], bar: 368 }, { p: ['will', 'phebe'], k: ['wynona'], bar: 368 }, { p: ['alice', 'william'], k: ['winona', 'lulu', 'infant'], bar: 368 }, { p: ['wynona', 'early'], k: ['harold', 'raymond'], bar: 538 }];
+  const RAISE = { by: ['lib', 'thomas'], kid: 'wynona', note: 'from 1876' };
+  const REL = {
+    parents: k => (FAMS.find(f => f.k.includes(k)) || { p: [] }).p,
+    spouses: k => COUPLES.filter(c => c.includes(k)).map(c => c[0] === k ? c[1] : c[0]),
+    kids: k => FAMS.filter(f => f.p.includes(k)).flatMap(f => f.k),
+    sibs: k => (FAMS.find(f => f.k.includes(k)) || { k: [] }).k.filter(x => x !== k),
+    raisedBy: k => k === RAISE.kid ? RAISE.by : [],
+    raised: k => RAISE.by.includes(k) ? [RAISE.kid] : []
+  };
+  const PLACES = {
+    millersville: { x: 470, y: 34, n: 'Millersville Normal School', s: 'off this map, to the north', kind: 'off' },
+    liberty: { x: 575, y: 120, n: 'Liberty Square', s: 'her postal address before 1890', kind: 'community' },
+    fernglen: { x: 250, y: 168, n: 'Fernglen Store', s: 'Drumore · home from 1876', kind: 'building' },
+    meeting: { x: 440, y: 205, n: 'Drumore Friends Meeting House', s: 'Drumore Township', kind: 'building' },
+    earnhart: { x: 620, y: 262, n: 'Earnhart farm', s: 'Silver Spring Road', kind: 'community' },
+    shoemaker: { x: 450, y: 420, n: 'Shoemaker home', s: 'near Goshen P.O., Fulton', kind: 'community' },
+    conowingo: { x: 290, y: 470, n: 'Conowingo School', s: 'Fulton Township', kind: 'community' }
+  };
+  const PLACES_OF = { wynona: ['fernglen', 'liberty', 'millersville', 'conowingo', 'shoemaker', 'meeting'], will: ['shoemaker', 'meeting'], lib: ['fernglen', 'meeting'], thomas: ['fernglen'], alice: ['shoemaker', 'meeting'], william: ['shoemaker'], winona: ['shoemaker'], lulu: ['shoemaker'], early: ['earnhart'], george: ['meeting'] };
+  const BUS = []; let CUR = 'wynona';
+  const select = k => { if (!N[k] || k === 'more') return; CUR = k; BUS.forEach(f => f(k)); };
+  const shortName = k => N[k][2].replace('|', ' ');
+  const faceHTML = k => IMG[k] ? `<img src="${IMG[k]}" alt="">` : `<i>${k === 'infant' ? '' : N[k][4]}</i>`;
+  const pron = k => ['wynona', 'phebe', 'lib', 'alice', 'winona', 'lulu', 'lucretia', 'margaret', 'sarah'].includes(k) ? 'her' : 'his';
+
+  /* ---------- Family tree, chapter 11 ---------- */
+  (function () {
+    const svg = document.getElementById('treeSvg'), card = document.getElementById('tCard'); if (!svg) return;
+    const R = 30, lines = [];
+    const lg = el('g', {}, svg), ng = el('g', {}, svg);
+    COUPLES.forEach(([a, b]) => { const A = N[a], B = N[b]; const l = el('path', { d: `M${A[0] + R} ${A[1]} H${B[0] - R}`, class: 'ln' }, lg); lines.push([l, [a, b]]); });
+    FAMS.forEach(f => {
+      const A = N[f.p[0]], B = N[f.p[1]], mx = (A[0] + B[0]) / 2, xs = f.k.map(k => N[k][0]);
+      const d = `M${mx} ${A[1]} V${f.bar}` + (xs.length > 1 ? ` M${Math.min(...xs)} ${f.bar} H${Math.max(...xs)}` : ` H${xs[0]}`) + xs.map((x, i) => ` M${x} ${f.bar} V${N[f.k[i]][1] - R - (f.k[i] === 'infant' ? -12 : 0)}`).join('');
+      const l = el('path', { d, class: 'ln' }, lg); lines.push([l, f.p.concat(f.k)]);
+    });
+    const raise = el('path', { d: `M590 259 C 590 360, 420 360, 346 426`, class: 'ln raise' }, lg); lines.push([raise, ['lib', 'thomas', 'wynona']]);
+    const rl = el('text', { x: 512, y: 378, 'font-family': font, 'font-size': 11.5, fill: C.lampInk, 'paint-order': 'stroke', stroke: C.plaster, 'stroke-width': 5 }, lg, 'raised her from 1876');
+    const nodes = {};
+    Object.entries(N).forEach(([k, v]) => {
+      const [x, y, nm, dd, ini] = v;
+      const g = el('g', { class: 'nd', tabindex: k === 'more' ? -1 : 0, role: 'button', 'aria-label': v[5] + (v[6] ? ', ' + v[6] : '') }, ng);
+      if (k === 'infant') { el('circle', { cx: x, cy: y + 12, r: 14, fill: C.plaster, stroke: C.pewter, 'stroke-width': 1.5, 'stroke-dasharray': '3 3', class: 'ring' }, g); el('text', { x, y: y + 44, 'text-anchor': 'middle', class: 'nm' }, g, nm.split('|')[0]); el('text', { x, y: y + 58, 'text-anchor': 'middle', class: 'dd' }, g, dd); }
+      else if (k === 'more') { el('rect', { x: x - 34, y: y - 22, width: 68, height: 44, rx: 22, fill: C.lime, stroke: C.hair, 'stroke-width': 1.5 }, g); el('text', { x, y: y - 2, 'text-anchor': 'middle', class: 'nm' }, g, '7 more'); el('text', { x, y: y + 13, 'text-anchor': 'middle', class: 'dd' }, g, 'children'); }
+      else {
+        portrait(g, x, y, R, IMG[k] ? k : null, ini);
+        el('circle', { cx: x, cy: y, r: R, class: 'ring' }, g);
+        const [a, b] = nm.split('|');
+        el('text', { x, y: y + R + 16, 'text-anchor': 'middle', class: 'nm' }, g, a);
+        el('text', { x, y: y + R + 30, 'text-anchor': 'middle', class: 'nm' }, g, b);
+        if (dd) el('text', { x, y: y + R + 44, 'text-anchor': 'middle', class: 'dd' }, g, dd);
+      }
+      nodes[k] = g;
+      const go = () => select(k); g.addEventListener('click', go); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+    BUS.push(k => {
+      const rel = new Set();
+      lines.forEach(([l, m]) => { const on = m.includes(k); l.classList.toggle('on', on); if (on) m.forEach(x => rel.add(x)); });
+      rl.setAttribute('fill', ['lib', 'thomas', 'wynona'].includes(k) ? C.lampInk : C.pewter);
+      Object.entries(nodes).forEach(([n, g]) => { g.classList.toggle('sel', n === k); g.classList.toggle('rel', n !== k && rel.has(n)); g.setAttribute('aria-pressed', n === k); });
+      const v = N[k];
+      const ph = IMG[k] ? `<img class="ph" src="${IMG[k]}" alt="">` : `<div class="ph ini">${k === 'infant' ? '·' : v[4]}</div>`;
+      const act = k === 'wynona' ? '<a href="#person">Follow her life →</a>' : '<a href="#pages">See on the timeline →</a>';
+      card.innerHTML = `${ph}<div><h5>${v[5]}</h5><div class="rel">${v[6]}</div><div class="dt">${v[7]}</div><div class="src">Reported in ${v[8]}</div></div><div class="acts"><span class="evi rep"><i></i>Reported</span>${act}</div>`;
+    });
+  })();
+
+  /* ---------- Main timeline mock: four views, one selection ---------- */
+  (function () {
+    const svg = document.getElementById('tlSvg'), dock = document.getElementById('tlDock'); if (!svg) return;
+    const L = 150, Rt = 784, Y0 = 1864, Y1 = 1918, X = y => L + (y - Y0) / (Y1 - Y0) * (Rt - L);
+    const lanes = [['Lamborn', 40, 196], ['Hambleton', 228, 330], ['Shoemaker', 362, 464], ['Earnhart', 496, 540], ['Places', 572, 640]];
+    lanes.forEach(([n, a, b], i) => { if (i % 2 === 0) el('rect', { x: 0, y: a - 10, width: 800, height: b - a + 20, fill: '#F6F7F4' }, svg); el('text', { x: 14, y: a + 16, 'font-family': font, 'font-size': 12.5, 'font-weight': 600, fill: C.ink }, svg, n); });
+    [1870, 1880, 1890, 1900, 1910].forEach(t => { el('line', { x1: X(t), x2: X(t), y1: 30, y2: 648, stroke: C.hair, 'stroke-dasharray': '2 4' }, svg); el('text', { x: X(t), y: 670, 'text-anchor': 'middle', 'font-family': font, 'font-size': 11, fill: C.pewter }, svg, t); });
+    const TL = [
+      { k: 'will', y: 66, a: null, b: 1876.51, ev: [1873, 1876.51] },
+      { k: 'phebe', y: 120, a: null, b: 1874, split: 1871.9, ev: [] },
+      { k: 'wynona', y: 176, a: 1868.78, b: null, ev: [1868.78, 1876.51, 1879, 1890.78, 1892.93] },
+      { k: 'lib', y: 254, a: null, b: null, ev: [1876.51] },
+      { k: 'thomas', y: 308, a: null, b: null, ev: [1890.4] },
+      { k: 'alice', y: 388, a: null, b: null, ev: [1870.05] },
+      { k: 'winona', y: 442, a: 1870, fade: true, b: null, ev: [] },
+      { k: 'early', y: 520, a: null, b: null, ev: [1892.93] }
+    ];
+    const Y = Object.fromEntries(TL.map(p => [p.k, p.y]));
+    const links = [
+      { for: ['wynona', 'will', 'phebe'], d: `M${X(1868.78)} ${Y.will} V${Y.wynona}`, cls: 'par' },
+      { for: ['wynona', 'lib', 'thomas'], d: `M${X(1876.51)} ${Y.lib} V${Y.wynona}`, cls: 'raise', t: 'raised by Lib and Thomas, from 1876', tx: X(1876.51) + 8, ty: Y.wynona + 34 },
+      { for: ['wynona', 'early'], d: `M${X(1892.93)} ${Y.wynona} V${Y.early}`, cls: 'mar', t: 'married 8 Dec 1892', tx: X(1892.93) + 8, ty: Y.early - 14 },
+      { for: ['alice', 'winona'], d: `M${X(1870)} ${Y.alice} V${Y.winona}`, cls: 'par' }
+    ];
+    const lg = el('g', {}, svg), pg = el('g', {}, svg);
+    const linkEls = links.map(l => { const g = el('g', { class: 'lk' }, lg); el('path', { d: l.d, fill: 'none', stroke: l.cls === 'raise' ? C.lampInk : C.shutter, 'stroke-width': 1.6, 'stroke-dasharray': l.cls === 'par' ? '2 3' : l.cls === 'raise' ? '6 4' : '0' }, g); if (l.t) el('text', { x: l.tx, y: l.ty, 'font-family': font, 'font-size': 11, fill: l.cls === 'raise' ? C.lampInk : C.ink, 'paint-order': 'stroke', stroke: C.plaster, 'stroke-width': 4 }, g, l.t); return [g, l.for]; });
+    const rows = TL.map(p => {
+      const g = el('g', { class: 'ln', tabindex: 0, role: 'button', 'aria-label': N[p.k][5] }, pg);
+      const x0 = p.a != null ? X(p.a) : L, x1 = p.b != null ? X(p.b) : Rt;
+      el('rect', { x: L - 36, y: p.y - 18, width: Rt - L + 36, height: 36, fill: 'transparent' }, g);
+      if (p.fade) { for (let i = 0; i < 4; i++) el('line', { x1: X(p.a - 1.2 + i * .6), x2: X(p.a - .6 + i * .6), y1: p.y, y2: p.y, class: 's', opacity: .2 + i * .25 }, g); el('line', { x1: X(p.a + 1.2), x2: x1, y1: p.y, y2: p.y, class: 's' }, g); }
+      else if (p.split) { el('line', { x1: x0, x2: X(p.split), y1: p.y, y2: p.y, class: 's' }, g); el('line', { x1: X(p.split), x2: x1, y1: p.y, y2: p.y, class: 's', 'stroke-dasharray': '2 5' }, g); [p.split, p.b].forEach(t => el('circle', { cx: X(t), cy: p.y, r: 4, fill: C.shutter }, g)); el('path', { d: `M${X(p.split)} ${p.y + 6} Q${(X(p.split) + X(p.b)) / 2} ${p.y + 18} ${X(p.b)} ${p.y + 6}`, fill: 'none', stroke: C.shutter, 'stroke-width': 1.2, 'stroke-dasharray': '2 2' }, g); el('text', { x: X(p.b) + 10, y: p.y + 4, class: 'note' }, g, '1872 or 1874'); }
+      else el('line', { x1: x0, x2: x1, y1: p.y, y2: p.y, class: 's' }, g);
+      if (p.a == null) el('path', { d: `M${L - 4} ${p.y - 5} l-5 5 l5 5`, fill: 'none', stroke: C.pewter, 'stroke-width': 1.5 }, g);
+      if (p.b == null) el('path', { d: `M${Rt + 4} ${p.y - 5} l5 5 l-5 5`, fill: 'none', stroke: C.pewter, 'stroke-width': 1.5 }, g);
+      p.ev.forEach(t => { el('circle', { cx: X(t), cy: p.y, r: 5, fill: C.plaster, stroke: C.shutter, 'stroke-width': 1.8 }, g); el('circle', { cx: X(t), cy: p.y, r: 1.8, fill: C.shutter }, g); });
+      const bx = (p.a != null ? X(p.a) : L) - 24;
+      el('circle', { cx: bx, cy: p.y, r: 16, class: 'bub' }, g); portrait(g, bx, p.y, 14.5, IMG[p.k] ? p.k : null, N[p.k][4]);
+      el('text', { x: bx + 22, y: p.y - 10 }, g, N[p.k][5].replace(/ “[^”]+”/, '').replace('Jessie Wynona Lamborn Earnhart', 'Wynona Lamborn').replace('Mary Elizabeth Lamborn Hambleton', 'Lib Lamborn Hambleton'));
+      const go = () => select(p.k); g.addEventListener('click', go); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+      return [g, p];
+    });
+    [[1871, 'Lib & Thomas lease Fernglen'], [1885, 'buy the store'], [1890.4, 'post office opens'], [1910, 'reunion, 1910 or 1912'], [1916.75, 'centennial']].forEach(([t, n], i) => { const y = 590 + (i % 2) * 34; el('circle', { cx: X(t), cy: y, r: 5, fill: C.plaster, stroke: C.shutter, 'stroke-width': 1.8 }, svg); el('circle', { cx: X(t), cy: y, r: 1.8, fill: C.shutter }, svg); el('text', { x: X(t) + (t > 1912 ? -9 : 9), y: y + 4, 'text-anchor': t > 1912 ? 'end' : 'start', 'font-family': font, 'font-size': 11.5, fill: C.pewter }, svg, n); });
+    BUS.push(k => { rows.forEach(([g, p]) => { g.classList.toggle('sel', p.k === k); g.setAttribute('aria-pressed', p.k === k); }); linkEls.forEach(([g, f]) => g.classList.toggle('on', f.includes(k))); });
+
+    /* family view: the selected person at the center */
+    const fam = document.getElementById('famView');
+    const tok = (k, size, cls) => k === 'more' ? `<span class="ff-p more" style="--s:${size}px"><i>+7</i><b>7 more</b><span>children</span></span>` : `<button type="button" class="ff-p ${cls || ''} ${k === 'infant' ? 'inf' : ''}" data-k="${k}" style="--s:${size}px">${faceHTML(k)}<b>${shortName(k)}</b><span>${N[k][3] || ''}</span></button>`;
+    const row = (label, ks, size, cls) => ks.length ? `<div class="ff-row ${cls || ''}"><span class="ff-l">${label}</span><div class="ff-g">${ks.map(x => tok(x, size)).join('')}</div></div>` : '';
+    BUS.push(k => {
+      const par = REL.parents(k), rb = REL.raisedBy(k), sp = REL.spouses(k), kids = REL.kids(k), sibs = REL.sibs(k), rd = REL.raised(k);
+      fam.innerHTML = `<div class="ff">
+        ${par.length ? row('Parents', par, 64) : '<div class="ff-row"><span class="ff-l">Parents</span><div class="ff-g"><span class="ff-none">Not yet in the archive</span></div></div>'}
+        ${row('Raised by, ' + RAISE.note, rb, 64, 'r')}
+        <div class="ff-row me"><div class="ff-g">${tok(k, 104, 'sel')}${sp.map(s => '<span class="ff-m">married</span>' + tok(s, 72)).join('')}</div></div>
+        ${row(k === 'lib' || k === 'thomas' ? 'Raised' : '', rd, 64, 'r')}
+        ${row('Children', kids, 64)}
+        ${row('Brothers, sisters and cousins raised alongside', sibs, 52, 'sm')}
+      </div>`;
+      fam.querySelectorAll('button[data-k]').forEach(b => b.addEventListener('click', () => select(b.dataset.k)));
+    });
+
+    /* map view: a schematic of the person's places, zoomed to them */
+    const msv = document.getElementById('mapView');
+    let s = 23; const r = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    el('rect', { x: -400, y: -300, width: 1600, height: 1200, fill: '#E4E7DC' }, msv);
+    const OX = -360, OY = -320, cols = 26, rws = 22, cw = 57, ch = 62, P = [];
+    for (let j = 0; j <= rws; j++) { P[j] = []; for (let i = 0; i <= cols; i++) P[j][i] = [OX + i * cw + (r() - .5) * cw * .55, OY + j * ch + (r() - .5) * ch * .55]; }
+    const tones = ['#E4E7DC', '#DCE1D2', '#E8EADF', '#DFE4D6'], fg = el('g', { stroke: '#C9D1C0', 'stroke-width': 1.1 }, msv);
+    for (let j = 0; j < rws; j++) for (let i = 0; i < cols; i++) { const a = P[j][i], b = P[j][i + 1], c = P[j + 1][i + 1], d = P[j + 1][i]; el('path', { d: `M${a}L${b}L${c}L${d}Z`, fill: tones[Math.floor(r() * 4)] }, fg); }
+    el('path', { d: 'M-400 -340 H70 C110 -120 90 0 96 0 C140 110 86 220 124 330 C150 420 104 500 120 560 C130 700 100 860 120 1040 H-400 Z', fill: '#BCD1D5' }, msv);
+    el('text', { x: 46, y: 330, transform: 'rotate(-82 46 330)', 'font-family': 'Gelasio, Georgia, serif', 'font-style': 'italic', 'font-size': 16, fill: C.river }, msv, 'Susquehanna River');
+    el('path', { d: 'M120 330 C260 300 380 352 520 326 S 720 300 1200 318', fill: 'none', stroke: C.shutter, 'stroke-width': 1.4, 'stroke-dasharray': '8 6', opacity: .5 }, msv);
+    el('text', { x: 700, y: 296, 'font-family': font, 'font-size': 11, 'letter-spacing': 2, fill: C.pewter }, msv, 'DRUMORE');
+    el('text', { x: 700, y: 352, 'font-family': font, 'font-size': 11, 'letter-spacing': 2, fill: C.pewter }, msv, 'FULTON');
+    el('path', { d: 'M470 -400 V40', stroke: '#C5CCC2', 'stroke-width': 8 }, msv);
+    const pg2 = el('g', {}, msv), pnodes = {};
+    Object.entries(PLACES).forEach(([key, p]) => {
+      const g = el('g', { class: 'pl' }, pg2);
+      el('circle', { cx: p.x, cy: p.y, r: 26, class: 'halo' }, g);
+      if (p.kind === 'building') { el('path', { d: `M${p.x} ${p.y - 26}c-9 0-15 6-15 15 0 11 15 25 15 25s15-14 15-25c0-9-6-15-15-15z`, class: 'pin', transform: `translate(0 6)` }, g); el('circle', { cx: p.x, cy: p.y - 5, r: 4.5, fill: C.plaster }, g); }
+      else if (p.kind === 'off') { el('path', { d: `M${p.x - 12} ${p.y + 6} L${p.x} ${p.y - 10} L${p.x + 12} ${p.y + 6}`, fill: 'none', class: 'pinl', 'stroke-width': 3 }, g); }
+      else el('circle', { cx: p.x, cy: p.y, r: 20, class: 'area' }, g);
+      const tx = p.x + (p.kind === 'off' ? 20 : 24);
+      el('text', { x: tx, y: p.y - 2, class: 'pn' }, g, p.n);
+      el('text', { x: tx, y: p.y + 13, class: 'ps' }, g, p.s);
+      pnodes[key] = g;
+    });
+    const chip = el('g', { 'font-family': font, 'font-size': 11 }, msv);
+    const note = el('text', { class: 'mnote', 'text-anchor': 'middle' }, msv);
+    let vb = [0, -70, 800, 700], anim;
+    function setVB(t) { msv.setAttribute('viewBox', t.map(v => v.toFixed(1)).join(' ')); vb = t; }
+    function zoomTo(t) {
+      cancelAnimationFrame(anim); const from = vb.slice(), t0 = performance.now(), D = reduce ? 0 : 420;
+      const step = now => { const u = D ? Math.min(1, (now - t0) / D) : 1, e = 1 - Math.pow(1 - u, 3); setVB(from.map((v, i) => v + (t[i] - v) * e)); if (u < 1) anim = requestAnimationFrame(step); };
+      anim = requestAnimationFrame(step);
+    }
+    BUS.push(k => {
+      const mine = PLACES_OF[k] || [];
+      Object.entries(pnodes).forEach(([key, g]) => { g.classList.toggle('on', mine.includes(key)); g.classList.toggle('dim', mine.length > 0 && !mine.includes(key)); });
+      note.textContent = mine.length ? '' : `No places for ${shortName(k)} in the archive yet`;
+      note.setAttribute('x', 400); note.setAttribute('y', 300);
+      const A = (msv.clientWidth && msv.clientHeight) ? msv.clientWidth / msv.clientHeight : 800 / 700;
+      if (!mine.length) { const h0 = 800 / A; return zoomTo([0, 280 - h0 / 2, 800, h0]); }
+      const xs = mine.map(m => PLACES[m].x), ys = mine.map(m => PLACES[m].y);
+      let x0 = Math.min(...xs) - 90, x1 = Math.max(...xs) + 230, y0 = Math.min(...ys) - 80, y1 = Math.max(...ys) + 80;
+      let w = Math.max(x1 - x0, 600), h = Math.max(y1 - y0, 420); if (w / h > A) h = w / A; else w = h * A;
+      const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2; zoomTo([cx - w / 2, cy - h / 2, w, h]);
+    });
+
+    /* list view */
+    const list = document.getElementById('listView');
+    const order = ['wynona', 'will', 'phebe', 'lib', 'thomas', 'alice', 'william', 'winona', 'lulu', 'early', 'george', 'sarah', 'linneaus', 'lucretia', 'harry', 'harold', 'raymond', 'smedley', 'margaret'];
+    list.innerHTML = '<table class="lv"><thead><tr><th></th><th>Name</th><th>To Wynona</th><th>Known dates</th><th>Places</th></tr></thead><tbody>' + order.map(k => `<tr data-k="${k}" tabindex="0"><td><span class="lv-f">${faceHTML(k)}</span></td><td><b>${N[k][5]}</b></td><td>${k === 'wynona' ? '—' : N[k][6]}</td><td class="num">${N[k][3] || '—'}</td><td class="num">${(PLACES_OF[k] || []).length || '—'}</td></tr>`).join('') + '</tbody></table>';
+    list.querySelectorAll('tr[data-k]').forEach(tr => { const go = () => select(tr.dataset.k); tr.addEventListener('click', go); tr.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } }); });
+    BUS.push(k => list.querySelectorAll('tr[data-k]').forEach(tr => tr.classList.toggle('sel', tr.dataset.k === k)));
+
+    /* tabs */
+    const tabs = document.querySelectorAll('#tlTabs button'), views = document.querySelectorAll('#tlField .view');
+    const show = v => { tabs.forEach(b => { const on = b.dataset.v === v; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); }); views.forEach(x => x.hidden = x.dataset.view !== v); };
+    tabs.forEach(b => b.addEventListener('click', () => { show(b.dataset.v); if (b.dataset.v === 'map') select(CUR); }));
+
+    /* dock */
+    BUS.push(k => {
+      const v = N[k], ph = IMG[k] ? `<img class="ph" src="${IMG[k]}" alt="">` : `<div class="ph ini"><div>${k === 'infant' ? '·' : v[4]}<small>No photograph identified yet</small></div></div>`;
+      const pl = (PLACES_OF[k] || []).map(p => PLACES[p].n);
+      const go = k === 'wynona' ? '<a href="#person">Follow her life →</a>' : `<a href="#pages" data-v="family">See ${pron(k)} family →</a>`;
+      dock.innerHTML = `${ph}<h5>${v[5]}</h5><div class="d">${v[6]}</div><div class="m">${v[7]}</div>${pl.length ? `<div class="m"><b style="color:var(--ink)">Places:</b> ${pl.join(' · ')}</div>` : ''}<div><span class="evi rep"><i></i>Reported</span></div><div class="go">${go}</div>`;
+      const a = dock.querySelector('a[data-v]'); if (a) a.addEventListener('click', e => { e.preventDefault(); show('family'); });
+    });
+  })();
+
+  select('wynona');
+
+  /* ---------- Motion demo ---------- */
+  (function () {
+    const svg = document.getElementById('demoSel'); if (!svg) return;
+    const ppl = [['Will', 20, 190, 26], ['Wynona', 60, 420, 58], ['Lib', 10, 430, 90], ['Early', 160, 430, 122]];
+    let sel = 1; const lines = [];
+    ppl.forEach((p, i) => {
+      const g = el('g', { class: 'ln', tabindex: 0, role: 'button', 'aria-label': 'Select ' + p[0] }, svg);
+      el('rect', { x: p[1] - 6, y: p[3] - 14, width: p[2] - p[1] + 12, height: 28, fill: 'transparent' }, g);
+      const l = el('line', { x1: p[1], x2: p[2], y1: p[3], y2: p[3], 'stroke-linecap': 'round' }, g);
+      const t = el('text', { x: p[1], y: p[3] - 8, 'font-family': font, 'font-size': 11.5 }, g, p[0]);
+      lines.push([l, t]);
+      const go = () => { sel = i; paint(); };
+      g.addEventListener('click', go); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+    function paint() { lines.forEach(([l, t], i) => { const on = i === sel; l.setAttribute('stroke', on ? C.lamp : C.mist); l.setAttribute('stroke-width', on ? 4.5 : 2.5); t.setAttribute('fill', on ? C.lampInk : C.pewter); t.setAttribute('font-weight', on ? 700 : 400); }); }
+    paint();
+  })();
+
+  /* ---------- Handwriting switch ---------- */
+  (function () {
+    const card = document.getElementById('txCard'); if (!card) return;
+    const btns = document.querySelectorAll('.handpick button');
+    btns.forEach(b => b.addEventListener('click', () => { btns.forEach(x => x.setAttribute('aria-pressed', x === b)); card.classList.toggle('chancery', b.dataset.hand === 'b'); }));
+  })();
+
+  /* ---------- Copy tokens ---------- */
+  (function () {
+    const b = document.getElementById('copyBtn'), box = document.getElementById('tokenCode'); if (!b) return;
+    b.addEventListener('click', () => {
+      const txt = box.textContent.replace(/^Copy/, '').trim();
+      const done = () => { b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1600); };
+      function selAll() { const r = document.createRange(); r.selectNodeContents(box); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected'; }
+      try { navigator.clipboard.writeText(txt).then(done, selAll); } catch (e) { selAll(); }
+    });
+  })();
+})();
+</script>

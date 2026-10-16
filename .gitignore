@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env*
+.DS_Store
+# rebuilt by brand-book/build.py
+brand-book/Drumore-Friends-Brand-Book-v0.2.html
