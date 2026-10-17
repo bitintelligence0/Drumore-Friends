@@ -4,6 +4,8 @@ A private website prototype for the history of the Drumore Friends Meeting House
 
 Planning lives in Linear: team **DRU**, project *Drumore Friends Meeting House — Interactive History Prototype*, milestones 6–10.
 
+Contributor and agent work must follow [`CONTRIBUTING.md`](CONTRIBUTING.md). A change is not submitted until it has a visible pull-request URL targeting `bitintelligence0/Drumore-Friends:main`.
+
 ## What’s in this repo
 
 | Folder | What it is |
