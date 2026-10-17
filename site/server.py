@@ -7,7 +7,7 @@ DATA=json.loads((ROOT/'content.json').read_text())
 ARCHIVE=resolve_archive(DATA.get('archiveSnapshot'))
 POSTS={p['id']:p for p in DATA['posts']}
 IMAGES={i['id']:i for i in DATA['images']}
-STATIC={'/':'index.html','/app.js':'app.js','/store.js':'store.js','/lib.js':'lib.js','/explore.js':'explore.js','/timeline.js':'timeline.js','/map.js':'map.js','/hero.js':'hero.js','/family.js':'family.js','/reading.js':'reading.js','/site.css':'site.css','/content.json':'content.json','/mark.svg':'mark.svg','/mark-small.svg':'mark-small.svg','/favicon.svg':'favicon.svg'}
+STATIC={'/':'index.html','/app.js':'app.js','/store.js':'store.js','/lib.js':'lib.js','/explore.js':'explore.js','/timeline.js':'timeline.js','/map.js':'map.js','/hero.js':'hero.js','/family.js':'family.js','/reading.js':'reading.js','/site.css':'site.css','/content.json':'content.json','/mark.svg':'mark.svg','/mark-small.svg':'mark-small.svg','/favicon.svg':'favicon.svg','/places-geo.json':'places-geo.json','/vendor/leaflet.js':'vendor/leaflet.js','/vendor/leaflet.css':'vendor/leaflet.css'}
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         path=urllib.parse.urlsplit(self.path).path

@@ -51,6 +51,10 @@ Checked in a browser at 1440×1000 and 390×844: landing, era switching, person,
 
 Not yet done: full keyboard and screen-reader passes (markers and lifelines are focusable and respond to Enter, but the List view is the accessible equivalent for now); image thumbnails (full scans load in Imagery); self-hosted fonts (Google Fonts for now); the real traced maps. Questions for Beth are in `../docs/BETH_QUESTIONS.md`.
 
+### OpenStreetMap places, 17 October 2026
+
+The Map tab now draws places on an OpenStreetMap base map with Leaflet 1.9.4 (vendored in `vendor/`, so no install). Locations live in `places-geo.json`, built by `build_geo.py` from named OpenStreetMap objects. Each entry records its OSM id and is marked "proposed, unverified". `content.json` still keeps `places[].coordinates` null until someone reviews a location. Townships, boroughs and counties are drawn as outlines, communities as soft circles and Silver Spring Road as a line. Nothing becomes an exact pin unless a location is entered by hand in `MANUAL` in `build_geo.py`. Six places with no reliable OSM match are listed in the map's "Not yet on the map" panel. A plain mouse wheel scrolls the page, and Ctrl/⌘ + wheel zooms the map. Tiles load from tile.openstreetmap.org, so the map needs an internet connection. `validate.py` checks that every place has a map decision. The old schematic drawing is in Git history.
+
 ## Source snapshot and selection
 
 Source: the private shared Google Drive folder **Personal / Family / Drumore Friends / 01 Source Archive**, captured October 15, 2026. SHA-256 hashes for the three input curation files are in `content.json.archiveSnapshot`. The current structured layer contains **47 dated events, 76 linked posts, 32 selected image records, 20 provisional people, 20 broad or unresolved places, 1 story, and 5 scenes**. It does not contain full post text or image bytes. The local server reads those files from the synchronized archive on demand and exposes only selected `/source/:postId` and `/media/:imageId` paths. The preserved source archive is never written by the site.

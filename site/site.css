@@ -98,8 +98,7 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
 .explore { display: grid; }
 .mapstrip { display: none; }
 .mapstrip.tall { display: block; position: relative; background: var(--m-field); border: 1px solid var(--hair); border-radius: 4px; height: clamp(420px, 52vw, 680px); overflow: hidden; }
-.mapstrip svg { display: block; width: 100%; height: 100%; }
-.map-ui { position: absolute; inset: 12px max(var(--gutter), env(safe-area-inset-left, 0px)) auto; display: flex; justify-content: space-between; gap: 10px; pointer-events: none; }
+.map-ui { position: absolute; z-index: 500; inset: 12px max(var(--gutter), env(safe-area-inset-left, 0px)) auto; display: flex; justify-content: space-between; gap: 10px; pointer-events: none; }
 .map-ui > * { pointer-events: auto; }
 .map-title { background: rgb(251 251 248 / .92); border: 1px solid var(--hair); border-radius: 4px; padding: 7px 12px; display: grid; gap: 1px; }
 .map-title b { font-family: var(--f-serif); font-weight: 400; font-size: 17px; color: var(--shutter); }
@@ -109,25 +108,22 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
 .mchip::before { content: ""; width: 8px; height: 8px; border: 1.5px dashed var(--river); transform: rotate(45deg); }
 .mapbtn { all: unset; cursor: pointer; font-size: 12.5px; font-weight: 600; background: var(--plaster); border: 1px solid var(--hair); border-radius: 999px; padding: 5px 12px; color: var(--shutter); }
 .mapbtn:focus-visible { outline: 3px solid var(--lamp); }
-.mapv .pl { cursor: pointer; transition: opacity var(--t-move) var(--ease); }
-.mapv .pl.dim { opacity: .38; }
-.mapv .halo { fill: var(--lamp); opacity: 0; transition: opacity var(--t-move) var(--ease); }
-.mapv .pl.on .halo { opacity: .4; }
-.mapv .pl.sel .halo { opacity: .65; }
-.mapv .pin { fill: var(--shutter); }
-.mapv .pin-dot { fill: var(--plaster); }
-.mapv .area { fill: rgb(23 48 43 / .06); stroke: var(--shutter); stroke-dasharray: 4 4; stroke-width: 1.4; }
-.mapv .region { fill: rgb(46 98 115 / .05); stroke: var(--river); stroke-dasharray: 2 5; stroke-width: 1.2; }
-.mapv .unres { fill: var(--plaster); stroke: var(--pewter); stroke-dasharray: 3 3; stroke-width: 1.5; }
-.mapv .pl.on .area { fill: rgb(227 163 59 / .22); stroke: var(--lamp-ink); }
-.mapv .off { fill: none; stroke: var(--shutter); stroke-width: 2.5; }
-.mapv .pn { font: 600 13px var(--f-ui); fill: var(--ink); paint-order: stroke; stroke: var(--m-field); stroke-width: 4px; stroke-linejoin: round; }
-.mapv .ps { font: 400 11px var(--f-ui); fill: var(--pewter); paint-order: stroke; stroke: var(--m-field); stroke-width: 4px; }
-.mapv .pl.on .ps, .mapv .pl.sel .ps { fill: var(--lamp-ink); }
-.mapv .lbl-hide .pn, .mapv .lbl-hide .ps { display: none; } .mapv .bg-hide { visibility: hidden; } .mapv .lbl-one .ps { display: none; }
-.mapv .county { font: 600 11px var(--f-ui); letter-spacing: .22em; fill: #8C978F; }
-.mapv .water { font: italic 15px var(--f-serif); fill: var(--river); }
-.mapv .pl:focus-visible .halo { opacity: .6; }
+.mapstrip .lmap { position: absolute; inset: 0; background: var(--m-field); font-family: var(--f-ui); }
+.lmap .leaflet-tile-pane { filter: saturate(.45) sepia(.12) contrast(.94) brightness(1.03); }
+.lmap .mtip { background: rgb(251 251 248 / .94); border: 1px solid var(--hair); border-radius: 3px; box-shadow: none; padding: 3px 7px; display: grid; gap: 0; color: var(--ink); white-space: nowrap; }
+.lmap .mtip::before { display: none; }
+.lmap .mtip b { font: 600 12.5px var(--f-ui); } .lmap .mtip span { font: 400 10.5px var(--f-ui); color: var(--pewter); }
+.lmap .mtip.on, .lmap .mtip.sel { border-color: var(--lamp); background: #FBF3E3; } .lmap .mtip.on span, .lmap .mtip.sel span { color: var(--lamp-ink); }
+.lmap .mtip.dim { opacity: .5; } .lmap .mtip.hide { visibility: hidden; }
+.lmap .mpop .leaflet-popup-content { font: 400 13px/1.45 var(--f-ui); color: var(--ink); margin: 10px 14px; } .lmap .mpop p { margin: 4px 0 0; } .lmap .mpop .mp-src { font-size: 11.5px; color: var(--pewter); }
+.lmap .leaflet-control-attribution { font-size: 10.5px; background: rgb(251 251 248 / .85); }
+.lmap .leaflet-interactive:focus-visible { outline: 3px solid var(--lamp); }
+.map-note { position: absolute; left: max(var(--gutter), 12px); bottom: 14px; z-index: 500; background: #FBF3E3; border: 1px dashed #D9B577; border-radius: 3px; padding: 6px 10px; font-size: 12.5px; color: var(--lamp-ink); max-width: min(420px, 70%); }
+.map-unmapped { position: absolute; right: max(var(--gutter), 12px); top: 64px; z-index: 500; max-width: 300px; background: rgb(251 251 248 / .95); border: 1px solid var(--hair); border-radius: 4px; font-size: 12.5px; }
+.map-unmapped summary { cursor: pointer; padding: 6px 10px; font-weight: 600; color: var(--shutter); }
+.map-unmapped ul { list-style: none; margin: 0; padding: 0 10px 8px; display: grid; gap: 8px; max-height: 300px; overflow: auto; }
+.map-unmapped li { display: grid; gap: 2px; } .map-unmapped li span { font-size: 11.5px; color: var(--pewter); line-height: 1.35; }
+.map-unmapped li.on .linkbtn { color: var(--lamp-ink); font-weight: 700; }
 
 /* ---------- Explore: cover hero (book "COVER") and Gable Line story (book chapter 6) ---------- */
 .cover { padding-block: clamp(28px, 4vw, 48px) 0; }
@@ -539,6 +535,7 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
   .reasons { gap: 8px; } .reasons > div { padding: 12px 14px; } .gable-txt .lead { font-size: 17px; }
   .mainnav [data-nav="explore"] { display: none; } /* the brand links to Explore and the bottom bar holds its modes */
   .map-ui { inset: 10px 16px auto; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .map-unmapped { top: auto; bottom: 30px; right: auto; left: 10px; max-width: calc(100% - 70px); } .map-unmapped ul { max-height: 34vh; } .map-note { bottom: 70px; left: 10px; max-width: calc(100% - 70px); }
   .map-title { padding: 5px 10px; } .map-title b { font-size: 15px; } .map-title span { font-size: 11px; }
   .mapstrip.tall { height: 62vh; margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); border-radius: 0; border-inline: 0; }
   .eras.desk { display: none; }

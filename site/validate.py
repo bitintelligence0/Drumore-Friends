@@ -36,6 +36,12 @@ for image in DATA['images']:
 for scene in DATA['scenes']:
  assert scene['eventId'] in ids['events']
  assert set(scene['sourcePostIds']).issubset(set(next(e for e in DATA['events'] if e['id']==scene['eventId'])['sourcePostIds']))
+# proposed map locations (build_geo.py): every place has a decision, ids are real, nothing is marked verified
+GEO=json.loads((pathlib.Path(__file__).resolve().parent/'places-geo.json').read_text())
+mapped={f['properties']['placeId'] for f in GEO['features']}; um={u['placeId'] for u in GEO['unmapped']}
+assert mapped<=ids['places'] and um<=ids['places'] and not (mapped&um),'places-geo ids'
+assert mapped|um==ids['places'],('places with no map decision',ids['places']-mapped-um)
+for f in GEO['features']: assert f['properties']['status']!='verified' and f['properties']['shape'].split(':')[0] in ('outline','circle','line','pin')
 for place in DATA['places']:
  assert place['coordinates'] is None and place['locationPrecision'] in ['region','community','unresolved','building']
  assert 'schematic' not in place or {'x','y','kind'} <= set(place['schematic'])
