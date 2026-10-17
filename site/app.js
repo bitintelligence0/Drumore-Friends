@@ -6,12 +6,13 @@ import { renderPerson, renderStories, renderAbout, renderViewer } from './readin
 
 import { MARK_FULL } from './hero.js';
 const MARK = `<svg viewBox="0 0 64 48" aria-hidden="true">${MARK_FULL}</svg>`;
+const HEADER_MARK = `<svg viewBox="0 16 64 33" aria-hidden="true">${MARK_FULL}</svg>`;
 let mounted = null;
 
 await load();
 document.getElementById('app').innerHTML = `
   <header class="top gut"><div class="wide top-in">
-    <a class="brand" href="/" aria-label="Drumore Friends, Explore">${MARK}Drumore Friends<small>Meeting House · Drumore Township, PA</small></a>
+    <a class="brand" href="/" aria-label="Drumore Friends, Explore">${HEADER_MARK}Drumore Friends<small>Meeting House · Drumore Township, PA</small></a>
     <nav class="mainnav" aria-label="Main"><a data-nav="explore" href="/">Explore</a><a data-nav="stories" href="?view=stories">Stories</a><a data-nav="about" href="?view=about">About</a></nav>
     <label class="search"><span class="sr">Search</span><input id="q" type="search" placeholder="Search names, places, years" autocomplete="off"></label>
     <div class="search-results" id="qr" hidden></div>

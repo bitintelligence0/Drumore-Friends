@@ -40,6 +40,9 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
 .top-in { display: flex; align-items: center; gap: 28px; min-height: 76px; }
 .brand { display: flex; align-items: center; gap: 14px; white-space: nowrap; color: var(--plaster); text-decoration: none; font-family: var(--f-serif); font-size: 24px; margin-right: auto; }
 .brand svg { width: 56px; height: 42px; flex: none; }
+.top .brand { font-size: 28px; }
+/* Crop the mark’s empty upper canvas so the visible gable is centered. */
+.top .brand svg { width: 72px; height: 37.125px; }
 .brand small { font-family: var(--f-ui); font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #B4C1BB; margin-left: 6px; }
 .mainnav { display: flex; gap: 26px; }
 .mainnav a { color: #DCE3DF; text-decoration: none; font-weight: 500; font-size: 15.5px; padding: 26px 2px 24px; border-bottom: 3px solid transparent; }
@@ -512,10 +515,10 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
 
 /* ---------- Phone ---------- */
 .ptl { display: none; }
-@media (max-width: 1180px) { .brand small { display: none; } }
+@media (max-width: 1220px) { .brand small { display: none; } }
 @media (max-width: 1100px) { :root { --dock: 290px; } .below-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .below-in > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 900px) { .search { display: none; } }
 @media (max-width: 860px) {
-  .search { display: none; }
   .pp { grid-template-columns: minmax(0, 1fr); }
   .pp-side { border-right: 0; border-bottom: 1px solid var(--hair); }
   .pp-main { padding: 24px 18px 32px; }
@@ -530,6 +533,8 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
   body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   .top-in { min-height: 60px; }
   .brand { font-size: 19px; white-space: nowrap; gap: 10px; } .brand svg { width: 40px; height: 30px; } .brand small { display: none; }
+  .top .brand { font-size: 21px; }
+  .top .brand svg { width: 48px; height: 24.75px; }
   .top-in { gap: 12px; } .mainnav { gap: 16px; } .mainnav a { font-size: 14px; padding: 19px 2px 17px; }
   .workbench { scroll-margin-top: 60px; }
   .reasons { gap: 8px; } .reasons > div { padding: 12px 14px; } .gable-txt .lead { font-size: 17px; }
@@ -576,6 +581,12 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
   .prose { font-size: 18px; }
   .pp-main { order: -1; }
   .pp-side .back { position: fixed; left: 12px; bottom: calc(72px + env(safe-area-inset-bottom, 0px)); z-index: 41; font-size: 13.5px; padding: 8px 14px 8px 11px; }
+}
+@media (max-width: 374px) {
+  .top-in { gap: 8px; }
+  .top .brand { font-size: 18px; gap: 8px; }
+  .top .brand svg { width: 40px; height: 20.625px; }
+  .mainnav { gap: 10px; }
 }
 /* phone timeline */
 .ptl-list { position: relative; list-style: none; margin: 0; padding: 6px 0 20px; }
