@@ -582,6 +582,12 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
   .pp-main { order: -1; }
   .pp-side .back { position: fixed; left: 12px; bottom: calc(72px + env(safe-area-inset-bottom, 0px)); z-index: 41; font-size: 13.5px; padding: 8px 14px 8px 11px; }
 }
+@media (max-width: 360px) {
+  .top-in { gap: 8px; }
+  .top .brand { font-size: 18px; gap: 8px; }
+  .top .brand svg { width: 40px; height: 20.625px; }
+  .mainnav { gap: 10px; }
+}
 /* phone timeline */
 .ptl-list { position: relative; list-style: none; margin: 0; padding: 6px 0 20px; }
 .ptl-era { position: relative; z-index: 1; font-family: var(--f-serif); font-size: 21px; color: var(--shutter); padding: 16px 0 6px var(--ptl-pad, 70px); }
