@@ -24,7 +24,7 @@ For historical or family content, preserve reported, provisional, disputed, and 
 ## Audit before drafting
 
 1. Identify the repository, target Trello workspace and board, relevant surface, and batch boundary. Check the working tree and the exact commit or source snapshot being inspected.
-2. Search open and archived cards for the outcome using title variants and dictation synonyms. Read likely matches, including comments and checklists. Classify each proposal as new, duplicate, overlapping, related, or already done. Update the existing card when it already owns the outcome.
+2. Search open and archived cards for the outcome using title variants and dictation synonyms. Read likely matches, including comments and checklists. Classify each proposal as new, duplicate, overlapping, related, or already done. If an existing card owns the outcome, propose updating it; apply that update only in Publish mode after the batch is authorized.
 3. Inspect the smallest relevant set of UI, data, service, configuration, and test files. For every proposed card, distinguish **Observed** behavior, **Confirmed** code facts with repository-relative file anchors, and **Hypotheses or open verification**. Do not claim a root cause from narration alone. If the running site and checked-out code disagree, record that mismatch and require a version or configuration check before prescribing a fix.
 4. Identify decisions and genuine dependencies. Split work when parts have different outcomes, owners, safety boundaries, or review gates; do not split merely by file or layer. Keep the narration-to-card mapping even when one idea becomes several cards.
 
