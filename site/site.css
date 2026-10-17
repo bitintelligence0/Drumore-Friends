@@ -355,14 +355,33 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
 .ff-m { font-size: 11.5px; color: var(--pewter); align-self: center; margin-bottom: 30px; }
 .ff-none { font-size: 13px; color: var(--pewter); font-style: italic; }
 
-/* imagery */
-.imgs { padding: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 26px 16px; align-items: start; }
-.imgs .fig { cursor: pointer; transition: opacity var(--t-move) var(--ease); }
-.imgs .fig.dim { opacity: .4; }
-.imgs .fig.on .mat { outline: 3px solid var(--lamp); outline-offset: 2px; }
-.imgs .mat img { aspect-ratio: 1; object-fit: cover; }
-.imgs button.fig { all: unset; cursor: pointer; display: grid; gap: 8px; }
-.imgs button.fig:focus-visible .mat { outline: 3px solid var(--lamp); outline-offset: 2px; }
+/* posts: Beth's posts with a summary title, paragraphs, and diary days set one tab stop in */
+.posts { padding: 18px 22px 28px; display: grid; grid-template-columns: minmax(0, 1fr); max-width: 780px; }
+.post { min-width: 0; overflow-wrap: anywhere; }
+.posts-note { margin: 0 0 6px; font-size: 13px; color: var(--pewter); }
+.post { padding: 22px 0 20px; border-top: 1px solid var(--hair); transition: opacity var(--t-move) var(--ease); }
+.post:first-of-type { border-top: 0; }
+.post.dim { opacity: .45; }
+.post.on { box-shadow: inset 4px 0 0 var(--lamp); padding-left: 16px; }
+.post-title { margin: 0; font-family: var(--f-serif); font-weight: 700; font-size: 21px; line-height: 1.25; color: var(--shutter); }
+.post-meta { margin-top: 4px; font-size: 12.5px; color: var(--pewter); }
+.post-meta a { color: inherit; }
+.post-figs { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; }
+.post-fig { all: unset; cursor: pointer; flex: none; }
+.post-fig img { display: block; width: 92px; height: 92px; object-fit: cover; border: 1px solid var(--hair); }
+.post-fig:focus-visible img { outline: 3px solid var(--lamp); outline-offset: 2px; }
+.post .post-body { margin-top: 12px; font-family: var(--f-serif); font-size: 16px; line-height: 1.6; max-height: 9.6em; overflow: hidden; position: relative; }
+.post .post-body:not(.open)::after { content: ""; position: absolute; inset: auto 0 0; height: 3.2em; background: linear-gradient(rgba(251, 251, 248, 0), var(--plaster)); }
+.post .post-body.open, .post .post-body.short { max-height: none; }
+.post .post-body.short::after { content: none; }
+.post-acts [data-fold][hidden] { display: none; }
+.post-body p { margin: 0; }
+.post-body p + p, .post-body p + .pd-day, .post-body .pd-day + p, .post-body .pd-day + .pd-day, .post-body .pd-date + .pd-entry p:first-child { margin-top: .75em; }   /* a half line between paragraphs */
+.post-body .pd-date { display: block; font-family: var(--f-ui); font-size: 14px; font-weight: 700; letter-spacing: .02em; }
+.post-body .pd-date + .pd-entry p:first-child { margin-top: .2em; }
+.post-body .pd-entry { margin-left: 3em; }   /* one tab stop */
+.post-acts { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-size: 13.5px; }
+@media (max-width: 760px) { .posts { padding: 12px 4px 20px; } .post-title { font-size: 19px; } .post-body .pd-entry { margin-left: 2em; } }
 
 /* list */
 .lvw { padding: 12px 16px; }
@@ -487,7 +506,11 @@ svg [tabindex]:focus, svg [tabindex]:focus-visible { outline: none !important; }
 .viewer-side > *, .viewer-doc > * { flex: none; }
 .viewer-doc > img { align-self: center; }
 .viewer-side .k { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #8FA19A; }
-.viewer-side .posttext { font-family: var(--f-serif); font-size: 16px; line-height: 1.62; white-space: pre-wrap; color: var(--night-fg); }
+.viewer-side .posttext { overflow-wrap: anywhere; font-family: var(--f-serif); font-size: 16px; line-height: 1.62; color: var(--night-fg); }
+.viewer-side .post-title { margin: 6px 0 10px; font-family: var(--f-serif); font-weight: 700; font-size: 20px; line-height: 1.25; color: var(--night-fg); }
+.viewer-side .post-rest { margin-top: 1.2em; font-family: var(--f-ui); font-size: 13px; color: #A9B5AF; }
+.viewer-side .post-rest summary { cursor: pointer; }
+.viewer-side .post-rest div { white-space: pre-wrap; margin-top: 8px; }
 .viewer-side dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; font-size: 13.5px; }
 .viewer-side dt { color: #8FA19A; }
 .viewer-side dd { margin: 0; }

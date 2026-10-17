@@ -100,3 +100,54 @@ export const personName = (id) => S.idx.people[id]?.shortName || S.idx.people[id
 export function sourcesHTML(postIds) {
   return `<div class="srcl">${postIds.map(pid => { const p = S.idx.posts[pid]; if (!p) return ''; return `<div><button type="button" class="linkbtn" data-post="${pid}">Read Beth’s post ${pid}</button><a class="ext" href="${esc(p.facebookUrl)}" target="_blank" rel="noopener">Facebook original ↗</a></div>`; }).join('')}</div>`;
 }
+
+// ---------- Beth's post text ----------
+// The archive keeps each post as Markdown: a "## date — title" heading, a source link, the post's lines,
+// then "**Photos**" captions and sometimes "**Meetinghouse comments…**". One line is one paragraph.
+const postText = {};
+export const postTitle = (p) => p.summaryTitle || p.title;
+export function fetchPost(id) {
+  return postText[id] ??= fetch(`/source/${encodeURIComponent(id)}`).then(r => r.ok ? r.text() : null).catch(() => null);
+}
+// a diary date at the start of a line: "Nov. 16.", "Dec. 15", "Feb.15.", "Jan. 1, 1891." alone,
+// or followed by a wide gap and the entry ("Nov. 9.      Aunt Lib and I went to Meeting")
+const DIARY_DATE = /^((?:Jan|Feb|Mar|Apr|May|June?|July?|Aug|Sept?|Oct|Nov|Dec)\.?\s?\d{1,2}(?:st|nd|rd|th)?(?:,\s*\d{4})?\.?)(?:\s*$|\s{2,}(\S.*)$)/;
+// inside a diary, a short heading with the same wide gap ("All Week.      Enjoyed myself")
+const DIARY_LABEL = /^([A-Z][A-Za-z ]{1,14}\.)\s{3,}(\S.*)$/;
+const inline = (s) => esc(s).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
+export function splitPost(raw) {
+  const t = String(raw || '').replace(/^## .*\n?/, '').replace(/\[Facebook source\]\([^)]*\)/g, '').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[Original photo\]\([^)]*\)/g, '');
+  const cut = t.search(/^\*\*(Photos|Meetinghouse comments)/m);
+  const body = cut < 0 ? t : t.slice(0, cut), rest = cut < 0 ? '' : t.slice(cut);
+  const lines = [];
+  for (const l of body.split('\n')) {
+    const s = l.trim(); if (!s || s === '---') continue;
+    // a line the capture broke mid-sentence carries on in lower case; rejoin it
+    if (/^[a-z]/.test(s) && lines.length && !lines[lines.length - 1].date) { lines[lines.length - 1].text += ' ' + s; continue; }
+    lines.push({ text: s });
+  }
+  for (const ln of lines) {
+    const m = ln.text.match(DIARY_DATE);
+    if (m) { ln.date = m[1]; ln.text = m[2] || ''; }
+  }
+  if (lines.some(l => l.date)) for (const ln of lines) {
+    const m = !ln.date && ln.text.match(DIARY_LABEL);
+    if (m) { ln.date = m[1]; ln.text = m[2]; }
+  }
+  return { lines, rest: rest.replace(/\n{3,}/g, '\n\n').replace(/\n?---\s*$/, '').trim() };
+}
+// paragraphs; each diary date starts a block whose text sits one tab stop in
+export function postBodyHTML(raw) {
+  const { lines } = splitPost(raw);
+  if (!lines.length) return '<p class="asw">This post has no text, only a photo.</p>';
+  let html = '', day = null;
+  const close = () => { if (day) { html += `<div class="pd-day"><b class="pd-date">${esc(day.date)}</b><div class="pd-entry">${day.ps.join('')}</div></div>`; day = null; } };
+  for (const ln of lines) {
+    if (ln.date) { close(); day = { date: ln.date, ps: ln.text ? [`<p>${inline(ln.text)}</p>`] : [] }; continue; }
+    if (day) day.ps.push(`<p>${inline(ln.text)}</p>`);
+    else html += `<p>${inline(ln.text)}</p>`;
+  }
+  close();
+  return html;
+}
+export const postRestText = (raw) => splitPost(raw).rest.replace(/\*\*([^*]+)\*\*/g, '$1');

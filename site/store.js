@@ -41,7 +41,8 @@ export function parse(search = location.search) {
   if (v === 'people' || v === 'family') { st.view = 'explore'; st.mode = 'family'; }
   if (q.has('focus') && !q.has('era')) st.era = LEGACY_FOCUS[q.get('focus')] || 'all';
   if (!['explore', 'person', 'story', 'stories', 'about'].includes(st.view)) st.view = 'explore';
-  if (!['timeline', 'family', 'map', 'imagery', 'list'].includes(st.mode)) st.mode = 'timeline';
+  if (st.mode === 'imagery') st.mode = 'posts';   // the Posts tab was called Imagery until October 2026
+  if (!['timeline', 'family', 'map', 'posts', 'list'].includes(st.mode)) st.mode = 'timeline';
   if (st.era !== 'all' && !S.idx.eras[st.era]) st.era = DEFAULTS.era;
   if (st.person && !S.idx.people[st.person]) st.person = null;
   if (st.event && !S.idx.events[st.event]) st.event = null;
