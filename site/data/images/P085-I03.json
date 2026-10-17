@@ -1,0 +1,24 @@
+{
+  "id": "P085-I03",
+  "postId": "P085",
+  "archivePath": "images/912864334788138/912858541455384.jpg",
+  "caption": "Sarah Walker Coates Lamborn - wife of George S. Lamborn - one of several women who Wynona refers to as \"Aunt Sallie\"",
+  "alt": "Sarah Walker Coates Lamborn - wife of George S. Lamborn - one of several women who Wynona refers to as \"Aunt Sallie\"",
+  "originalUrl": "https://www.facebook.com/photo?fbid=912858541455384&set=pcb.912864334788138",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "sarah-coates-lamborn"
+  ],
+  "width": 457,
+  "height": 664,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.53,
+    "cy": 0.32,
+    "side": 0.72,
+    "personId": "sarah-coates-lamborn"
+  }
+}

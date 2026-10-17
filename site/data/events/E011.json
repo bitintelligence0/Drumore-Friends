@@ -1,0 +1,37 @@
+{
+  "id": "E011",
+  "date": {
+    "original": "1777-09-11",
+    "precision": "day",
+    "start": "1777-09-11",
+    "end": null,
+    "sortYear": 1777
+  },
+  "title": "Battle of Brandywine and Friends’ farms",
+  "summary": "The battle and its aftermath affect Chester County families connected to later Drumore Friends; the 1777 property atlas may help locate those farms.",
+  "sourcePostIds": [
+    "P005",
+    "P136",
+    "P137"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/735453425862564/",
+    "https://www.facebook.com/100081937388902/posts/1097271159680787/",
+    "https://www.facebook.com/100081937388902/posts/1096349793106257/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Lamborn family",
+    "Pennock family"
+  ],
+  "placeIds": [
+    "brandywine-area"
+  ],
+  "placeMentions": [
+    "Brandywine area, Chester County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

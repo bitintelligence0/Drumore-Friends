@@ -1,0 +1,37 @@
+{
+  "id": "E029",
+  "date": {
+    "original": "1890-10-12",
+    "precision": "day",
+    "start": "1890-10-12",
+    "end": null,
+    "sortYear": 1890
+  },
+  "title": "Wynona begins her diary",
+  "summary": "On her twenty-second birthday, Wynona starts the diary that anchors many of Beth’s stories about school, family, worship, and rural life.",
+  "sourcePostIds": [
+    "P045",
+    "P042",
+    "P099"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/825809853493587/",
+    "https://www.facebook.com/100081937388902/posts/834903939250845/",
+    "https://www.facebook.com/100081937388902/posts/1003493782391859/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn"
+  ],
+  "nameMentions": [
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore area, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "X-george-marries",
+  "date": {
+    "original": "1856-05",
+    "precision": "month",
+    "start": "1856-05",
+    "end": null,
+    "sortYear": 1856
+  },
+  "title": "George S. Lamborn marries Sarah Walker Coates",
+  "summary": "Married at the Cutler home, where Alban and Mary Cutler had become guardians of the Lamborn children.",
+  "sourcePostIds": [
+    "P067"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/870370532370852/"
+  ],
+  "personSubjectIds": [
+    "george-lamborn",
+    "sarah-coates-lamborn"
+  ],
+  "nameMentions": [],
+  "placeIds": [],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

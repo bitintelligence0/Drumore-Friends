@@ -1,0 +1,19 @@
+{
+  "id": "overseas",
+  "label": "Across the Atlantic",
+  "locationPrecision": "region",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P040",
+    "P043",
+    "P044",
+    "P003"
+  ],
+  "status": "England and Kresheim, Germany: places of origin beyond this drawing",
+  "schematic": {
+    "x": 1568,
+    "y": 150,
+    "kind": "offmap"
+  },
+  "origin": "brand-book-extension"
+}

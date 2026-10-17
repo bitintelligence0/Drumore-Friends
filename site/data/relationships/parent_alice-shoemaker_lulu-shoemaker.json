@@ -1,0 +1,12 @@
+{
+  "id": "parent:alice-shoemaker:lulu-shoemaker",
+  "type": "parent",
+  "from": "alice-shoemaker",
+  "to": "lulu-shoemaker",
+  "sourcePostIds": [
+    "P045",
+    "P067"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

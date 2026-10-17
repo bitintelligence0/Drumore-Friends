@@ -1,0 +1,28 @@
+{
+  "id": "linneaus-lamborn",
+  "displayName": "Linneaus Lamborn",
+  "shortName": "Linneaus Lamborn",
+  "family": "Lamborn",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Cousin",
+  "about": "Planned a surprise for his sister Lucretia in spring 1891.",
+  "sourcePostIds": [
+    "P099"
+  ],
+  "eventIds": [],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": null,
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

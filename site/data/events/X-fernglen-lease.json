@@ -1,0 +1,31 @@
+{
+  "id": "X-fernglen-lease",
+  "date": {
+    "original": "1871",
+    "precision": "year",
+    "start": "1871",
+    "end": null,
+    "sortYear": 1871
+  },
+  "title": "Lib and Thomas begin leasing the Fernglen Store",
+  "summary": "The Hambletons lease the store, established in 1849 by John Patton.",
+  "sourcePostIds": [
+    "P048"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/820245490716690/"
+  ],
+  "personSubjectIds": [
+    "lib-hambleton",
+    "thomas-hambleton"
+  ],
+  "nameMentions": [],
+  "placeIds": [
+    "fernglen-store"
+  ],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

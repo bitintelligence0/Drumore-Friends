@@ -1,0 +1,23 @@
+{
+  "id": "germantown",
+  "label": "Germantown, Philadelphia",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P040",
+    "P084",
+    "P088",
+    "P118",
+    "P031",
+    "P086",
+    "P096",
+    "P102"
+  ],
+  "status": "Settlement area only; individual lots not mapped",
+  "schematic": {
+    "x": 1412,
+    "y": 162,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "shoemaker-home",
+  "label": "Shoemaker home near Goshen P.O.",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P034",
+    "P045",
+    "P035"
+  ],
+  "status": "Fulton Township, near the Goshen post office; house site not mapped",
+  "schematic": {
+    "x": 340,
+    "y": 304,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

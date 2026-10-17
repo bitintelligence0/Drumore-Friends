@@ -1,0 +1,24 @@
+{
+  "id": "P058-I01",
+  "postId": "P058",
+  "archivePath": "images/848714327869806/848703647870874.jpg",
+  "caption": "Winona Shoemaker \"Nonie\" Shoemaker",
+  "alt": "Winona Shoemaker \"Nonie\" Shoemaker",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=848703647870874&set=pcb.848714327869806",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "winona-shoemaker"
+  ],
+  "width": 960,
+  "height": 1228,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.47,
+    "cy": 0.29,
+    "side": 0.76,
+    "personId": "winona-shoemaker"
+  }
+}

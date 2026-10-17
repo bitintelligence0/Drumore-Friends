@@ -1,0 +1,34 @@
+{
+  "id": "E017",
+  "date": {
+    "original": "1812-01-11",
+    "precision": "day",
+    "start": "1812-01-11",
+    "end": null,
+    "sortYear": 1812
+  },
+  "title": "Trial meeting for worship is approved",
+  "summary": "The Little Britain committee proposes worship every two weeks under its care for a trial period.",
+  "sourcePostIds": [
+    "P006"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/733731142701459/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Benjamin Mason",
+    "Joseph Richardson",
+    "Sarah Mason",
+    "Ruth Webster"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore Township, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

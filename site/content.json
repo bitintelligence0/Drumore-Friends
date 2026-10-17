@@ -1,14 +1,17 @@
 {
   "schemaVersion": 2,
   "archiveSnapshot": {
-    "path": "/Users/bevanwaite/Documents/Bevan OS/12 Personal/Parents/Beth/Genealogy Project/Drumore Friends Meeting House Facebook Archive",
     "curationFiles": {
       "timeline-events.json": "d071bdc52afe19e84eedb9c63d88daa0d89dd58023939fe1bfc45065ca9c82fb",
       "post-content-map.json": "6af00b5d7801655c00849d6b45cb5c0297e3768b9859c624ac09fa2918444040",
       "entity-index.json": "417930fd23fbf41ea06f72533cae0d7303693692f6d161ca4f982d3cb161039c"
     },
     "captured": "2026-10-15",
-    "publicationStatus": "private prototype; no public clearance"
+    "publicationStatus": "private prototype; no public clearance",
+    "sourceKind": "shared-google-drive-archive",
+    "driveFolderId": "1SzyWjGO0M7-qMsQh1l2XE6I3Va_5MRqy",
+    "driveUrl": "https://drive.google.com/drive/folders/1SzyWjGO0M7-qMsQh1l2XE6I3Va_5MRqy",
+    "relativePath": "Personal/Family/Drumore Friends/01 Source Archive"
   },
   "events": [
     {

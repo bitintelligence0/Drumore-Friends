@@ -1,0 +1,31 @@
+{
+  "id": "margaret-bolton-lamborn",
+  "displayName": "Margaret Bolton Lamborn",
+  "shortName": "Margaret Bolton Lamborn",
+  "family": "Lamborn",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Grandmother",
+  "about": "Died 1855. Her ten surviving children were 4 to 24 years old.",
+  "sourcePostIds": [
+    "P057",
+    "P067"
+  ],
+  "eventIds": [
+    "X-margaret-dies"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": 1855,
+      "kind": "known"
+    }
+  },
+  "portraitImageId": "P067-I01",
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

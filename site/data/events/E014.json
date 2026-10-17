@@ -1,0 +1,33 @@
+{
+  "id": "E014",
+  "date": {
+    "original": "1801",
+    "precision": "year",
+    "start": "1801",
+    "end": null,
+    "sortYear": 1801
+  },
+  "title": "Jacob and Joyce Shoemaker arrive in Drumore",
+  "summary": "They move from Gwynedd; Beth says they later provide land for the meetinghouse and cemetery. The land transfer date needs a deed or meeting record.",
+  "sourcePostIds": [
+    "P073"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/866834966057742/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Jacob Shoemaker",
+    "Joyce Parry Shoemaker"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore Township, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

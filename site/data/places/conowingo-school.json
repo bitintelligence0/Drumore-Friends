@@ -1,0 +1,16 @@
+{
+  "id": "conowingo-school",
+  "label": "Conowingo School",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P045"
+  ],
+  "status": "One-room school in Fulton Township; site not mapped",
+  "schematic": {
+    "x": 196,
+    "y": 322,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

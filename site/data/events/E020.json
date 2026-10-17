@@ -1,0 +1,32 @@
+{
+  "id": "E020",
+  "date": {
+    "original": "1824-01-21",
+    "precision": "day",
+    "start": "1824-01-21",
+    "end": null,
+    "sortYear": 1824
+  },
+  "title": "Benjamin Martick Lamborn marries",
+  "summary": "The second Lamborn brother marries a Bradley sister. Beth’s post gives this date; confirm the spouse’s full name from the marriage record before a public card.",
+  "sourcePostIds": [
+    "P028"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/785934957481077/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Benjamin Martick Lamborn"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore Township, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

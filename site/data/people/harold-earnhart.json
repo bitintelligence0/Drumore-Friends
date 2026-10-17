@@ -1,0 +1,29 @@
+{
+  "id": "harold-earnhart",
+  "displayName": "Harold Earnhart",
+  "shortName": "Harold Earnhart",
+  "family": "Earnhart",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Son",
+  "about": "Played in the Earnhart Family Orchestra.",
+  "sourcePostIds": [
+    "P064",
+    "P112"
+  ],
+  "eventIds": [],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": null,
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

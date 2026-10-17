@@ -1,0 +1,33 @@
+{
+  "id": "E034",
+  "date": {
+    "original": "1896-02",
+    "precision": "month",
+    "start": "1896-02",
+    "end": null,
+    "sortYear": 1896
+  },
+  "title": "Alban Cutler’s obituary appears",
+  "summary": "An obituary in the Lancaster Intelligencer follows Cutler’s burial at Drumore Friends Cemetery. Exact publication and death dates should be checked against the newspaper image.",
+  "sourcePostIds": [
+    "P090"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/935656819175556/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Alban Cutler"
+  ],
+  "placeIds": [
+    "friends-cemetery"
+  ],
+  "placeMentions": [
+    "Drumore Friends Cemetery",
+    "Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

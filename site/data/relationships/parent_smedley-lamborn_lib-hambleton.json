@@ -1,0 +1,12 @@
+{
+  "id": "parent:smedley-lamborn:lib-hambleton",
+  "type": "parent",
+  "from": "smedley-lamborn",
+  "to": "lib-hambleton",
+  "sourcePostIds": [
+    "P057",
+    "P067"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

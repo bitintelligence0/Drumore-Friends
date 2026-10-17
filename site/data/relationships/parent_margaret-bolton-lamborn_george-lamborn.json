@@ -1,0 +1,12 @@
+{
+  "id": "parent:margaret-bolton-lamborn:george-lamborn",
+  "type": "parent",
+  "from": "margaret-bolton-lamborn",
+  "to": "george-lamborn",
+  "sourcePostIds": [
+    "P057",
+    "P067"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

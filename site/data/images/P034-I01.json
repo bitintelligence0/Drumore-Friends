@@ -1,0 +1,24 @@
+{
+  "id": "P034-I01",
+  "postId": "P034",
+  "archivePath": "images/814495534625019/814487307959175.jpg",
+  "caption": "Mary Elizabeth \"Lib\" or \"Lizzie\" Lamborn Hambleton",
+  "alt": "Mary Elizabeth \"Lib\" or \"Lizzie\" Lamborn Hambleton",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=814487307959175&set=pcb.814495534625019",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "lib-hambleton"
+  ],
+  "width": 720,
+  "height": 1292,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.45,
+    "cy": 0.1,
+    "side": 0.36,
+    "personId": "lib-hambleton"
+  }
+}

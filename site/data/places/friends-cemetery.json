@@ -1,0 +1,20 @@
+{
+  "id": "friends-cemetery",
+  "label": "Drumore Friends Cemetery",
+  "locationPrecision": "unresolved",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P059",
+    "P060",
+    "P061",
+    "P106",
+    "P090"
+  ],
+  "status": "Burial ground named in the archive; plot map and location need review",
+  "schematic": {
+    "x": 318,
+    "y": 206,
+    "kind": "unresolved"
+  },
+  "origin": "brand-book-extension"
+}

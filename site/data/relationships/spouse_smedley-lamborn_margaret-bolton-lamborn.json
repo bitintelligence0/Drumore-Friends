@@ -1,0 +1,11 @@
+{
+  "id": "spouse:smedley-lamborn:margaret-bolton-lamborn",
+  "type": "spouse",
+  "from": "smedley-lamborn",
+  "to": "margaret-bolton-lamborn",
+  "sourcePostIds": [
+    "P057"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

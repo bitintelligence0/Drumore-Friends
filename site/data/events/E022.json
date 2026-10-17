@@ -1,0 +1,37 @@
+{
+  "id": "E022",
+  "date": {
+    "original": "1853/1858",
+    "precision": "range",
+    "start": "1853",
+    "end": "1858",
+    "sortYear": 1853
+  },
+  "title": "Teacher education grows around Millersville",
+  "summary": "Beth’s Sallie Bolton material connects the Lancaster County Teachers’ Institute and early normal-school education to Drumore families.",
+  "sourcePostIds": [
+    "P011",
+    "P127",
+    "P128"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/726604916747415/",
+    "https://www.facebook.com/100081937388902/posts/1069627912445112/",
+    "https://www.facebook.com/100081937388902/posts/1068185599256010/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Sarah Eva Bolton Pyle",
+    "J. P. Wickersham"
+  ],
+  "placeIds": [
+    "millersville-area"
+  ],
+  "placeMentions": [
+    "Millersville, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "E004",
+  "date": {
+    "original": "1708",
+    "precision": "year",
+    "start": "1708",
+    "end": null,
+    "sortYear": 1708
+  },
+  "title": "William Swayne emigrates",
+  "summary": "William Swayne, Sara Swayne Lamborn’s brother, moves from England to Pennsylvania ahead of his parents and siblings.",
+  "sourcePostIds": [
+    "P003"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/738141425593764/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "William Swayne",
+    "Sara Swayne Lamborn"
+  ],
+  "placeIds": [
+    "overseas",
+    "chester-county"
+  ],
+  "placeMentions": [
+    "England",
+    "Chester County, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

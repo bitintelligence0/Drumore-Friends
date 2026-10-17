@@ -1,0 +1,39 @@
+{
+  "id": "E003",
+  "date": {
+    "original": "1688",
+    "precision": "year",
+    "start": "1688",
+    "end": null,
+    "sortYear": 1688
+  },
+  "title": "Germantown Friends endorse an antislavery protest",
+  "summary": "A group of Germantown Friends put their objection to slavery before the wider Quaker community. Beth traces the document and the ancestors connected to this meeting.",
+  "sourcePostIds": [
+    "P031",
+    "P086",
+    "P096",
+    "P102"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/1080745777576433/",
+    "https://www.facebook.com/100081937388902/posts/958674193540485/",
+    "https://www.facebook.com/100081937388902/posts/964686789605892/",
+    "https://www.facebook.com/100081937388902/posts/994347253306512/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Francis Daniel Pastorius",
+    "Germantown Friends"
+  ],
+  "placeIds": [
+    "germantown"
+  ],
+  "placeMentions": [
+    "Germantown, Philadelphia"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

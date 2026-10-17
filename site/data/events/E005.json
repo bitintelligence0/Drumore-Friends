@@ -1,0 +1,36 @@
+{
+  "id": "E005",
+  "date": {
+    "original": "1711",
+    "precision": "year",
+    "start": "1711",
+    "end": null,
+    "sortYear": 1711
+  },
+  "title": "The Swayne family settles in Chester County",
+  "summary": "Francis and Elizabeth Swayne and their children arrive and purchase land in East Marlborough Township.",
+  "sourcePostIds": [
+    "P003",
+    "P004"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/738141425593764/",
+    "https://www.facebook.com/100081937388902/posts/736277712446802/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Francis Swayne",
+    "Elizabeth Milton Swayne",
+    "Sara Swayne Lamborn"
+  ],
+  "placeIds": [
+    "east-marlborough"
+  ],
+  "placeMentions": [
+    "East Marlborough Township, Chester County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

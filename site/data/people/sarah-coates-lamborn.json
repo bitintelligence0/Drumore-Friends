@@ -1,0 +1,32 @@
+{
+  "id": "sarah-coates-lamborn",
+  "displayName": "Sarah Walker Coates Lamborn",
+  "shortName": "Sarah W. Coates Lamborn",
+  "family": "Lamborn",
+  "aliases": [
+    "Aunt Sallie"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Aunt by marriage",
+  "about": "One of several women Wynona calls “Aunt Sallie.”",
+  "sourcePostIds": [
+    "P085"
+  ],
+  "eventIds": [
+    "X-george-marries"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P085-I03",
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "spouse:wynona-lamborn:early-earnhart",
+  "type": "spouse",
+  "from": "wynona-lamborn",
+  "to": "early-earnhart",
+  "sourcePostIds": [
+    "P064"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "smedley-lamborn",
+  "displayName": "Smedley Lamborn",
+  "shortName": "Smedley Lamborn",
+  "family": "Lamborn",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Grandfather",
+  "about": "Died 1851, long before Wynona was born.",
+  "sourcePostIds": [
+    "P057",
+    "P067"
+  ],
+  "eventIds": [
+    "X-smedley-dies"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": 1851,
+      "kind": "known"
+    }
+  },
+  "portraitImageId": null,
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

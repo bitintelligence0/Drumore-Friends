@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Private local preview. Reads selected media and post text from the archive, never writes it."""
 import http.server, json, os, pathlib, re, socketserver, urllib.parse
+from archive import resolve_archive
 ROOT=pathlib.Path(__file__).resolve().parent
 DATA=json.loads((ROOT/'content.json').read_text())
-ARCHIVE=pathlib.Path(os.environ.get('DRUMORE_ARCHIVE', DATA['archiveSnapshot']['path'])).resolve()
+ARCHIVE=resolve_archive(DATA.get('archiveSnapshot'))
 POSTS={p['id']:p for p in DATA['posts']}
 IMAGES={i['id']:i for i in DATA['images']}
 STATIC={'/':'index.html','/app.js':'app.js','/store.js':'store.js','/lib.js':'lib.js','/explore.js':'explore.js','/timeline.js':'timeline.js','/map.js':'map.js','/hero.js':'hero.js','/family.js':'family.js','/reading.js':'reading.js','/site.css':'site.css','/content.json':'content.json','/mark.svg':'mark.svg','/mark-small.svg':'mark-small.svg','/favicon.svg':'favicon.svg'}

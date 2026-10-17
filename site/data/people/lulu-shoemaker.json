@@ -1,0 +1,34 @@
+{
+  "id": "lulu-shoemaker",
+  "displayName": "Lula May “Lulu” Shoemaker Ulrich",
+  "shortName": "Lula May Shoemaker",
+  "family": "Shoemaker",
+  "aliases": [
+    "Lulu"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Cousin",
+  "about": "The toddler in Wynona’s diary.",
+  "sourcePostIds": [
+    "P045",
+    "P058",
+    "P085"
+  ],
+  "eventIds": [],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": 1888,
+      "kind": "about"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P085-I01",
+  "origin": "brand-book-extension",
+  "placeIds": [
+    "shoemaker-home"
+  ]
+}

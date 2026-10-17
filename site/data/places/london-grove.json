@@ -1,0 +1,16 @@
+{
+  "id": "london-grove",
+  "label": "London Grove",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P027"
+  ],
+  "status": "Meeting and township area",
+  "schematic": {
+    "x": 786,
+    "y": 246,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

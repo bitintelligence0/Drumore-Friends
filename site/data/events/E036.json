@@ -1,0 +1,35 @@
+{
+  "id": "E036",
+  "date": {
+    "original": "1914",
+    "precision": "year",
+    "start": "1914",
+    "end": null,
+    "sortYear": 1914
+  },
+  "title": "The Earnhart family connects to Oxford history",
+  "summary": "Beth’s posts describe Early and Wynona Earnhart’s role in a 1914 Oxford-area story; identify the precise event and location before a public timeline card.",
+  "sourcePostIds": [
+    "P112",
+    "P113"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/1054633150611255/",
+    "https://www.facebook.com/photo/?fbid=1450853917084682&set=pcb.1450871907082883"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Early Earnhart",
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "oxford-area"
+  ],
+  "placeMentions": [
+    "Oxford area, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

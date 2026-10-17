@@ -1,0 +1,35 @@
+{
+  "id": "E035",
+  "date": {
+    "original": "1912",
+    "precision": "year",
+    "start": "1912",
+    "end": null,
+    "sortYear": 1912
+  },
+  "title": "Lamborn family reunion",
+  "summary": "The Oxford Press reports on a Lamborn reunion; Beth uses photographs to identify descendants.",
+  "sourcePostIds": [
+    "P121",
+    "P122"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/1081874057887164/",
+    "https://www.facebook.com/100081937388902/posts/1080434164697820/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Lamborn family",
+    "Earnhart family"
+  ],
+  "placeIds": [
+    "oxford-area"
+  ],
+  "placeMentions": [
+    "Oxford area, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

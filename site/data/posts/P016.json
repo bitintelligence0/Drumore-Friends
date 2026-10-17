@@ -1,0 +1,22 @@
+{
+  "id": "P016",
+  "archiveFile": "2025-06.md",
+  "ordinal": 16,
+  "publishedDate": "2025-06-10",
+  "title": "Drumore Friends Meeting House updated their cover photo.",
+  "excerpt": "**Photos** ![Photo 1](images/725108373563736/725108373563736.jpg) [Original photo]( ---",
+  "facebookUrl": "https://www.facebook.com/100081937388902/posts/725108373563736/",
+  "allImages": [
+    {
+      "archivePath": "images/725108373563736/725108373563736.jpg",
+      "caption": "",
+      "alt": "Photo 1",
+      "originalUrl": "https://www.facebook.com/photo/?fbid=725108373563736&set=a.143521125055800"
+    }
+  ],
+  "selectedImageIds": [
+    "P016-I01"
+  ],
+  "curationStatus": "first-pass; review against full post",
+  "origin": "brand-book-extension"
+}

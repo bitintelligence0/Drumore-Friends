@@ -1,0 +1,11 @@
+{
+  "id": "spouse:alice-shoemaker:william-shoemaker",
+  "type": "spouse",
+  "from": "alice-shoemaker",
+  "to": "william-shoemaker",
+  "sourcePostIds": [
+    "P067"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

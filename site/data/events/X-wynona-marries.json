@@ -1,0 +1,29 @@
+{
+  "id": "X-wynona-marries",
+  "date": {
+    "original": "1892-12-08",
+    "precision": "day",
+    "start": "1892-12-08",
+    "end": null,
+    "sortYear": 1892
+  },
+  "title": "Wynona marries Early Earnhart",
+  "summary": "Two years after the Christmas evening recorded in her diary. They have two sons, Harold and Raymond.",
+  "sourcePostIds": [
+    "P064"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/883249131082992/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn",
+    "early-earnhart"
+  ],
+  "nameMentions": [],
+  "placeIds": [],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

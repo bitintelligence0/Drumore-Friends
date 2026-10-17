@@ -1,0 +1,24 @@
+{
+  "id": "P067-I01",
+  "postId": "P067",
+  "archivePath": "images/870370532370852/870360175705221.jpg",
+  "caption": "Margaret Bolton",
+  "alt": "Margaret Bolton",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=870360175705221&set=pcb.870370532370852",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "margaret-bolton-lamborn"
+  ],
+  "width": 1080,
+  "height": 1310,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.49,
+    "cy": 0.36,
+    "side": 0.46,
+    "personId": "margaret-bolton-lamborn"
+  }
+}

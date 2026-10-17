@@ -1,0 +1,12 @@
+{
+  "id": "parent:will-lamborn:wynona-lamborn",
+  "type": "parent",
+  "from": "will-lamborn",
+  "to": "wynona-lamborn",
+  "sourcePostIds": [
+    "P034",
+    "P035"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "X-to-fernglen",
+  "date": {
+    "original": "1876",
+    "precision": "year",
+    "start": "1876",
+    "end": null,
+    "sortYear": 1876
+  },
+  "title": "Wynona goes to live with Aunt Lib and Uncle Thomas",
+  "summary": "Will asked his sister Lib and her husband Thomas to raise his daughter. She was eight.",
+  "sourcePostIds": [
+    "P034"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/814495534625019/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn",
+    "lib-hambleton",
+    "thomas-hambleton"
+  ],
+  "nameMentions": [],
+  "placeIds": [
+    "fernglen-store"
+  ],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

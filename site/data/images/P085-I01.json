@@ -1,0 +1,24 @@
+{
+  "id": "P085-I01",
+  "postId": "P085",
+  "archivePath": "images/912864334788138/912807474793824.jpg",
+  "caption": "Lula May Shoemaker (later Ulrich) - called Lulu by family when she was a child",
+  "alt": "Lula May Shoemaker (later Ulrich) - called Lulu by family when she was a child",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=912807474793824&set=pcb.912864334788138",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "lulu-shoemaker"
+  ],
+  "width": 843,
+  "height": 1188,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.42,
+    "cy": 0.19,
+    "side": 0.46,
+    "personId": "lulu-shoemaker"
+  }
+}

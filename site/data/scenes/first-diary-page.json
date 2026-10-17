@@ -1,0 +1,24 @@
+{
+  "id": "first-diary-page",
+  "title": "Beginning the diary",
+  "eventId": "E029",
+  "sourcePostIds": [
+    "P045",
+    "P042",
+    "P099"
+  ],
+  "imageIds": [
+    "P045-I03",
+    "P045-I04"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "narrative": [
+    "On her twenty-second birthday, Wynona opened a diary with a reason to write: she hoped to look back on pleasant things while remembering that life also held loss. She recorded a rainy autumn day and an evening drive to her aunt and uncle’s new house.",
+    "The archive account places her teaching at the Conowingo School and staying with relatives during the school week. Those biographical details are useful context, but they need checking against the diary and other records before publication."
+  ],
+  "quote": "This being my twenty-second birthday, I thought it would be a good time to start a diary.",
+  "quoteSourcePostId": "P045",
+  "evidenceNote": "The quoted opening is Beth’s transcription in P045. The pictured cover and title page are original diary photographs; this prototype has not independently compared every transcription line with the manuscript."
+}

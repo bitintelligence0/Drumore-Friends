@@ -1,0 +1,41 @@
+{
+  "id": "E037",
+  "date": {
+    "original": "1916-09-30",
+    "precision": "day",
+    "start": "1916-09-30",
+    "end": null,
+    "sortYear": 1916
+  },
+  "title": "Drumore Friends celebrate the meetinghouse centennial",
+  "summary": "Wilmer Pennock Bolton reads a historical address naming early families at the 100-year celebration.",
+  "sourcePostIds": [
+    "P005",
+    "P006",
+    "P028",
+    "P043",
+    "P052"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/735453425862564/",
+    "https://www.facebook.com/100081937388902/posts/733731142701459/",
+    "https://www.facebook.com/100081937388902/posts/785934957481077/",
+    "https://www.facebook.com/100081937388902/posts/831657546242151/",
+    "https://www.facebook.com/100081937388902/posts/859866056754633/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Wilmer Pennock Bolton",
+    "founding families"
+  ],
+  "placeIds": [
+    "meetinghouse"
+  ],
+  "placeMentions": [
+    "Drumore Friends Meetinghouse"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

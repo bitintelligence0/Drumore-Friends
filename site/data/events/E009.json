@@ -1,0 +1,32 @@
+{
+  "id": "E009",
+  "date": {
+    "original": "1768-12-23",
+    "precision": "day",
+    "start": "1768-12-23",
+    "end": null,
+    "sortYear": 1768
+  },
+  "title": "George Charles Lamborn is born",
+  "summary": "Beth’s post places his birth two days before Christmas near Chadds Ford; he later becomes one of the earliest Drumore Friends.",
+  "sourcePostIds": [
+    "P020"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/755361100538463/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "George Charles Lamborn"
+  ],
+  "placeIds": [
+    "brandywine-area"
+  ],
+  "placeMentions": [
+    "Chadds Ford area, Chester County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

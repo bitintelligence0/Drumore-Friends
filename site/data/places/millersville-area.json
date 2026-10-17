@@ -1,0 +1,15 @@
+{
+  "id": "millersville-area",
+  "label": "Millersville, Lancaster County",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P054"
+  ],
+  "status": "community only; school image caption is not a geolocation",
+  "schematic": {
+    "x": 560,
+    "y": 66,
+    "kind": "community"
+  }
+}

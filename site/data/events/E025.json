@@ -1,0 +1,37 @@
+{
+  "id": "E025",
+  "date": {
+    "original": "1868-10-12",
+    "precision": "day",
+    "start": "1868-10-12",
+    "end": null,
+    "sortYear": 1868
+  },
+  "title": "Jessie Wynona Lamborn is born",
+  "summary": "Wynona’s twenty-second birthday on October 12, 1890 establishes her birth date. Confirm with a vital or family record before publishing as independently verified.",
+  "sourcePostIds": [
+    "P045",
+    "P099",
+    "P100"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/825809853493587/",
+    "https://www.facebook.com/100081937388902/posts/1003493782391859/",
+    "https://www.facebook.com/100081937388902/posts/998491559558748/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn"
+  ],
+  "nameMentions": [
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore area, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

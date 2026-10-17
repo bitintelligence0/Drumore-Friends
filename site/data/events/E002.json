@@ -1,0 +1,38 @@
+{
+  "id": "E002",
+  "date": {
+    "original": "1686",
+    "precision": "year",
+    "start": "1686",
+    "end": null,
+    "sortYear": 1686
+  },
+  "title": "Shoemaker ancestors leave Germany",
+  "summary": "Beth follows the Schumacher/Shoemaker family from religious persecution near Kresheim to Pennsylvania. Passenger details and spelling variants need source review.",
+  "sourcePostIds": [
+    "P040",
+    "P043",
+    "P044"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/791438466930726/",
+    "https://www.facebook.com/100081937388902/posts/831657546242151/",
+    "https://www.facebook.com/100081937388902/posts/829417026466203/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "George Roesen Schumacher",
+    "Sarah Heinrich/Hendricks"
+  ],
+  "placeIds": [
+    "overseas"
+  ],
+  "placeMentions": [
+    "Kresheim, Germany",
+    "Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

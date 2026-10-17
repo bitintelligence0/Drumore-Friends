@@ -1,0 +1,11 @@
+{
+  "id": "parent:wynona-lamborn:harold-earnhart",
+  "type": "parent",
+  "from": "wynona-lamborn",
+  "to": "harold-earnhart",
+  "sourcePostIds": [
+    "P064"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

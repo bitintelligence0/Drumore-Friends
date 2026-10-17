@@ -1,0 +1,30 @@
+{
+  "id": "X-post-office",
+  "date": {
+    "original": "1890",
+    "precision": "year",
+    "start": "1890",
+    "end": null,
+    "sortYear": 1890
+  },
+  "title": "A post office opens at Fernglen",
+  "summary": "Thomas obtains authorization for a post office, which Wynona notes in her diary.",
+  "sourcePostIds": [
+    "P048"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/820245490716690/"
+  ],
+  "personSubjectIds": [
+    "thomas-hambleton"
+  ],
+  "nameMentions": [],
+  "placeIds": [
+    "fernglen-store"
+  ],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "autograph-book",
+  "title": "An autograph book",
+  "eventId": "E028",
+  "sourcePostIds": [
+    "P047"
+  ],
+  "imageIds": [
+    "P047-I01"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "narrative": [
+    "At eleven, Wynona began an autograph book. The pages gathered advice and affection from relatives and friends, making a small record of the people around her before she kept a diary.",
+    "One photographed spread carries messages signed by her uncle Aquilla Lamborn and other family members. The archive account describes more than forty pages, but the complete book and its ownership still need Beth’s review."
+  ],
+  "evidenceNote": "The 1879 year and relationship identifications come from Beth’s archive post. The photographed spread itself includes a March 17, 1879 inscription; it does not date every page in the book."
+}

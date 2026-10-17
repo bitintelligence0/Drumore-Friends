@@ -1,0 +1,19 @@
+{
+  "id": "brandywine-area",
+  "label": "Brandywine and Chadds Ford area",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P020",
+    "P005",
+    "P136",
+    "P137"
+  ],
+  "status": "Area only",
+  "schematic": {
+    "x": 1006,
+    "y": 232,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

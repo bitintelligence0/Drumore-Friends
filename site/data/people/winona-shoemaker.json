@@ -1,0 +1,35 @@
+{
+  "id": "winona-shoemaker",
+  "displayName": "Winona “Nonie” Shoemaker Drennan",
+  "shortName": "Winona Shoemaker",
+  "family": "Shoemaker",
+  "aliases": [
+    "Nonie"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Cousin, two years younger",
+  "about": "Also called Nonie. Married Harry Drennan.",
+  "sourcePostIds": [
+    "P045",
+    "P058",
+    "P067",
+    "P071"
+  ],
+  "eventIds": [],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": 1870,
+      "kind": "about"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P058-I01",
+  "origin": "brand-book-extension",
+  "placeIds": [
+    "shoemaker-home"
+  ]
+}

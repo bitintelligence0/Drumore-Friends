@@ -1,0 +1,25 @@
+{
+  "id": "isaac-news",
+  "title": "News of Isaac",
+  "eventId": "E033",
+  "sourcePostIds": [
+    "P092",
+    "P093"
+  ],
+  "imageIds": [
+    "P092-I01"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "narrative": [
+    "By spring, Wynona’s diary had recorded sickness and deaths in the community. On April 16 she wrote that Isaac Bolton Shoemaker had died that evening after much suffering. The archive account connects him to Wynona’s extended circle and follows his family history in a separate post.",
+    "The photographed grave marker offers a different kind of evidence from the diary transcription. Together they support a question for Beth: confirm the date, family relationships and cemetery record from the original sources before this story is published."
+  ],
+  "quote": "Altho’ looked for by all it seemed sudden.",
+  "quoteSourcePostId": "P093",
+  "evidenceNote": "P093 contains Beth’s transcription of Wynona’s April 16 entry; P092 provides the family account and grave image. The grave photograph’s capture date and cemetery location are not established in this selected metadata.",
+  "relatedPersonIds": [
+    "isaac-bolton-shoemaker"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "will-lamborn",
+  "displayName": "William Lewis “Will” Lamborn",
+  "shortName": "Will Lamborn",
+  "family": "Lamborn",
+  "aliases": [
+    "Will"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Father",
+  "about": "Fifth of eleven children. Discharged from the Union Army with tuberculosis; died 5 July 1876. No photograph identified yet.",
+  "sourcePostIds": [
+    "P034",
+    "P035",
+    "P057"
+  ],
+  "eventIds": [
+    "E027",
+    "X-will-letter"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": 1876,
+      "kind": "known"
+    }
+  },
+  "portraitImageId": null,
+  "origin": "brand-book-extension",
+  "placeIds": [
+    "shoemaker-home"
+  ]
+}

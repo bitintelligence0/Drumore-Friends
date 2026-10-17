@@ -1,0 +1,19 @@
+{
+  "id": "fulton-township",
+  "label": "Fulton Township",
+  "locationPrecision": "region",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P034",
+    "P045",
+    "P075",
+    "P035"
+  ],
+  "status": "Township-level area",
+  "schematic": {
+    "x": 262,
+    "y": 316,
+    "kind": "region"
+  },
+  "origin": "brand-book-extension"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "E007",
+  "date": {
+    "original": "1746-09-19",
+    "precision": "day",
+    "start": "1746-09-19",
+    "end": null,
+    "sortYear": 1746
+  },
+  "title": "Robert Lamborn and Ann Maris Bourne marry",
+  "summary": "The next Lamborn generation marries at London Grove Meeting, linking later Drumore founders to Chester County.",
+  "sourcePostIds": [
+    "P027"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/743753491699224/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Robert Lamborn",
+    "Ann Maris Bourne"
+  ],
+  "placeIds": [
+    "london-grove"
+  ],
+  "placeMentions": [
+    "London Grove, Chester County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}
