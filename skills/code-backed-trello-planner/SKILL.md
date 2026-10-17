@@ -40,7 +40,7 @@ For Drumore Friends, distinguish historical review from implementation review. A
 
 Use an available Trello connector or the board UI according to the current environment. Before a batch write, state the card count, grouping, and any updates to existing cards. Create prerequisite cards before dependent cards. Do not create or alter cards outside the authorized board or batch. Do not upload files, change board sharing, invite people, send messages, or migrate a Linear backlog unless separately requested.
 
-Read each created or updated card back. Verify its title, list, description, members and labels if set, prerequisite links, and board visibility. Repair mismatches. Update the living review with card URLs and note any duplicate, deferred, or unresolved items. When implementation follows, preserve the repository's issue, branch, draft PR, checks, and human review requirements.
+Read each created or updated card back. Verify its title, list, description, members and labels if set, prerequisite links, and board visibility. Repair mismatches. Update the living review with card URLs and note any duplicate, deferred, or unresolved items. When implementation follows, preserve the repository's issue, branch, pull request, checks, and human review requirements.
 
 ## Completion check
 
