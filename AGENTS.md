@@ -13,7 +13,7 @@ These instructions apply to the entire repository. They are written for Codex, P
 ## Before working
 
 1. Read this file, `README.md`, `docs/BRAND.md`, and the closest README for the area being changed.
-2. Pull the latest `main`, inspect open work, and use one issue and one branch for one bounded change. Do not have two agents edit the same record or view concurrently.
+2. Read `CONTRIBUTING.md`. Confirm that the upstream repository is `bitintelligence0/Drumore-Friends`, pull the latest `main`, inspect open work, and use one issue and one branch for one bounded change. Do not have two agents edit the same record or view concurrently.
 3. Configure `DRUMORE_ARCHIVE` to the synchronized Google Drive `01 Source Archive` folder. Never hardcode a contributor's home directory.
 4. State which records or interface area the agent owns in the issue or pull request before making broad edits.
 
@@ -49,6 +49,10 @@ These instructions apply to the entire repository. They are written for Codex, P
 ## Collaboration and handoff
 
 - Prefer small pull requests with a clear record or interface owner. Do not push directly to `main` unless Bevan explicitly requests it for that change.
+- Open a draft pull request early. Work is not submitted until GitHub returns a pull-request URL whose base is `bitintelligence0/Drumore-Friends:main`; a pushed branch, local commit, email, or verbal report is not a pull request.
+- Put the GitHub URL in every handoff. Before stopping, use `gh pr view --json url,state,isDraft,headRefName,baseRefName,statusCheckRollup` or the GitHub UI to verify the PR is visible and its checks have run.
+- An agent may prepare commits, push its branch, open or update a draft PR, and respond to review. It must not approve its own work. It may merge only after a human explicitly authorizes that merge and all required review and checks pass.
+- Use the author/reviewer roles in `CONTRIBUTING.md`. Beth owns historical meaning and image-rights decisions; Jim or Bevan may review implementation; Bevan owns publishing and repository administration.
 - A pull request must list changed record IDs, source files or post IDs consulted, historical questions left open, rights implications, validation commands, and browser views checked.
 - Generated files belong in the same commit as their canonical inputs. Do not leave another agent to guess whether generated data is stale.
 - Do not overwrite another contributor's unresolved work. Rebase or coordinate record ownership when changes overlap.

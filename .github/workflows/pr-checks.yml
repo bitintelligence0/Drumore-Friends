@@ -1,0 +1,39 @@
+name: Pull request checks
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@v4
+
+      - name: Compile Python files
+        run: python3 -m compileall -q site
+
+      - name: Rebuild browser content
+        run: python3 site/build_content.py
+
+      - name: Reject stale generated content
+        run: git diff --exit-code -- site/content.json
+
+      - name: Validate story joins
+        run: python3 site/validate_story.py
+
+      - name: Validate JSON syntax
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          files = list(Path('site/data').rglob('*.json')) + [Path('site/content.json')]
+          for path in files:
+              json.loads(path.read_text())
+          print(f'Validated JSON syntax in {len(files)} files.')
+          PY
