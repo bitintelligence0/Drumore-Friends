@@ -1,0 +1,17 @@
+{
+  "id": "wynona-diary",
+  "title": "Wynona’s diary years",
+  "personIds": [
+    "wynona-lamborn"
+  ],
+  "sceneIds": [
+    "autograph-book",
+    "first-diary-page",
+    "millersville-institute",
+    "winter-entries",
+    "isaac-news"
+  ],
+  "status": "editorial prototype; claims and rights await Beth’s review",
+  "opening": "In 1879, an eleven-year-old in the Drumore circle began collecting words from relatives and friends. Eleven years later, Jessie Wynona Lamborn began a diary. Its pages move between school, worship, travel, weather, friendship and loss. This story follows five moments in that surviving account, with the archive trail beside each one.",
+  "ending": "The diary continues beyond these five moments. Here, Wynona’s own words and the family archive offer a route through a particular year, not a complete account of her life. Beth’s review of the diary, identities, captions and permissions is the next editorial step."
+}

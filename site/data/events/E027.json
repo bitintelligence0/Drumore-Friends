@@ -1,0 +1,39 @@
+{
+  "id": "E027",
+  "date": {
+    "original": "1876-07-05",
+    "precision": "day",
+    "start": "1876-07-05",
+    "end": null,
+    "sortYear": 1876
+  },
+  "title": "William Lewis Lamborn dies",
+  "summary": "Wynona’s father dies of tuberculosis at his sister Alice’s home; his death shapes Wynona’s childhood story.",
+  "sourcePostIds": [
+    "P034",
+    "P035"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/814495534625019/",
+    "https://www.facebook.com/100081937388902/posts/809130265161546/"
+  ],
+  "personSubjectIds": [
+    "will-lamborn"
+  ],
+  "nameMentions": [
+    "William Lewis Lamborn",
+    "Alice Lamborn Shoemaker",
+    "Jessie Wynona Lamborn"
+  ],
+  "placeIds": [
+    "shoemaker-home",
+    "fulton-township"
+  ],
+  "placeMentions": [
+    "Fulton Township, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

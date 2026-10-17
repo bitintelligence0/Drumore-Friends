@@ -1,0 +1,44 @@
+{
+  "id": "E023",
+  "date": {
+    "original": "1861/1865",
+    "precision": "range",
+    "start": "1861",
+    "end": "1865",
+    "sortYear": 1861
+  },
+  "title": "Drumore Friends serve in the Union Army",
+  "summary": "Several young men associated with the meeting serve despite the Quaker Peace Testimony; Beth follows the Normal Rifles and Hambleton and Lamborn family stories.",
+  "sourcePostIds": [
+    "P056",
+    "P069",
+    "P072",
+    "P130",
+    "P139",
+    "P140"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/851135710961001/",
+    "https://www.facebook.com/100081937388902/posts/870395535701685/",
+    "https://www.facebook.com/100081937388902/posts/868229375918301/",
+    "https://www.facebook.com/100081937388902/posts/1114384924636077/",
+    "https://www.facebook.com/100081937388902/posts/1122764277131475/",
+    "https://www.facebook.com/100081937388902/posts/1118255697582333/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Thomas Benton Hambleton",
+    "William Lewis Lamborn"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore Township",
+    "Civil War service locations"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

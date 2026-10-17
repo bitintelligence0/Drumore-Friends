@@ -1,0 +1,19 @@
+{
+  "id": "oxford-area",
+  "label": "Oxford area",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P121",
+    "P122",
+    "P112",
+    "P113"
+  ],
+  "status": "Area only",
+  "schematic": {
+    "x": 690,
+    "y": 300,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

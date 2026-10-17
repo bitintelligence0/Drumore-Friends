@@ -1,0 +1,25 @@
+{
+  "id": "P067-I06",
+  "postId": "P067",
+  "archivePath": "images/870370532370852/870362475704991.jpg",
+  "caption": "William Shoemaker and Alice Lamborn Shoemaker in 1910",
+  "alt": "William Shoemaker and Alice Lamborn Shoemaker in 1910",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=870362475704991&set=pcb.870370532370852",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "william-shoemaker",
+    "alice-shoemaker"
+  ],
+  "width": 991,
+  "height": 748,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.22,
+    "cy": 0.36,
+    "side": 0.3,
+    "personId": "william-shoemaker"
+  }
+}

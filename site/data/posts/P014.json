@@ -1,0 +1,22 @@
+{
+  "id": "P014",
+  "archiveFile": "2025-06.md",
+  "ordinal": 14,
+  "publishedDate": "2025-06-10",
+  "title": "Drumore Friends Meeting House updated their profile picture.",
+  "excerpt": "**Photos** ![Photo 1](images/725116663562907/725116663562907.jpg) [Original photo]( ---",
+  "facebookUrl": "https://www.facebook.com/100081937388902/posts/725116663562907/",
+  "allImages": [
+    {
+      "archivePath": "images/725116663562907/725116663562907.jpg",
+      "caption": "",
+      "alt": "Photo 1",
+      "originalUrl": "https://www.facebook.com/photo/?fbid=725116663562907&set=a.143521135055799"
+    }
+  ],
+  "selectedImageIds": [
+    "P014-I01"
+  ],
+  "curationStatus": "first-pass; review against full post",
+  "origin": "brand-book-extension"
+}

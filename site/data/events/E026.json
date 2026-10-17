@@ -1,0 +1,37 @@
+{
+  "id": "E026",
+  "date": {
+    "original": "1870-01-20",
+    "precision": "day",
+    "start": "1870-01-20",
+    "end": null,
+    "sortYear": 1870
+  },
+  "title": "Alice Lamborn and William Lukens Shoemaker marry",
+  "summary": "The marriage occurs in a Friends ceremony at Alban Cutler’s home, where Alice had been raised.",
+  "sourcePostIds": [
+    "P075"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/902859005788671/"
+  ],
+  "personSubjectIds": [
+    "alice-shoemaker",
+    "william-shoemaker"
+  ],
+  "nameMentions": [
+    "Alice Lamborn Shoemaker",
+    "William Lukens Shoemaker",
+    "Alban Cutler"
+  ],
+  "placeIds": [
+    "fulton-township"
+  ],
+  "placeMentions": [
+    "Fulton Township area, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

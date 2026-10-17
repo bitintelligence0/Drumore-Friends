@@ -1,0 +1,11 @@
+{
+  "id": "parent:sarah-coates-lamborn:linneaus-lamborn",
+  "type": "parent",
+  "from": "sarah-coates-lamborn",
+  "to": "linneaus-lamborn",
+  "sourcePostIds": [
+    "P085"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

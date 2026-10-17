@@ -1,0 +1,18 @@
+{
+  "id": "gwynedd",
+  "label": "Gwynedd",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P062",
+    "P055",
+    "P073"
+  ],
+  "status": "Meeting and township area",
+  "schematic": {
+    "x": 1300,
+    "y": 66,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

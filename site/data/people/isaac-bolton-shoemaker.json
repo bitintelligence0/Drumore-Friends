@@ -1,0 +1,32 @@
+{
+  "id": "isaac-bolton-shoemaker",
+  "displayName": "Isaac Bolton Shoemaker",
+  "aliases": [],
+  "identityStatus": "provisional archive identity; verify records",
+  "sourcePostIds": [
+    "P092",
+    "P093"
+  ],
+  "eventIds": [
+    "E033"
+  ],
+  "storyIds": [],
+  "shortName": "Isaac Bolton Shoemaker",
+  "family": "Shoemaker",
+  "relationToWynona": "In her extended circle; relationship needs review",
+  "about": "Born 24 Sept 1832; died 16 Apr 1891 after a long illness (P092). Wynona’s diary records his death.",
+  "lifeline": {
+    "start": {
+      "year": 1832,
+      "kind": "known"
+    },
+    "end": {
+      "year": 1891,
+      "kind": "known"
+    }
+  },
+  "portraitImageId": null,
+  "placeIds": [
+    "friends-cemetery"
+  ]
+}

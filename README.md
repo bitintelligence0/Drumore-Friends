@@ -8,7 +8,7 @@ Planning lives in Linear: team **DRU**, project *Drumore Friends Meeting House �
 
 | Folder | What it is |
 |---|---|
-| `site/` | The website: a dependency-free local server (`server.py`), the browser app (`index.html`, `app.js`, `store.js`, `lib.js`, `hero.js`, `explore.js`, `timeline.js`, `map.js`, `family.js`, `reading.js`, `site.css`), the data layer (`content.json`) and the scripts that build and validate it. `site/README.md` has the full data and URL contract. |
+| `site/` | The website: a dependency-free local server, browser app, canonical contributor records under `site/data/`, generated browser bundle `content.json`, and build and validation scripts. `site/README.md` has the full data and URL contract. |
 | `brand-book/` | Brand book v0.2: the editable source (`drumore-brand-book-source.html`), its images (`assets/`), `build.py` to rebuild the one-file book, and the PDF. The website is built from this book’s components. |
 | `docs/` | `IMPLEMENTATION_MAP.md` (which book component became which site file), `BRAND.md` (rules for developers), `BETH_QUESTIONS.md`, `STORY_EDITORIAL_TEMPLATE.md` (how a story scene is structured), and `QA_COMPARISON.html` with screenshots in `docs/qa/`. |
 | `tools/` | `print-brand-book-pdf.mjs` (prints the book at desktop width through Chrome) and `capture-qa.mjs` (captures the book and the site side by side). |
@@ -21,15 +21,15 @@ python3 validate.py && python3 validate_story.py
 PORT=8780 python3 server.py
 ```
 
-Open <http://127.0.0.1:8780/>. The server reads post text and images on demand from Beth’s archive in the Obsidian vault (see below), so the archive must be on this machine. Set `DRUMORE_ARCHIVE` if it moves. Restart the server after changing `content.json`.
+Open <http://127.0.0.1:8780/>. The server reads post text and images on demand from the synchronized private Google Drive archive. Set `DRUMORE_ARCHIVE` to the local `01 Source Archive` folder if automatic discovery does not find it. Restart the server after rebuilding `content.json`.
 
-Rebuild the data: `python3 build_data.py` (BED-280 snapshot), then `python3 build_extensions.py` (people, relationships, places, portraits, transcriptions), then both validators.
+After editing canonical records, run `python3 build_content.py`, then both validators. To intentionally refresh everything from the captured archive, run `python3 build_data.py` followed by `python3 build_extensions.py`; those scripts also refresh the split records and browser bundle.
 
 Rebuild the brand book: `cd brand-book && python3 build.py`. Print the PDF: `node tools/print-brand-book-pdf.mjs file://$PWD/brand-book/Drumore-Friends-Brand-Book-v0.2.html brand-book/Drumore-Friends-Brand-Book-v0.2.pdf`.
 
 ## Where the history comes from
 
-All content comes from Beth’s posts, captured into the Obsidian vault **Bevan OS** at `12 Personal/Parents/Beth/Genealogy Project/`. Nothing in that folder is copied here except the brand book’s images; the site reads it directly.
+All source content comes from Beth’s posts. The shared source of truth is the private Google Drive folder **My Drive / Personal / Family / Drumore Friends**. The original Bevan OS capture remains a frozen backup. Nothing from the raw archive is committed here; the local preview reads selected source files from the synchronized Drive copy.
 
 | What | Vault path | Link |
 |---|---|---|

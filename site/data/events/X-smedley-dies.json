@@ -1,0 +1,28 @@
+{
+  "id": "X-smedley-dies",
+  "date": {
+    "original": "1851",
+    "precision": "year",
+    "start": "1851",
+    "end": null,
+    "sortYear": 1851
+  },
+  "title": "Smedley Lamborn dies",
+  "summary": "Wynona’s grandfather; her grandmother Margaret dies four years later.",
+  "sourcePostIds": [
+    "P067"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/870370532370852/"
+  ],
+  "personSubjectIds": [
+    "smedley-lamborn"
+  ],
+  "nameMentions": [],
+  "placeIds": [],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

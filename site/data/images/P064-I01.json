@@ -1,0 +1,25 @@
+{
+  "id": "P064-I01",
+  "postId": "P064",
+  "archivePath": "images/883249131082992/883242404416998.jpg",
+  "caption": "Wedding portrait of Wynona and Early December 8, 1892",
+  "alt": "Wedding portrait of Wynona and Early December 8, 1892",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=883242404416998&set=pcb.883249131082992",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "wynona-lamborn",
+    "early-earnhart"
+  ],
+  "width": 843,
+  "height": 1281,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.76,
+    "cy": 0.28,
+    "side": 0.26,
+    "personId": "early-earnhart"
+  }
+}

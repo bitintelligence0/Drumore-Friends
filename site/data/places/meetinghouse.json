@@ -1,0 +1,16 @@
+{
+  "id": "meetinghouse",
+  "label": "Drumore Friends Meetinghouse",
+  "locationPrecision": "unresolved",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P006",
+    "P080"
+  ],
+  "status": "building identity in archive; address and historical footprint await review",
+  "schematic": {
+    "x": 300,
+    "y": 182,
+    "kind": "building"
+  }
+}

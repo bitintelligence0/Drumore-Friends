@@ -1,0 +1,9 @@
+{
+  "id": "shoemaker-children",
+  "parents": [
+    "alice-shoemaker",
+    "william-shoemaker"
+  ],
+  "unshownChildren": 1,
+  "note": "A third child died as an infant; name not yet in the archive (P067)."
+}

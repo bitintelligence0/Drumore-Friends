@@ -1,0 +1,24 @@
+{
+  "id": "P067-I03",
+  "postId": "P067",
+  "archivePath": "images/870370532370852/870361402371765.jpg",
+  "caption": "Alice Lamborn Shoemaker",
+  "alt": "Alice Lamborn Shoemaker",
+  "originalUrl": "https://www.facebook.com/photo?fbid=870361402371765&set=pcb.870370532370852",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "alice-shoemaker"
+  ],
+  "width": 449,
+  "height": 613,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.5,
+    "cy": 0.38,
+    "side": 0.8,
+    "personId": "alice-shoemaker"
+  }
+}

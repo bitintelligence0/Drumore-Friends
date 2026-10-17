@@ -1,0 +1,25 @@
+{
+  "id": "P071-I02",
+  "postId": "P071",
+  "archivePath": "images/869853165755922/869883452419560.jpg",
+  "caption": "Winona Shoemaker and husband, Harry Drennan",
+  "alt": "Winona Shoemaker and husband, Harry Drennan",
+  "originalUrl": "https://www.facebook.com/photo?fbid=869883452419560&set=pcb.869853165755922",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "winona-shoemaker",
+    "harry-drennan"
+  ],
+  "width": 1291,
+  "height": 960,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.7,
+    "cy": 0.33,
+    "side": 0.32,
+    "personId": "harry-drennan"
+  }
+}

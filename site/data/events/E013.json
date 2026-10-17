@@ -1,0 +1,31 @@
+{
+  "id": "E013",
+  "date": {
+    "original": "1795",
+    "precision": "approximate_year",
+    "start": "1795",
+    "end": null,
+    "sortYear": 1795
+  },
+  "title": "Friends begin settling in Drumore",
+  "summary": "The centennial account describes Friends arriving in Drumore around 1795 and initially worshiping in homes.",
+  "sourcePostIds": [
+    "P006"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/733731142701459/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Early Drumore Friends"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore Township, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

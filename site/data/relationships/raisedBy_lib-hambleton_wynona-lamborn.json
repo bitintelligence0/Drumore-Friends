@@ -1,0 +1,11 @@
+{
+  "id": "raisedBy:lib-hambleton:wynona-lamborn",
+  "type": "raisedBy",
+  "from": "lib-hambleton",
+  "to": "wynona-lamborn",
+  "sourcePostIds": [
+    "P034"
+  ],
+  "since": 1876,
+  "status": "provisional; from Beth’s posts"
+}

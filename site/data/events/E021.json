@@ -1,0 +1,34 @@
+{
+  "id": "E021",
+  "date": {
+    "original": "1828",
+    "precision": "year",
+    "start": "1828",
+    "end": null,
+    "sortYear": 1828
+  },
+  "title": "Jesse Shoemaker comes to Drumore",
+  "summary": "Jesse, a nephew of Jacob Shoemaker, follows relatives from Gwynedd to the Drumore community.",
+  "sourcePostIds": [
+    "P073"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/866834966057742/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Jesse Shoemaker"
+  ],
+  "placeIds": [
+    "gwynedd",
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Gwynedd",
+    "Drumore Township"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "war",
+  "label": "War years",
+  "start": 1861,
+  "end": 1865,
+  "weight": 0.55
+}

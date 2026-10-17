@@ -1,0 +1,33 @@
+{
+  "id": "E019",
+  "date": {
+    "original": "1822-03-13",
+    "precision": "day",
+    "start": "1822-03-13",
+    "end": null,
+    "sortYear": 1822
+  },
+  "title": "Thomas Martick Lamborn marries Lydia Bradley",
+  "summary": "A son of George Charles Lamborn marries at Drumore; his brother Benjamin later marries Lydia’s sister.",
+  "sourcePostIds": [
+    "P028"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/785934957481077/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Thomas Martick Lamborn",
+    "Lydia Bradley"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore Township, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

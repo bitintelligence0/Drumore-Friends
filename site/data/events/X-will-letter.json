@@ -1,0 +1,29 @@
+{
+  "id": "X-will-letter",
+  "date": {
+    "original": "1873",
+    "precision": "year",
+    "start": "1873",
+    "end": null,
+    "sortYear": 1873
+  },
+  "title": "Will writes a letter to his daughter",
+  "summary": "A three-page letter of love and advice: “Let thy religion be simple, plain, and full of love for thy fellow mortals …”",
+  "sourcePostIds": [
+    "P035"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/809130265161546/"
+  ],
+  "personSubjectIds": [
+    "will-lamborn",
+    "wynona-lamborn"
+  ],
+  "nameMentions": [],
+  "placeIds": [],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

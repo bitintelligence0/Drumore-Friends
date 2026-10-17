@@ -1,0 +1,33 @@
+{
+  "id": "E015",
+  "date": {
+    "original": "1806-11-13",
+    "precision": "day",
+    "start": "1806-11-13",
+    "end": null,
+    "sortYear": 1806
+  },
+  "title": "Sarah Lamborn and Simon Pennock marry",
+  "summary": "The marriage joins neighboring Chester County families whose descendants become part of the Drumore community.",
+  "sourcePostIds": [
+    "P033"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/768394655901774/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Sarah Lamborn Pennock",
+    "Simon Pennock"
+  ],
+  "placeIds": [
+    "chester-county"
+  ],
+  "placeMentions": [
+    "Chester County, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

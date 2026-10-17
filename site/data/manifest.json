@@ -1,0 +1,999 @@
+{
+  "meta": "meta.json",
+  "collections": {
+    "events": [
+      {
+        "id": "E013",
+        "file": "events/E013.json"
+      },
+      {
+        "id": "E016",
+        "file": "events/E016.json"
+      },
+      {
+        "id": "E017",
+        "file": "events/E017.json"
+      },
+      {
+        "id": "E018",
+        "file": "events/E018.json"
+      },
+      {
+        "id": "E025",
+        "file": "events/E025.json"
+      },
+      {
+        "id": "E028",
+        "file": "events/E028.json"
+      },
+      {
+        "id": "E029",
+        "file": "events/E029.json"
+      },
+      {
+        "id": "E030",
+        "file": "events/E030.json"
+      },
+      {
+        "id": "E031",
+        "file": "events/E031.json"
+      },
+      {
+        "id": "E033",
+        "file": "events/E033.json"
+      },
+      {
+        "id": "E001",
+        "file": "events/E001.json"
+      },
+      {
+        "id": "E002",
+        "file": "events/E002.json"
+      },
+      {
+        "id": "E003",
+        "file": "events/E003.json"
+      },
+      {
+        "id": "E004",
+        "file": "events/E004.json"
+      },
+      {
+        "id": "E005",
+        "file": "events/E005.json"
+      },
+      {
+        "id": "E006",
+        "file": "events/E006.json"
+      },
+      {
+        "id": "E007",
+        "file": "events/E007.json"
+      },
+      {
+        "id": "E008",
+        "file": "events/E008.json"
+      },
+      {
+        "id": "E009",
+        "file": "events/E009.json"
+      },
+      {
+        "id": "E010",
+        "file": "events/E010.json"
+      },
+      {
+        "id": "E011",
+        "file": "events/E011.json"
+      },
+      {
+        "id": "E012",
+        "file": "events/E012.json"
+      },
+      {
+        "id": "E014",
+        "file": "events/E014.json"
+      },
+      {
+        "id": "E015",
+        "file": "events/E015.json"
+      },
+      {
+        "id": "E019",
+        "file": "events/E019.json"
+      },
+      {
+        "id": "E020",
+        "file": "events/E020.json"
+      },
+      {
+        "id": "E021",
+        "file": "events/E021.json"
+      },
+      {
+        "id": "E022",
+        "file": "events/E022.json"
+      },
+      {
+        "id": "E023",
+        "file": "events/E023.json"
+      },
+      {
+        "id": "E024",
+        "file": "events/E024.json"
+      },
+      {
+        "id": "E026",
+        "file": "events/E026.json"
+      },
+      {
+        "id": "E027",
+        "file": "events/E027.json"
+      },
+      {
+        "id": "E032",
+        "file": "events/E032.json"
+      },
+      {
+        "id": "E034",
+        "file": "events/E034.json"
+      },
+      {
+        "id": "E035",
+        "file": "events/E035.json"
+      },
+      {
+        "id": "E036",
+        "file": "events/E036.json"
+      },
+      {
+        "id": "E037",
+        "file": "events/E037.json"
+      },
+      {
+        "id": "X-fernglen-lease",
+        "file": "events/X-fernglen-lease.json"
+      },
+      {
+        "id": "X-will-letter",
+        "file": "events/X-will-letter.json"
+      },
+      {
+        "id": "X-phebe-death",
+        "file": "events/X-phebe-death.json"
+      },
+      {
+        "id": "X-to-fernglen",
+        "file": "events/X-to-fernglen.json"
+      },
+      {
+        "id": "X-fernglen-bought",
+        "file": "events/X-fernglen-bought.json"
+      },
+      {
+        "id": "X-post-office",
+        "file": "events/X-post-office.json"
+      },
+      {
+        "id": "X-wynona-marries",
+        "file": "events/X-wynona-marries.json"
+      },
+      {
+        "id": "X-smedley-dies",
+        "file": "events/X-smedley-dies.json"
+      },
+      {
+        "id": "X-margaret-dies",
+        "file": "events/X-margaret-dies.json"
+      },
+      {
+        "id": "X-george-marries",
+        "file": "events/X-george-marries.json"
+      }
+    ],
+    "posts": [
+      {
+        "id": "P006",
+        "file": "posts/P006.json"
+      },
+      {
+        "id": "P080",
+        "file": "posts/P080.json"
+      },
+      {
+        "id": "P045",
+        "file": "posts/P045.json"
+      },
+      {
+        "id": "P099",
+        "file": "posts/P099.json"
+      },
+      {
+        "id": "P100",
+        "file": "posts/P100.json"
+      },
+      {
+        "id": "P047",
+        "file": "posts/P047.json"
+      },
+      {
+        "id": "P042",
+        "file": "posts/P042.json"
+      },
+      {
+        "id": "P051",
+        "file": "posts/P051.json"
+      },
+      {
+        "id": "P054",
+        "file": "posts/P054.json"
+      },
+      {
+        "id": "P063",
+        "file": "posts/P063.json"
+      },
+      {
+        "id": "P064",
+        "file": "posts/P064.json"
+      },
+      {
+        "id": "P065",
+        "file": "posts/P065.json"
+      },
+      {
+        "id": "P066",
+        "file": "posts/P066.json"
+      },
+      {
+        "id": "P068",
+        "file": "posts/P068.json"
+      },
+      {
+        "id": "P071",
+        "file": "posts/P071.json"
+      },
+      {
+        "id": "P074",
+        "file": "posts/P074.json"
+      },
+      {
+        "id": "P077",
+        "file": "posts/P077.json"
+      },
+      {
+        "id": "P079",
+        "file": "posts/P079.json"
+      },
+      {
+        "id": "P082",
+        "file": "posts/P082.json"
+      },
+      {
+        "id": "P085",
+        "file": "posts/P085.json"
+      },
+      {
+        "id": "P087",
+        "file": "posts/P087.json"
+      },
+      {
+        "id": "P092",
+        "file": "posts/P092.json"
+      },
+      {
+        "id": "P093",
+        "file": "posts/P093.json"
+      },
+      {
+        "id": "P034",
+        "file": "posts/P034.json"
+      },
+      {
+        "id": "P048",
+        "file": "posts/P048.json"
+      },
+      {
+        "id": "P057",
+        "file": "posts/P057.json"
+      },
+      {
+        "id": "P067",
+        "file": "posts/P067.json"
+      },
+      {
+        "id": "P035",
+        "file": "posts/P035.json"
+      },
+      {
+        "id": "P072",
+        "file": "posts/P072.json"
+      },
+      {
+        "id": "P058",
+        "file": "posts/P058.json"
+      },
+      {
+        "id": "P112",
+        "file": "posts/P112.json"
+      },
+      {
+        "id": "P040",
+        "file": "posts/P040.json"
+      },
+      {
+        "id": "P084",
+        "file": "posts/P084.json"
+      },
+      {
+        "id": "P088",
+        "file": "posts/P088.json"
+      },
+      {
+        "id": "P118",
+        "file": "posts/P118.json"
+      },
+      {
+        "id": "P043",
+        "file": "posts/P043.json"
+      },
+      {
+        "id": "P044",
+        "file": "posts/P044.json"
+      },
+      {
+        "id": "P031",
+        "file": "posts/P031.json"
+      },
+      {
+        "id": "P086",
+        "file": "posts/P086.json"
+      },
+      {
+        "id": "P096",
+        "file": "posts/P096.json"
+      },
+      {
+        "id": "P102",
+        "file": "posts/P102.json"
+      },
+      {
+        "id": "P003",
+        "file": "posts/P003.json"
+      },
+      {
+        "id": "P004",
+        "file": "posts/P004.json"
+      },
+      {
+        "id": "P119",
+        "file": "posts/P119.json"
+      },
+      {
+        "id": "P027",
+        "file": "posts/P027.json"
+      },
+      {
+        "id": "P062",
+        "file": "posts/P062.json"
+      },
+      {
+        "id": "P020",
+        "file": "posts/P020.json"
+      },
+      {
+        "id": "P055",
+        "file": "posts/P055.json"
+      },
+      {
+        "id": "P005",
+        "file": "posts/P005.json"
+      },
+      {
+        "id": "P136",
+        "file": "posts/P136.json"
+      },
+      {
+        "id": "P137",
+        "file": "posts/P137.json"
+      },
+      {
+        "id": "P033",
+        "file": "posts/P033.json"
+      },
+      {
+        "id": "P073",
+        "file": "posts/P073.json"
+      },
+      {
+        "id": "P028",
+        "file": "posts/P028.json"
+      },
+      {
+        "id": "P011",
+        "file": "posts/P011.json"
+      },
+      {
+        "id": "P127",
+        "file": "posts/P127.json"
+      },
+      {
+        "id": "P128",
+        "file": "posts/P128.json"
+      },
+      {
+        "id": "P056",
+        "file": "posts/P056.json"
+      },
+      {
+        "id": "P069",
+        "file": "posts/P069.json"
+      },
+      {
+        "id": "P130",
+        "file": "posts/P130.json"
+      },
+      {
+        "id": "P139",
+        "file": "posts/P139.json"
+      },
+      {
+        "id": "P140",
+        "file": "posts/P140.json"
+      },
+      {
+        "id": "P059",
+        "file": "posts/P059.json"
+      },
+      {
+        "id": "P060",
+        "file": "posts/P060.json"
+      },
+      {
+        "id": "P061",
+        "file": "posts/P061.json"
+      },
+      {
+        "id": "P106",
+        "file": "posts/P106.json"
+      },
+      {
+        "id": "P075",
+        "file": "posts/P075.json"
+      },
+      {
+        "id": "P089",
+        "file": "posts/P089.json"
+      },
+      {
+        "id": "P090",
+        "file": "posts/P090.json"
+      },
+      {
+        "id": "P121",
+        "file": "posts/P121.json"
+      },
+      {
+        "id": "P122",
+        "file": "posts/P122.json"
+      },
+      {
+        "id": "P113",
+        "file": "posts/P113.json"
+      },
+      {
+        "id": "P052",
+        "file": "posts/P052.json"
+      },
+      {
+        "id": "P016",
+        "file": "posts/P016.json"
+      },
+      {
+        "id": "P014",
+        "file": "posts/P014.json"
+      },
+      {
+        "id": "P107",
+        "file": "posts/P107.json"
+      }
+    ],
+    "people": [
+      {
+        "id": "wynona-lamborn",
+        "file": "people/wynona-lamborn.json"
+      },
+      {
+        "id": "isaac-bolton-shoemaker",
+        "file": "people/isaac-bolton-shoemaker.json"
+      },
+      {
+        "id": "smedley-lamborn",
+        "file": "people/smedley-lamborn.json"
+      },
+      {
+        "id": "margaret-bolton-lamborn",
+        "file": "people/margaret-bolton-lamborn.json"
+      },
+      {
+        "id": "george-lamborn",
+        "file": "people/george-lamborn.json"
+      },
+      {
+        "id": "sarah-coates-lamborn",
+        "file": "people/sarah-coates-lamborn.json"
+      },
+      {
+        "id": "will-lamborn",
+        "file": "people/will-lamborn.json"
+      },
+      {
+        "id": "phebe-barnard-lamborn",
+        "file": "people/phebe-barnard-lamborn.json"
+      },
+      {
+        "id": "lib-hambleton",
+        "file": "people/lib-hambleton.json"
+      },
+      {
+        "id": "thomas-hambleton",
+        "file": "people/thomas-hambleton.json"
+      },
+      {
+        "id": "alice-shoemaker",
+        "file": "people/alice-shoemaker.json"
+      },
+      {
+        "id": "william-shoemaker",
+        "file": "people/william-shoemaker.json"
+      },
+      {
+        "id": "winona-shoemaker",
+        "file": "people/winona-shoemaker.json"
+      },
+      {
+        "id": "lulu-shoemaker",
+        "file": "people/lulu-shoemaker.json"
+      },
+      {
+        "id": "harry-drennan",
+        "file": "people/harry-drennan.json"
+      },
+      {
+        "id": "linneaus-lamborn",
+        "file": "people/linneaus-lamborn.json"
+      },
+      {
+        "id": "lucretia-lamborn",
+        "file": "people/lucretia-lamborn.json"
+      },
+      {
+        "id": "early-earnhart",
+        "file": "people/early-earnhart.json"
+      },
+      {
+        "id": "harold-earnhart",
+        "file": "people/harold-earnhart.json"
+      },
+      {
+        "id": "raymond-earnhart",
+        "file": "people/raymond-earnhart.json"
+      }
+    ],
+    "places": [
+      {
+        "id": "drumore-area",
+        "file": "places/drumore-area.json"
+      },
+      {
+        "id": "meetinghouse",
+        "file": "places/meetinghouse.json"
+      },
+      {
+        "id": "little-britain-area",
+        "file": "places/little-britain-area.json"
+      },
+      {
+        "id": "millersville-area",
+        "file": "places/millersville-area.json"
+      },
+      {
+        "id": "fernglen-store",
+        "file": "places/fernglen-store.json"
+      },
+      {
+        "id": "liberty-square",
+        "file": "places/liberty-square.json"
+      },
+      {
+        "id": "earnhart-farm",
+        "file": "places/earnhart-farm.json"
+      },
+      {
+        "id": "shoemaker-home",
+        "file": "places/shoemaker-home.json"
+      },
+      {
+        "id": "conowingo-school",
+        "file": "places/conowingo-school.json"
+      },
+      {
+        "id": "fulton-township",
+        "file": "places/fulton-township.json"
+      },
+      {
+        "id": "friends-cemetery",
+        "file": "places/friends-cemetery.json"
+      },
+      {
+        "id": "oxford-area",
+        "file": "places/oxford-area.json"
+      },
+      {
+        "id": "chester-county",
+        "file": "places/chester-county.json"
+      },
+      {
+        "id": "london-grove",
+        "file": "places/london-grove.json"
+      },
+      {
+        "id": "east-marlborough",
+        "file": "places/east-marlborough.json"
+      },
+      {
+        "id": "brandywine-area",
+        "file": "places/brandywine-area.json"
+      },
+      {
+        "id": "gwynedd",
+        "file": "places/gwynedd.json"
+      },
+      {
+        "id": "camp-william-penn",
+        "file": "places/camp-william-penn.json"
+      },
+      {
+        "id": "germantown",
+        "file": "places/germantown.json"
+      },
+      {
+        "id": "overseas",
+        "file": "places/overseas.json"
+      }
+    ],
+    "stories": [
+      {
+        "id": "wynona-diary",
+        "file": "stories/wynona-diary.json"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "autograph-book",
+        "file": "scenes/autograph-book.json"
+      },
+      {
+        "id": "first-diary-page",
+        "file": "scenes/first-diary-page.json"
+      },
+      {
+        "id": "millersville-institute",
+        "file": "scenes/millersville-institute.json"
+      },
+      {
+        "id": "winter-entries",
+        "file": "scenes/winter-entries.json"
+      },
+      {
+        "id": "isaac-news",
+        "file": "scenes/isaac-news.json"
+      }
+    ],
+    "images": [
+      {
+        "id": "P006-I01",
+        "file": "images/P006-I01.json"
+      },
+      {
+        "id": "P080-I01",
+        "file": "images/P080-I01.json"
+      },
+      {
+        "id": "P045-I01",
+        "file": "images/P045-I01.json"
+      },
+      {
+        "id": "P047-I01",
+        "file": "images/P047-I01.json"
+      },
+      {
+        "id": "P054-I01",
+        "file": "images/P054-I01.json"
+      },
+      {
+        "id": "P063-I01",
+        "file": "images/P063-I01.json"
+      },
+      {
+        "id": "P092-I01",
+        "file": "images/P092-I01.json"
+      },
+      {
+        "id": "P045-I03",
+        "file": "images/P045-I03.json"
+      },
+      {
+        "id": "P045-I04",
+        "file": "images/P045-I04.json"
+      },
+      {
+        "id": "P034-I01",
+        "file": "images/P034-I01.json"
+      },
+      {
+        "id": "P034-I04",
+        "file": "images/P034-I04.json"
+      },
+      {
+        "id": "P035-I01",
+        "file": "images/P035-I01.json"
+      },
+      {
+        "id": "P035-I02",
+        "file": "images/P035-I02.json"
+      },
+      {
+        "id": "P035-I03",
+        "file": "images/P035-I03.json"
+      },
+      {
+        "id": "P045-I06",
+        "file": "images/P045-I06.json"
+      },
+      {
+        "id": "P048-I01",
+        "file": "images/P048-I01.json"
+      },
+      {
+        "id": "P051-I05",
+        "file": "images/P051-I05.json"
+      },
+      {
+        "id": "P058-I01",
+        "file": "images/P058-I01.json"
+      },
+      {
+        "id": "P064-I01",
+        "file": "images/P064-I01.json"
+      },
+      {
+        "id": "P067-I01",
+        "file": "images/P067-I01.json"
+      },
+      {
+        "id": "P067-I03",
+        "file": "images/P067-I03.json"
+      },
+      {
+        "id": "P067-I06",
+        "file": "images/P067-I06.json"
+      },
+      {
+        "id": "P071-I02",
+        "file": "images/P071-I02.json"
+      },
+      {
+        "id": "P072-I01",
+        "file": "images/P072-I01.json"
+      },
+      {
+        "id": "P085-I01",
+        "file": "images/P085-I01.json"
+      },
+      {
+        "id": "P085-I02",
+        "file": "images/P085-I02.json"
+      },
+      {
+        "id": "P085-I03",
+        "file": "images/P085-I03.json"
+      },
+      {
+        "id": "P140-I04",
+        "file": "images/P140-I04.json"
+      },
+      {
+        "id": "P080-I02",
+        "file": "images/P080-I02.json"
+      },
+      {
+        "id": "P016-I01",
+        "file": "images/P016-I01.json"
+      },
+      {
+        "id": "P014-I01",
+        "file": "images/P014-I01.json"
+      },
+      {
+        "id": "P107-I01",
+        "file": "images/P107-I01.json"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "parent:smedley-lamborn:george-lamborn",
+        "file": "relationships/parent_smedley-lamborn_george-lamborn.json"
+      },
+      {
+        "id": "parent:smedley-lamborn:will-lamborn",
+        "file": "relationships/parent_smedley-lamborn_will-lamborn.json"
+      },
+      {
+        "id": "parent:smedley-lamborn:lib-hambleton",
+        "file": "relationships/parent_smedley-lamborn_lib-hambleton.json"
+      },
+      {
+        "id": "parent:smedley-lamborn:alice-shoemaker",
+        "file": "relationships/parent_smedley-lamborn_alice-shoemaker.json"
+      },
+      {
+        "id": "parent:margaret-bolton-lamborn:george-lamborn",
+        "file": "relationships/parent_margaret-bolton-lamborn_george-lamborn.json"
+      },
+      {
+        "id": "parent:margaret-bolton-lamborn:will-lamborn",
+        "file": "relationships/parent_margaret-bolton-lamborn_will-lamborn.json"
+      },
+      {
+        "id": "parent:margaret-bolton-lamborn:lib-hambleton",
+        "file": "relationships/parent_margaret-bolton-lamborn_lib-hambleton.json"
+      },
+      {
+        "id": "parent:margaret-bolton-lamborn:alice-shoemaker",
+        "file": "relationships/parent_margaret-bolton-lamborn_alice-shoemaker.json"
+      },
+      {
+        "id": "parent:will-lamborn:wynona-lamborn",
+        "file": "relationships/parent_will-lamborn_wynona-lamborn.json"
+      },
+      {
+        "id": "parent:phebe-barnard-lamborn:wynona-lamborn",
+        "file": "relationships/parent_phebe-barnard-lamborn_wynona-lamborn.json"
+      },
+      {
+        "id": "parent:george-lamborn:linneaus-lamborn",
+        "file": "relationships/parent_george-lamborn_linneaus-lamborn.json"
+      },
+      {
+        "id": "parent:george-lamborn:lucretia-lamborn",
+        "file": "relationships/parent_george-lamborn_lucretia-lamborn.json"
+      },
+      {
+        "id": "parent:sarah-coates-lamborn:linneaus-lamborn",
+        "file": "relationships/parent_sarah-coates-lamborn_linneaus-lamborn.json"
+      },
+      {
+        "id": "parent:sarah-coates-lamborn:lucretia-lamborn",
+        "file": "relationships/parent_sarah-coates-lamborn_lucretia-lamborn.json"
+      },
+      {
+        "id": "parent:alice-shoemaker:winona-shoemaker",
+        "file": "relationships/parent_alice-shoemaker_winona-shoemaker.json"
+      },
+      {
+        "id": "parent:alice-shoemaker:lulu-shoemaker",
+        "file": "relationships/parent_alice-shoemaker_lulu-shoemaker.json"
+      },
+      {
+        "id": "parent:william-shoemaker:winona-shoemaker",
+        "file": "relationships/parent_william-shoemaker_winona-shoemaker.json"
+      },
+      {
+        "id": "parent:william-shoemaker:lulu-shoemaker",
+        "file": "relationships/parent_william-shoemaker_lulu-shoemaker.json"
+      },
+      {
+        "id": "parent:wynona-lamborn:harold-earnhart",
+        "file": "relationships/parent_wynona-lamborn_harold-earnhart.json"
+      },
+      {
+        "id": "parent:wynona-lamborn:raymond-earnhart",
+        "file": "relationships/parent_wynona-lamborn_raymond-earnhart.json"
+      },
+      {
+        "id": "parent:early-earnhart:harold-earnhart",
+        "file": "relationships/parent_early-earnhart_harold-earnhart.json"
+      },
+      {
+        "id": "parent:early-earnhart:raymond-earnhart",
+        "file": "relationships/parent_early-earnhart_raymond-earnhart.json"
+      },
+      {
+        "id": "spouse:smedley-lamborn:margaret-bolton-lamborn",
+        "file": "relationships/spouse_smedley-lamborn_margaret-bolton-lamborn.json"
+      },
+      {
+        "id": "spouse:george-lamborn:sarah-coates-lamborn",
+        "file": "relationships/spouse_george-lamborn_sarah-coates-lamborn.json"
+      },
+      {
+        "id": "spouse:will-lamborn:phebe-barnard-lamborn",
+        "file": "relationships/spouse_will-lamborn_phebe-barnard-lamborn.json"
+      },
+      {
+        "id": "spouse:lib-hambleton:thomas-hambleton",
+        "file": "relationships/spouse_lib-hambleton_thomas-hambleton.json"
+      },
+      {
+        "id": "spouse:alice-shoemaker:william-shoemaker",
+        "file": "relationships/spouse_alice-shoemaker_william-shoemaker.json"
+      },
+      {
+        "id": "spouse:wynona-lamborn:early-earnhart",
+        "file": "relationships/spouse_wynona-lamborn_early-earnhart.json"
+      },
+      {
+        "id": "spouse:winona-shoemaker:harry-drennan",
+        "file": "relationships/spouse_winona-shoemaker_harry-drennan.json"
+      },
+      {
+        "id": "raisedBy:lib-hambleton:wynona-lamborn",
+        "file": "relationships/raisedBy_lib-hambleton_wynona-lamborn.json"
+      },
+      {
+        "id": "raisedBy:thomas-hambleton:wynona-lamborn",
+        "file": "relationships/raisedBy_thomas-hambleton_wynona-lamborn.json"
+      }
+    ],
+    "transcriptions": [
+      {
+        "id": "T-diary-1890-10",
+        "file": "transcriptions/T-diary-1890-10.json"
+      },
+      {
+        "id": "T-letter-1873-p1",
+        "file": "transcriptions/T-letter-1873-p1.json"
+      }
+    ],
+    "eras": [
+      {
+        "id": "before",
+        "file": "eras/before.json"
+      },
+      {
+        "id": "ancestors",
+        "file": "eras/ancestors.json"
+      },
+      {
+        "id": "settling",
+        "file": "eras/settling.json"
+      },
+      {
+        "id": "meeting",
+        "file": "eras/meeting.json"
+      },
+      {
+        "id": "war",
+        "file": "eras/war.json"
+      },
+      {
+        "id": "diaries",
+        "file": "eras/diaries.json"
+      },
+      {
+        "id": "remembering",
+        "file": "eras/remembering.json"
+      }
+    ],
+    "familyGroups": [
+      {
+        "id": "lamborn-siblings",
+        "file": "familyGroups/lamborn-siblings.json"
+      },
+      {
+        "id": "shoemaker-children",
+        "file": "familyGroups/shoemaker-children.json"
+      }
+    ]
+  }
+}

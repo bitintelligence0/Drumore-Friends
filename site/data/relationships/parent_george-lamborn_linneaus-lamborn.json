@@ -1,0 +1,12 @@
+{
+  "id": "parent:george-lamborn:linneaus-lamborn",
+  "type": "parent",
+  "from": "george-lamborn",
+  "to": "linneaus-lamborn",
+  "sourcePostIds": [
+    "P085",
+    "P099"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

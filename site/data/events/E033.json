@@ -1,0 +1,37 @@
+{
+  "id": "E033",
+  "date": {
+    "original": "1891-04-16",
+    "precision": "day",
+    "start": "1891-04-16",
+    "end": null,
+    "sortYear": 1891
+  },
+  "title": "Isaac Bolton Shoemaker dies",
+  "summary": "Beth connects the sudden death in Wynona’s diary with a fuller account of Isaac’s life and family.",
+  "sourcePostIds": [
+    "P092",
+    "P093"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/978655838208987/",
+    "https://www.facebook.com/100081937388902/posts/972691195472118/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn",
+    "isaac-bolton-shoemaker"
+  ],
+  "nameMentions": [
+    "Isaac Bolton Shoemaker",
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore area, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

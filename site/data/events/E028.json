@@ -1,0 +1,33 @@
+{
+  "id": "E028",
+  "date": {
+    "original": "1879",
+    "precision": "year",
+    "start": "1879",
+    "end": null,
+    "sortYear": 1879
+  },
+  "title": "Wynona begins an autograph book",
+  "summary": "Eleven-year-old Wynona collects messages and advice from friends and relatives.",
+  "sourcePostIds": [
+    "P047"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/822797357128170/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn"
+  ],
+  "nameMentions": [
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore area, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

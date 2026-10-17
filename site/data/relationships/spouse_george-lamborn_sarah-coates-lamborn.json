@@ -1,0 +1,11 @@
+{
+  "id": "spouse:george-lamborn:sarah-coates-lamborn",
+  "type": "spouse",
+  "from": "george-lamborn",
+  "to": "sarah-coates-lamborn",
+  "sourcePostIds": [
+    "P067"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

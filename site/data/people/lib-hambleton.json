@@ -1,0 +1,39 @@
+{
+  "id": "lib-hambleton",
+  "displayName": "Mary Elizabeth “Lib” Lamborn Hambleton",
+  "shortName": "Lib Lamborn Hambleton",
+  "family": "Hambleton",
+  "aliases": [
+    "Lib",
+    "Lizzie",
+    "Aunt Lib"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Aunt who raised her",
+  "about": "Took Wynona in after Will’s death and raised her at the Fernglen Store.",
+  "sourcePostIds": [
+    "P034",
+    "P045"
+  ],
+  "eventIds": [
+    "X-fernglen-lease",
+    "X-to-fernglen",
+    "X-fernglen-bought"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P034-I01",
+  "origin": "brand-book-extension",
+  "placeIds": [
+    "fernglen-store"
+  ]
+}

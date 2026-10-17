@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Create a bounded metadata snapshot from the read-only Drumore curation."""
 import hashlib, json, os, pathlib, re
+from archive import DRIVE_FOLDER_ID, DRIVE_RELATIVE_PATH, DRIVE_URL, resolve_archive
+from content_records import write_records
 
 ROOT = pathlib.Path(__file__).resolve().parent
-ARCHIVE = pathlib.Path(os.environ.get('DRUMORE_ARCHIVE', '/Users/bevanwaite/Documents/Bevan OS/12 Personal/Parents/Beth/Genealogy Project/Drumore Friends Meeting House Facebook Archive'))
+ARCHIVE = resolve_archive()
 CURATION = ARCHIVE / 'curation'
 EVENT_IDS = ['E013','E016','E017','E018','E025','E028','E029','E030','E031','E033']
 IMAGE_POST_IDS = ['P006','P080','P045','P047','P054','P063','P092']
@@ -66,6 +68,6 @@ scenes=[
 ]
 stories=[{'id':'wynona-diary','title':'Wynona’s diary years','personIds':['wynona-lamborn'],'sceneIds':[s['id'] for s in scenes],'status':'outline only; BED-282 will write and verify the narrative'}]
 files=['timeline-events.json','post-content-map.json','entity-index.json']
-data={'schemaVersion':1,'archiveSnapshot':{'path':str(ARCHIVE),'curationFiles':{f:hashlib.sha256((CURATION/f).read_bytes()).hexdigest() for f in files},'captured':'2026-10-15','publicationStatus':'private prototype; no public clearance'},'events':events,'posts':posts,'people':people,'places':places,'stories':stories,'scenes':scenes,'images':images}
-(ROOT/'content.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+data={'schemaVersion':1,'archiveSnapshot':{'sourceKind':'shared-google-drive-archive','driveFolderId':DRIVE_FOLDER_ID,'driveUrl':DRIVE_URL,'relativePath':DRIVE_RELATIVE_PATH,'curationFiles':{f:hashlib.sha256((CURATION/f).read_bytes()).hexdigest() for f in files},'captured':'2026-10-15','publicationStatus':'private prototype; no public clearance'},'events':events,'posts':posts,'people':people,'places':places,'stories':stories,'scenes':scenes,'images':images}
+write_records(data)
 print(f"Wrote {len(events)} events, {len(posts)} posts, {len(images)} selected images, {len(scenes)} scenes")

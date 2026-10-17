@@ -1,0 +1,52 @@
+{
+  "id": "wynona-lamborn",
+  "displayName": "Jessie Wynona Lamborn Earnhart",
+  "aliases": [
+    "Wynona",
+    "Nonie"
+  ],
+  "identityStatus": "provisional archive identity; verify with Beth and primary records",
+  "sourcePostIds": [
+    "P045",
+    "P047",
+    "P054",
+    "P092"
+  ],
+  "eventIds": [
+    "E025",
+    "E028",
+    "E029",
+    "E030",
+    "E031",
+    "E033",
+    "X-will-letter",
+    "X-to-fernglen",
+    "X-wynona-marries"
+  ],
+  "storyIds": [
+    "wynona-diary"
+  ],
+  "shortName": "Wynona Lamborn",
+  "family": "Lamborn",
+  "relationToWynona": "",
+  "about": "Teacher, diarist and musician. Raised at the Fernglen Store by her aunt and uncle after her parents died.",
+  "lifeline": {
+    "start": {
+      "year": 1868,
+      "kind": "known"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P045-I01",
+  "placeIds": [
+    "fernglen-store",
+    "liberty-square",
+    "millersville-area",
+    "conowingo-school",
+    "shoemaker-home",
+    "meetinghouse"
+  ]
+}

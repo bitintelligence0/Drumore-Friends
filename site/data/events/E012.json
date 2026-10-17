@@ -1,0 +1,32 @@
+{
+  "id": "E012",
+  "date": {
+    "original": "1780-05-28",
+    "precision": "day",
+    "start": "1780-05-28",
+    "end": null,
+    "sortYear": 1780
+  },
+  "title": "Sarah Lamborn is born",
+  "summary": "Sarah, later wife of Simon Pennock, is one of the Lamborn relatives in the founding Drumore community.",
+  "sourcePostIds": [
+    "P033"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/768394655901774/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Sarah Lamborn Pennock"
+  ],
+  "placeIds": [
+    "chester-county"
+  ],
+  "placeMentions": [
+    "Chester County, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "parent:smedley-lamborn:george-lamborn",
+  "type": "parent",
+  "from": "smedley-lamborn",
+  "to": "george-lamborn",
+  "sourcePostIds": [
+    "P057",
+    "P067"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

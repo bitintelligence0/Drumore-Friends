@@ -1,0 +1,11 @@
+{
+  "id": "parent:early-earnhart:raymond-earnhart",
+  "type": "parent",
+  "from": "early-earnhart",
+  "to": "raymond-earnhart",
+  "sourcePostIds": [
+    "P064"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

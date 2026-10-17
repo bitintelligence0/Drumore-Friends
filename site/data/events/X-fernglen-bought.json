@@ -1,0 +1,31 @@
+{
+  "id": "X-fernglen-bought",
+  "date": {
+    "original": "1885",
+    "precision": "year",
+    "start": "1885",
+    "end": null,
+    "sortYear": 1885
+  },
+  "title": "The Hambletons buy the Fernglen Store",
+  "summary": "After leasing since 1871, Thomas and Lib purchase the store.",
+  "sourcePostIds": [
+    "P048"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/820245490716690/"
+  ],
+  "personSubjectIds": [
+    "lib-hambleton",
+    "thomas-hambleton"
+  ],
+  "nameMentions": [],
+  "placeIds": [
+    "fernglen-store"
+  ],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension"
+}

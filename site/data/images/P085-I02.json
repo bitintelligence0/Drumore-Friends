@@ -1,0 +1,24 @@
+{
+  "id": "P085-I02",
+  "postId": "P085",
+  "archivePath": "images/912864334788138/912858394788732.jpg",
+  "caption": "George Smedley Lamborn - \"Uncle George\" - older brother of Wynona's deceased father",
+  "alt": "George Smedley Lamborn - \"Uncle George\" - older brother of Wynona's deceased father",
+  "originalUrl": "https://www.facebook.com/photo?fbid=912858394788732&set=pcb.912864334788138",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "george-lamborn"
+  ],
+  "width": 960,
+  "height": 1305,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.54,
+    "cy": 0.33,
+    "side": 0.76,
+    "personId": "george-lamborn"
+  }
+}

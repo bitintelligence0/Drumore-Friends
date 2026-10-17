@@ -1,0 +1,32 @@
+{
+  "id": "E010",
+  "date": {
+    "original": "1776-04",
+    "precision": "month",
+    "start": "1776-04",
+    "end": null,
+    "sortYear": 1776
+  },
+  "title": "Thomas Shoemaker is recognized as an elder",
+  "summary": "At Gwynedd Meeting, Shoemaker takes on an elder’s role during the Revolutionary War period.",
+  "sourcePostIds": [
+    "P055"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/853593460715226/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Thomas Shoemaker"
+  ],
+  "placeIds": [
+    "gwynedd"
+  ],
+  "placeMentions": [
+    "Gwynedd, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

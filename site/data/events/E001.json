@@ -1,0 +1,40 @@
+{
+  "id": "E001",
+  "date": {
+    "original": "1683",
+    "precision": "year",
+    "start": "1683",
+    "end": null,
+    "sortYear": 1683
+  },
+  "title": "Germantown’s first Krefeld families arrive",
+  "summary": "The Original 13 settle in Germantown; the later Drumore Tennis, Lukens, and Streaper families have ancestral connections to this group.",
+  "sourcePostIds": [
+    "P040",
+    "P084",
+    "P088",
+    "P118"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/791438466930726/",
+    "https://www.facebook.com/100081937388902/posts/919679670773271/",
+    "https://www.facebook.com/100081937388902/posts/943533995054505/",
+    "https://www.facebook.com/100081937388902/posts/1041849465222957/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Tennis family",
+    "Lukens family",
+    "Streaper family"
+  ],
+  "placeIds": [
+    "germantown"
+  ],
+  "placeMentions": [
+    "Germantown, Philadelphia"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

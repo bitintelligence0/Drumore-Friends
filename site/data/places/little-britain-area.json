@@ -1,0 +1,15 @@
+{
+  "id": "little-britain-area",
+  "label": "Little Britain and Drumore",
+  "locationPrecision": "region",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P006"
+  ],
+  "status": "meeting jurisdiction and broad area, not a point",
+  "schematic": {
+    "x": 520,
+    "y": 292,
+    "kind": "region"
+  }
+}

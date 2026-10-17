@@ -1,0 +1,39 @@
+{
+  "id": "thomas-hambleton",
+  "displayName": "Thomas Benton Hambleton",
+  "shortName": "Thomas B. Hambleton",
+  "family": "Hambleton",
+  "aliases": [
+    "Uncle Thomas"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Uncle who raised her",
+  "about": "Teacher, Civil War veteran (79th Pennsylvania) and keeper of the Fernglen Store and post office.",
+  "sourcePostIds": [
+    "P034",
+    "P048",
+    "P072"
+  ],
+  "eventIds": [
+    "X-fernglen-lease",
+    "X-to-fernglen",
+    "X-fernglen-bought",
+    "X-post-office"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P072-I01",
+  "origin": "brand-book-extension",
+  "placeIds": [
+    "fernglen-store"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "parent:george-lamborn:lucretia-lamborn",
+  "type": "parent",
+  "from": "george-lamborn",
+  "to": "lucretia-lamborn",
+  "sourcePostIds": [
+    "P085",
+    "P099"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

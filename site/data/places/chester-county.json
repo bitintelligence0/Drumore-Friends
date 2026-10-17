@@ -1,0 +1,19 @@
+{
+  "id": "chester-county",
+  "label": "Chester County",
+  "locationPrecision": "region",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P003",
+    "P004",
+    "P119",
+    "P033"
+  ],
+  "status": "County-level area",
+  "schematic": {
+    "x": 880,
+    "y": 210,
+    "kind": "region"
+  },
+  "origin": "brand-book-extension"
+}

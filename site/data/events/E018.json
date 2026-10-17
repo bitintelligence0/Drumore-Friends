@@ -1,0 +1,33 @@
+{
+  "id": "E018",
+  "date": {
+    "original": "1816",
+    "precision": "year",
+    "start": "1816",
+    "end": null,
+    "sortYear": 1816
+  },
+  "title": "Drumore Friends Meetinghouse is built",
+  "summary": "The Friends have resources and permission to erect the stone meetinghouse near Liberty Square.",
+  "sourcePostIds": [
+    "P006",
+    "P080"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/733731142701459/",
+    "https://www.facebook.com/100081937388902/posts/932896146118290/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Drumore Friends"
+  ],
+  "placeIds": [
+    "meetinghouse"
+  ],
+  "placeMentions": [
+    "Drumore Friends Meetinghouse"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

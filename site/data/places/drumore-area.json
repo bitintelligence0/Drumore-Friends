@@ -1,0 +1,16 @@
+{
+  "id": "drumore-area",
+  "label": "Drumore Township, Lancaster County",
+  "locationPrecision": "region",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P006",
+    "P045"
+  ],
+  "status": "broad area; no household pin",
+  "schematic": {
+    "x": 262,
+    "y": 232,
+    "kind": "region"
+  }
+}

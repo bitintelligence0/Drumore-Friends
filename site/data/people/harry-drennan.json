@@ -1,0 +1,28 @@
+{
+  "id": "harry-drennan",
+  "displayName": "Harry Drennan",
+  "shortName": "Harry Drennan",
+  "family": "Shoemaker",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Cousin’s husband",
+  "about": "Married Winona Shoemaker.",
+  "sourcePostIds": [
+    "P071"
+  ],
+  "eventIds": [],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P071-I02",
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

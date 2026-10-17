@@ -1,0 +1,11 @@
+{
+  "id": "parent:phebe-barnard-lamborn:wynona-lamborn",
+  "type": "parent",
+  "from": "phebe-barnard-lamborn",
+  "to": "wynona-lamborn",
+  "sourcePostIds": [
+    "P035"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "lucretia-lamborn",
+  "displayName": "Lucretia Mott Lamborn",
+  "shortName": "Lucretia Mott Lamborn",
+  "family": "Lamborn",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Cousin",
+  "about": "Linneaus’s sister.",
+  "sourcePostIds": [
+    "P051",
+    "P099"
+  ],
+  "eventIds": [],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P051-I05",
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

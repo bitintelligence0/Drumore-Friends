@@ -1,0 +1,19 @@
+{
+  "id": "camp-william-penn",
+  "label": "Camp William Penn",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P059",
+    "P060",
+    "P061",
+    "P106"
+  ],
+  "status": "Civil War training camp; area only",
+  "schematic": {
+    "x": 1356,
+    "y": 104,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

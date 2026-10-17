@@ -1,0 +1,17 @@
+{
+  "id": "earnhart-farm",
+  "label": "Earnhart farm, Silver Spring Road",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P064",
+    "P082"
+  ],
+  "status": "Road named in P064; farm site not mapped",
+  "schematic": {
+    "x": 440,
+    "y": 222,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

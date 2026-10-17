@@ -1,0 +1,11 @@
+{
+  "id": "spouse:winona-shoemaker:harry-drennan",
+  "type": "spouse",
+  "from": "winona-shoemaker",
+  "to": "harry-drennan",
+  "sourcePostIds": [
+    "P071"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

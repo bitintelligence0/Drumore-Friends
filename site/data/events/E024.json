@@ -1,0 +1,40 @@
+{
+  "id": "E024",
+  "date": {
+    "original": "1864/1865",
+    "precision": "range",
+    "start": "1864",
+    "end": "1865",
+    "sortYear": 1864
+  },
+  "title": "William H. Presberry serves with the 25th U.S.C.T.",
+  "summary": "Presberry serves in the United States Colored Troops. Beth follows his service, later family life, and burial at Drumore Friends Cemetery.",
+  "sourcePostIds": [
+    "P059",
+    "P060",
+    "P061",
+    "P106"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/847792991295273/",
+    "https://www.facebook.com/100081937388902/posts/846734401401132/",
+    "https://www.facebook.com/100081937388902/posts/844583871616185/",
+    "https://www.facebook.com/100081937388902/posts/1026051413469429/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "William H. Presberry"
+  ],
+  "placeIds": [
+    "camp-william-penn",
+    "friends-cemetery"
+  ],
+  "placeMentions": [
+    "Camp William Penn",
+    "Drumore Friends Cemetery"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

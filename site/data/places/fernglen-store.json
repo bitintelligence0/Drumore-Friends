@@ -1,0 +1,17 @@
+{
+  "id": "fernglen-store",
+  "label": "Fernglen Store",
+  "locationPrecision": "building",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P034",
+    "P048"
+  ],
+  "status": "Store and Hambleton home at Fernglen Road and Park Drive (P048); exact site not mapped",
+  "schematic": {
+    "x": 172,
+    "y": 168,
+    "kind": "building"
+  },
+  "origin": "brand-book-extension"
+}

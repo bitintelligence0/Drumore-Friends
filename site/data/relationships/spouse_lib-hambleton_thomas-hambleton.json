@@ -1,0 +1,11 @@
+{
+  "id": "spouse:lib-hambleton:thomas-hambleton",
+  "type": "spouse",
+  "from": "lib-hambleton",
+  "to": "thomas-hambleton",
+  "sourcePostIds": [
+    "P034"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

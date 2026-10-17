@@ -1,0 +1,23 @@
+{
+  "id": "P045-I01",
+  "postId": "P045",
+  "archivePath": "images/825809853493587/825804543494118.jpg",
+  "caption": "Jessie \"Wynona\" Lamborn",
+  "alt": "Jessie \"Wynona\" Lamborn",
+  "originalUrl": "https://www.facebook.com/photo/?fbid=825804543494118&set=pcb.825809853493587",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "wynona-lamborn"
+  ],
+  "faceCrop": {
+    "cx": 0.49,
+    "cy": 0.27,
+    "side": 0.8,
+    "personId": "wynona-lamborn"
+  },
+  "width": 232,
+  "height": 316
+}

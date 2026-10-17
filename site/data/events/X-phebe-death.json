@@ -1,0 +1,42 @@
+{
+  "id": "X-phebe-death",
+  "date": {
+    "original": "1871/1874",
+    "precision": "range",
+    "start": "1871",
+    "end": "1874",
+    "sortYear": 1871
+  },
+  "title": "Phebe Barnard Lamborn dies",
+  "summary": "One post says Wynona’s mother died when Wynona was 3 (about 1872); another gives 1874. Both readings are shown until a record settles it.",
+  "sourcePostIds": [
+    "P035",
+    "P057"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/809130265161546/",
+    "https://www.facebook.com/100081937388902/posts/850320281042544/"
+  ],
+  "personSubjectIds": [
+    "phebe-barnard-lamborn"
+  ],
+  "nameMentions": [],
+  "placeIds": [],
+  "placeMentions": [],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate from post text; review historical claim and source",
+  "editorialStatus": "unverified; added from post text, not in the curated event list",
+  "origin": "brand-book-extension",
+  "conflict": [
+    {
+      "label": "about 1872",
+      "postId": "P035",
+      "basis": "died “when she was 3”"
+    },
+    {
+      "label": "1874",
+      "postId": "P057",
+      "basis": "stated year"
+    }
+  ]
+}

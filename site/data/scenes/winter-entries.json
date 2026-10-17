@@ -1,0 +1,30 @@
+{
+  "id": "winter-entries",
+  "title": "Winter entries",
+  "eventId": "E031",
+  "sourcePostIds": [
+    "P063",
+    "P064",
+    "P065",
+    "P066",
+    "P068",
+    "P071",
+    "P074",
+    "P077",
+    "P079",
+    "P082",
+    "P085",
+    "P087"
+  ],
+  "imageIds": [],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "narrative": [
+    "The diary keeps moving through ordinary winter life: worship, school, visitors, music, illness, bad roads and snow. On Christmas Day Wynona counted presents and described an evening with Early Earnhart. On December 26 she noted heavy snow and sleet; the following day people were out sleighing.",
+    "These entries feel close to daily life, but the twelve linked posts cover a wider period from December into February. The scene gives that span honestly rather than collapsing it into a single day."
+  ],
+  "quote": "Very heavy snow fell last night, and continued all day with sleet, making very good sleighing.",
+  "quoteSourcePostId": "P063",
+  "evidenceNote": "The scene range is December 1890–February 1891. Beth’s posts include transcribed daily entries, with P063 and P064 providing the details highlighted here. A sleigh photograph in P063 is undated contextual imagery and is intentionally not presented as a record of Wynona’s ride."
+}

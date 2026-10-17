@@ -12,11 +12,13 @@ reviewed story fields written for BED-282.
 Run after build_data.py, then run validate.py and validate_story.py.
 """
 import hashlib, json, os, pathlib, re, subprocess
+from archive import resolve_archive
+from content_records import write_records
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA_PATH = ROOT / 'content.json'
 DATA = json.loads(DATA_PATH.read_text())
-ARCHIVE = pathlib.Path(os.environ.get('DRUMORE_ARCHIVE', DATA['archiveSnapshot']['path']))
+ARCHIVE = resolve_archive(DATA.get('archiveSnapshot'))
 CURATION = ARCHIVE / 'curation'
 ORIGIN = 'brand-book-extension'
 
@@ -289,5 +291,5 @@ DATA['transcriptions'] = [
      ]},
 ]
 DATA['schemaVersion'] = 2
-DATA_PATH.write_text(json.dumps(DATA, ensure_ascii=False, indent=2) + '\n')
+write_records(DATA)
 print(f"content.json: {len(DATA['events'])} events, {len(DATA['people'])} people, {len(DATA['relationships'])} relationships, {len(DATA['places'])} places, {len(DATA['posts'])} posts, {len(DATA['images'])} images, {len(DATA['transcriptions'])} transcriptions")

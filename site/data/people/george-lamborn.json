@@ -1,0 +1,33 @@
+{
+  "id": "george-lamborn",
+  "displayName": "George Smedley Lamborn",
+  "shortName": "George S. Lamborn",
+  "family": "Lamborn",
+  "aliases": [
+    "Uncle George"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Uncle (“Uncle George”)",
+  "about": "Eldest of the eleven children. Married Sarah Walker Coates in May 1856.",
+  "sourcePostIds": [
+    "P067",
+    "P085"
+  ],
+  "eventIds": [
+    "X-george-marries"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P085-I02",
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

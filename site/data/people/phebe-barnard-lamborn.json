@@ -1,0 +1,44 @@
+{
+  "id": "phebe-barnard-lamborn",
+  "displayName": "Phebe Barnard Lamborn",
+  "shortName": "Phebe Barnard Lamborn",
+  "family": "Lamborn",
+  "aliases": [],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Mother",
+  "about": "Died 1874 (P057), or when Wynona was 3, about 1872 (P035). The sources disagree.",
+  "sourcePostIds": [
+    "P035",
+    "P057"
+  ],
+  "eventIds": [
+    "X-phebe-death"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": null,
+      "kind": "unknown"
+    },
+    "end": {
+      "year": 1874,
+      "kind": "conflict",
+      "readings": [
+        {
+          "year": 1872,
+          "label": "about 1872",
+          "postId": "P035",
+          "basis": "died “when she was 3”"
+        },
+        {
+          "year": 1874,
+          "label": "1874",
+          "postId": "P057"
+        }
+      ]
+    }
+  },
+  "portraitImageId": null,
+  "origin": "brand-book-extension",
+  "placeIds": []
+}

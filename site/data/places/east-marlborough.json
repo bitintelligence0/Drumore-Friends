@@ -1,0 +1,17 @@
+{
+  "id": "east-marlborough",
+  "label": "East Marlborough Township",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P003",
+    "P004"
+  ],
+  "status": "Township area",
+  "schematic": {
+    "x": 898,
+    "y": 176,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

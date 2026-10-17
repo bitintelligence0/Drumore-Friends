@@ -1,0 +1,35 @@
+{
+  "id": "E030",
+  "date": {
+    "original": "1890-11",
+    "precision": "month",
+    "start": "1890-11",
+    "end": null,
+    "sortYear": 1890
+  },
+  "title": "Wynona attends Institute at Millersville",
+  "summary": "Her diary describes lectures, entertainment, and friends during a week at the teachers’ institute.",
+  "sourcePostIds": [
+    "P051",
+    "P054"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/861117523296153/",
+    "https://www.facebook.com/100081937388902/posts/855010317240207/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn"
+  ],
+  "nameMentions": [
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "millersville-area"
+  ],
+  "placeMentions": [
+    "Millersville, Lancaster County"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}

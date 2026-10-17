@@ -1,0 +1,24 @@
+{
+  "id": "P051-I05",
+  "postId": "P051",
+  "archivePath": "images/861117523296153/861115403296365.jpg",
+  "caption": "Lucretia Mott Lamborn",
+  "alt": "Lucretia Mott Lamborn",
+  "originalUrl": "https://www.facebook.com/photo?fbid=861115403296365&set=pcb.861117523296153",
+  "rightsStatus": "unreviewed",
+  "kind": "archive_image",
+  "role": "portrait",
+  "provenance": "original",
+  "personIds": [
+    "lucretia-lamborn"
+  ],
+  "width": 259,
+  "height": 379,
+  "origin": "brand-book-extension",
+  "faceCrop": {
+    "cx": 0.47,
+    "cy": 0.29,
+    "side": 0.8,
+    "personId": "lucretia-lamborn"
+  }
+}

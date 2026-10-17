@@ -1,0 +1,17 @@
+{
+  "id": "liberty-square",
+  "label": "Liberty Square",
+  "locationPrecision": "community",
+  "coordinates": null,
+  "sourcePostIds": [
+    "P045",
+    "P048"
+  ],
+  "status": "Wynona’s postal address before Fernglen; community only",
+  "schematic": {
+    "x": 468,
+    "y": 140,
+    "kind": "community"
+  },
+  "origin": "brand-book-extension"
+}

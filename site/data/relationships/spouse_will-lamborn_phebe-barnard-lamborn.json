@@ -1,0 +1,11 @@
+{
+  "id": "spouse:will-lamborn:phebe-barnard-lamborn",
+  "type": "spouse",
+  "from": "will-lamborn",
+  "to": "phebe-barnard-lamborn",
+  "sourcePostIds": [
+    "P035"
+  ],
+  "since": null,
+  "status": "provisional; from Beth’s posts"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "william-shoemaker",
+  "displayName": "William Lukens Shoemaker",
+  "shortName": "William L. Shoemaker",
+  "family": "Shoemaker",
+  "aliases": [
+    "Uncle Will"
+  ],
+  "identityStatus": "provisional archive identity from Beth’s posts; verify",
+  "relationToWynona": "Uncle by marriage (“Uncle Will”)",
+  "about": "Born 1843. Will Lamborn died at his home in 1876.",
+  "sourcePostIds": [
+    "P034",
+    "P045",
+    "P067"
+  ],
+  "eventIds": [
+    "E026"
+  ],
+  "storyIds": [],
+  "lifeline": {
+    "start": {
+      "year": 1843,
+      "kind": "known"
+    },
+    "end": {
+      "year": null,
+      "kind": "unknown"
+    }
+  },
+  "portraitImageId": "P067-I06",
+  "origin": "brand-book-extension",
+  "placeIds": [
+    "shoemaker-home"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "E006",
+  "date": {
+    "original": "1722",
+    "precision": "year",
+    "start": "1722",
+    "end": null,
+    "sortYear": 1722
+  },
+  "title": "Robert Lamborn and Sara Swayne marry",
+  "summary": "Beth contrasts a romanticized family account with the dates she found for their marriage.",
+  "sourcePostIds": [
+    "P004",
+    "P119"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/736277712446802/",
+    "https://www.facebook.com/100081937388902/posts/1086994200708483/"
+  ],
+  "personSubjectIds": [],
+  "nameMentions": [
+    "Robert Lamborn",
+    "Sara Swayne Lamborn"
+  ],
+  "placeIds": [
+    "chester-county"
+  ],
+  "placeMentions": [
+    "Chester County, Pennsylvania"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate",
+  "origin": "brand-book-extension"
+}

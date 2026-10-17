@@ -1,0 +1,55 @@
+{
+  "id": "E031",
+  "date": {
+    "original": "1890-12/1891-02",
+    "precision": "range",
+    "start": "1890-12",
+    "end": "1891-02",
+    "sortYear": 1890
+  },
+  "title": "Winter in Wynona’s diary",
+  "summary": "A sequence of diary entries records school, worship, weather, social visits, and rural travel. Individual daily entries can become finer timeline moments after transcription review.",
+  "sourcePostIds": [
+    "P063",
+    "P064",
+    "P065",
+    "P066",
+    "P068",
+    "P071",
+    "P074",
+    "P077",
+    "P079",
+    "P082",
+    "P085",
+    "P087"
+  ],
+  "sourceUrls": [
+    "https://www.facebook.com/100081937388902/posts/885110234230215/",
+    "https://www.facebook.com/100081937388902/posts/883249131082992/",
+    "https://www.facebook.com/100081937388902/posts/882482681159637/",
+    "https://www.facebook.com/100081937388902/posts/880812511326654/",
+    "https://www.facebook.com/100081937388902/posts/869968712411034/",
+    "https://www.facebook.com/100081937388902/posts/869853165755922/",
+    "https://www.facebook.com/100081937388902/posts/903822149025690/",
+    "https://www.facebook.com/100081937388902/posts/896312053110033/",
+    "https://www.facebook.com/100081937388902/posts/889047430503162/",
+    "https://www.facebook.com/100081937388902/posts/925645983509973/",
+    "https://www.facebook.com/100081937388902/posts/912864334788138/",
+    "https://www.facebook.com/100081937388902/posts/950680904339814/"
+  ],
+  "personSubjectIds": [
+    "wynona-lamborn"
+  ],
+  "nameMentions": [
+    "Jessie Wynona Lamborn Earnhart"
+  ],
+  "placeIds": [
+    "drumore-area"
+  ],
+  "placeMentions": [
+    "Drumore and nearby communities"
+  ],
+  "evidenceLevel": "archive_account",
+  "publicationStatus": "candidate; review historical claim and source",
+  "editorialStatus": "unverified candidate"
+}
