@@ -209,7 +209,7 @@ function placeDock(p, st) {
   const evs = S.data.events.filter(e => e.placeIds.includes(p.id)).sort((a, b) => mid(a.date) - mid(b.date));
   const ppl = S.data.people.filter(x => (x.placeIds || []).includes(p.id));
   return `${close}<span class="eyebrow">Place · ${esc(p.locationPrecision)}</span><h2>${esc(p.label)}</h2><p class="m">${esc(p.status)}</p>
-    <p class="asw">Shown on a schematic drawing. No exact location is claimed.</p>
+    <p class="asw">The Map view uses proposed OpenStreetMap areas and lists places not yet located. No exact site is claimed here.</p>
     ${ppl.length ? `<div class="sec"><span class="eyebrow">People connected here</span><div class="chips">${ppl.map(x => `<button type="button" class="chip" data-sel-person="${x.id}">${faceHTML(x.id)}${esc(x.shortName)}</button>`).join('')}</div></div>` : ''}
     ${evs.length ? `<div class="sec"><span class="eyebrow">Events here · ${evs.length}</span>${evs.map(e => `<button type="button" class="chip plain" data-sel-event="${e.id}"><span class="datel" style="font-size:12px">${esc(fmtDate(e.date, e))}</span> ${esc(e.title)}</button>`).join('')}</div>` : ''}
     ${p.sourcePostIds.length ? `<div class="sec"><span class="eyebrow">Sources</span>${sourcesHTML(p.sourcePostIds.slice(0, 5))}</div>` : ''}`;

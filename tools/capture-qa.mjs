@@ -18,12 +18,12 @@ await send('Page.enable'); await send('Runtime.enable');
 await send('Page.addScriptToEvaluateOnNewDocument', { source: 'try{sessionStorage.setItem("df-desktop-prompt","1")}catch(e){}' });
 const evalJS = async (expr) => (await send('Runtime.evaluate', { expression: expr, returnByValue: true, awaitPromise: true })).result?.result?.value;
 
-async function shot(name, url, { w = 1440, h = 1000, mobile = false, sel = null, js = null, post = null, wait = 3500, maxH = 1500 } = {}) {
+async function shot(name, url, { w = 1440, h = 1000, mobile = false, sel = null, js = null, post = null, wait = 3500, jsWait = 900, maxH = 1500 } = {}) {
   if (wanted && !wanted.has(name)) return;
   await send('Emulation.setDeviceMetricsOverride', { width: w, height: h, deviceScaleFactor: 1, mobile });
   await send('Page.navigate', { url });
   await sleep(wait);
-  if (js) { await evalJS(js); await sleep(900); }
+  if (js) { await evalJS(js); await sleep(jsWait); }
   let res;
   if (sel) {
     // scroll the element clear of the site's sticky header, then clip it from the page
@@ -63,8 +63,9 @@ await shot('book-family', book, { sel: '#tree .tree-wrap' });
 await shot('site-family', site + '/?mode=family&person=wynona-lamborn', { h: 1300, sel: '.workbench', maxH: 1000 });
 // map
 await shot('book-map', book, { sel: '#map .mapwrap' });
-await shot('site-map', site + '/?mode=map&person=wynona-lamborn', { h: 1100, sel: '#mapstrip' });
-for (const w of [1024, 768]) await shot(`site-map-${w}`, site + '/?mode=map', { w, h: 1000, sel: '#mapstrip' });
+const showMap = 'document.querySelector("#workbench").scrollIntoView()';
+await shot('site-map', site + '/?mode=map', { h: 1000, js: showMap, jsWait: 3500 });
+for (const w of [1024, 768]) await shot(`site-map-${w}`, site + '/?mode=map', { w, h: 1000, js: showMap, jsWait: 3500 });
 await shot('site-phone-map', site + '/?mode=map', { w: 390, h: 844, mobile: true, js: noPrompt });
 // person page
 await shot('book-person', book, { sel: '#person .browser' });

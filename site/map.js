@@ -17,17 +17,24 @@ const ON = { color: '#8A5A10', fillColor: '#E3A33B', fillOpacity: .22, opacity: 
 const SEL = { color: '#8A5A10', fillColor: '#E3A33B', fillOpacity: .34, opacity: 1, weight: 2.6 };
 const SUB = { outline: 'area outline', circle: 'area, not a site', line: 'road named; site not mapped', pin: 'site entered by hand' };
 
-let root, map, geo, layers = {}, unmapped = [], lastKey = '', pending = null, allBounds;
+let root, map, geo, layers = {}, unmapped = [], lastKey = '', allBounds, resizeObserver, mountVersion = 0;
 
 export function mountMap(container) {
+  resizeObserver?.disconnect();
+  map?.remove();
+  const version = ++mountVersion;
   root = container;
+  map = geo = allBounds = null;
+  layers = {};
+  unmapped = [];
+  lastKey = '';
   root.innerHTML = `
     <div class="lmap" role="region" aria-label="Map of places in the archive. Locations are proposed and not yet reviewed."></div>
     <div class="map-ui">
       <div class="map-title"><b>Where it happened</b><span>OpenStreetMap · locations proposed, not yet reviewed</span></div>
       <div class="map-tools"><span class="mchip" title="Matched to OpenStreetMap by name. Not checked against the archive yet.">Proposed · unverified</span><button type="button" class="mapbtn" id="mapReset">Whole map</button></div>
     </div>
-    <div class="map-note" id="mapNote" hidden></div>
+    <div class="map-note" id="mapNote" role="status" hidden></div>
     <details class="map-unmapped" id="mapUnmapped"><summary></summary><ul></ul></details>`;
   root.querySelector('#mapReset').addEventListener('click', () => { lastKey = ''; select(null); });
   if (!L) { root.querySelector('.lmap').innerHTML = '<p class="ff-none" style="padding:16px">The map library did not load.</p>'; return; }
@@ -39,8 +46,55 @@ export function mountMap(container) {
   // ctrl/⌘ + wheel zooms, so a plain wheel keeps scrolling the page
   root.querySelector('.lmap').addEventListener('wheel', e => { if (!(e.ctrlKey || e.metaKey)) return; e.preventDefault(); map.setZoom(map.getZoom() + (e.deltaY < 0 ? .5 : -.5)); }, { passive: false });
   map.on('zoomend moveend', declutter);
-  new ResizeObserver(() => { map.invalidateSize(); lastKey = ''; if (S.state) focus(S.state, true); }).observe(root);
-  fetch('/places-geo.json').then(r => r.json()).then(g => { geo = g; draw(); if (pending) focus(pending, true); });
+  resizeObserver = new ResizeObserver(() => {
+    if (version !== mountVersion) return;
+    map.invalidateSize();
+    lastKey = '';
+    if (S.state) focus(S.state, true);
+  });
+  resizeObserver.observe(root);
+  loadGeometry(version);
+}
+
+async function loadGeometry(version) {
+  const note = root.querySelector('#mapNote');
+  const unmappedList = root.querySelector('#mapUnmapped');
+  try {
+    const response = await fetch('/places-geo.json');
+    if (!response.ok) throw new Error(`Map locations: HTTP ${response.status}`);
+    const data = await response.json();
+    if (!Array.isArray(data.features) || !data.features.length || !Array.isArray(data.unmapped)) {
+      throw new Error('Map locations: invalid data');
+    }
+    if (version !== mountVersion) return;
+    geo = data;
+    draw();
+    unmappedList.hidden = false;
+    if (S.state) focus(S.state, true);
+  } catch (error) {
+    if (version !== mountVersion) return;
+    for (const { layer } of Object.values(layers)) map.removeLayer(layer);
+    layers = {};
+    geo = null;
+    unmappedList.hidden = true;
+    note.hidden = false;
+    note.innerHTML = '<b>Map locations could not be loaded.</b> <button type="button" class="linkbtn">Try again</button>';
+    note.querySelector('button').addEventListener('click', () => loadGeometry(version));
+    console.error(error);
+  }
+}
+
+function keyboardLayer(layer, place, kind) {
+  const element = layer.getElement?.();
+  if (!element) return layer.eachLayer?.(child => keyboardLayer(child, place, kind));
+  element.setAttribute('tabindex', '0');
+  element.setAttribute('role', 'button');
+  element.setAttribute('aria-label', `${place.label}. ${SUB[kind] || 'place'}. Proposed, unverified.`);
+  element.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    select('place', place.placeId);
+  });
 }
 
 function draw() {
@@ -52,6 +106,7 @@ function draw() {
     else if (kind === 'line') layer = L.geoJSON(f, { style: () => ({ ...STYLE.line }) });
     else layer = L.circleMarker([p.center[0], p.center[1]], { radius: 7, ...STYLE.pin });
     layer.addTo(map);
+    keyboardLayer(layer, p, kind);
     const tip = `<b>${esc(p.label)}</b><span>${esc(SUB[kind] || '')}</span>`;
     layer.bindTooltip(tip, { permanent: true, direction: kind === 'outline' ? 'center' : 'right', className: 'mtip', offset: kind === 'outline' ? [0, 0] : [8, 0] });
     layer.bindPopup(`<b>${esc(p.label)}</b><p>${esc(p.note)}</p><p class="mp-src">${esc(p.status)} · ${esc(p.source)}${p.osm ? ` · <a href="https://www.openstreetmap.org/${({ R: 'relation', W: 'way', N: 'node' })[p.osm[0]]}/${p.osm.slice(1)}" target="_blank" rel="noopener">OSM ${esc(p.osm)}</a>` : ''}</p>`, { className: 'mpop', maxWidth: 280, autoPan: false });
@@ -82,7 +137,7 @@ export function placesFor(st) {
 
 export function focus(st, force) {
   if (!map) return;
-  if (!geo) { pending = st; return; }
+  if (!geo) return;
   const { on, sel, eraOnly } = placesFor(st);
   const hasSel = !!(st.place || st.event || st.person);
   for (const [id, m] of Object.entries(layers)) {
