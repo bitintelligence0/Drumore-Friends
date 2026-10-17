@@ -1,12 +1,12 @@
 // Explore: the cover hero and Gable Line story, the era bar, the five modes and the docked panel, all on one selection.
 import { S, go, select, href } from './store.js';
-import { svg, esc, fmtDate, mid, oldStyle, faceHTML, cropCSS, media, provTab, eviChip, placeLabel, personName, sourcesHTML, lifeText, isPhone, precisionWord } from './lib.js';
+import { svg, esc, fmtDate, mid, oldStyle, faceHTML, cropCSS, media, provTab, eviChip, placeLabel, personName, sourcesHTML, lifeText, isPhone, precisionWord, postTitle, fetchPost, postBodyHTML } from './lib.js';
 import { mountMap, focus as mapFocus } from './map.js';
 import { renderFamily } from './family.js';
 import { heroHTML } from './hero.js';
 import { mountTimeline, updateTimeline, yearsOf, windowOf, inRange, tapBuzz } from './timeline.js';
 
-const MODES = [['timeline', 'Timeline'], ['family', 'Family'], ['map', 'Map'], ['imagery', 'Imagery'], ['list', 'List']];
+const MODES = [['timeline', 'Timeline'], ['family', 'Family'], ['map', 'Map'], ['posts', 'Posts'], ['list', 'List']];
 let R = {}, built = {};
 
 export function mountExplore(main) {
@@ -86,7 +86,7 @@ function buildField(st) {
   }
   if (st.mode === 'family') return renderFamily(f, st);
   if (st.mode === 'map') return buildPlaces(st, f);
-  if (st.mode === 'imagery') return buildImagery(st, f);
+  if (st.mode === 'posts') return buildPosts(st, f);
   if (st.mode === 'list') return buildList(st, f);
 }
 
@@ -129,12 +129,34 @@ function buildPlaces(st, f) {
   const on = new Set(st.person ? S.idx.people[st.person].placeIds : st.event ? S.idx.events[st.event].placeIds : st.place ? [st.place] : []);
   f.innerHTML = `<div class="places">${list.map(p => `<button type="button" class="placecard ${on.has(p.id) ? 'on' : ''}" data-sel-place="${p.id}"><b>${esc(p.label)}</b><span>${counts[p.id] || 0} event${counts[p.id] === 1 ? '' : 's'} in this era · ${esc(p.locationPrecision)}</span><span>${esc(p.status)}</span></button>`).join('') || '<p class="ff-none" style="padding:16px">No places for this era yet.</p>'}</div>`;
 }
-function buildImagery(st, f) {
+// Beth's posts, in the order she shared them: a summary title, the photos the site shows from each post,
+// and the post's own text from the local archive, folded until opened.
+const opened = new Set(), bodies = {};   // bodies: formatted text, kept so a rebuild doesn't jump
+function buildPosts(st, f) {
   const sel = st.person, ev = st.event && S.idx.events[st.event], pl = st.place;
-  const related = (im) => (sel && im.personIds.includes(sel)) || (ev && ev.sourcePostIds.includes(im.postId)) || (pl && S.data.events.some(e => e.placeIds.includes(pl) && e.sourcePostIds.includes(im.postId)));
+  const imgsOf = (pid) => S.data.images.filter(i => i.postId === pid);
+  const related = (p) => !!((sel && (imgsOf(p.id).some(i => i.personIds.includes(sel)) || (S.idx.people[sel].sourcePostIds || []).includes(p.id))) || (ev && ev.sourcePostIds.includes(p.id)) || (pl && S.data.events.some(e => e.placeIds.includes(pl) && e.sourcePostIds.includes(p.id))));
   const any = !!(sel || ev || pl);
-  const imgs = S.data.images.slice().sort((a, b) => (related(b) - related(a)) || (a.role === 'portrait' ? -1 : 1));
-  f.innerHTML = `<div class="imgs">${imgs.map(im => { const on = related(im); const who = im.personIds.map(personName).join(', '); return `<button type="button" class="fig ${any && !on ? 'dim' : ''} ${on ? 'on' : ''}" data-post="${im.postId}" data-image="${im.id}"><div class="mat"><img src="${media(im.id)}" alt="${esc(im.alt || im.caption || 'Archive image')}" loading="lazy">${provTab(im)}</div><span class="fig" style="display:block;padding-top:12px;font-size:12.5px;color:var(--pewter)"><b style="color:var(--ink)">${esc(im.caption || 'Untitled image')}</b>${who ? ` · ${esc(who)}` : ''} · post ${im.postId}</span></button>`; }).join('')}</div>`;
+  const posts = S.data.posts.slice().sort((a, b) => (related(b) - related(a)) || a.publishedDate.localeCompare(b.publishedDate) || a.id.localeCompare(b.id));
+  f.innerHTML = `<div class="posts"><p class="posts-note">${posts.length} of Beth’s Facebook posts, in the order she shared them. Titles are draft summaries for Beth to review.</p>${posts.map(p => { const on = related(p), imgs = imgsOf(p.id), open = opened.has(p.id); return `<article class="post ${any && !on ? 'dim' : ''} ${on ? 'on' : ''}" id="post-${p.id}">
+    <h3 class="post-title">${esc(postTitle(p))}</h3>
+    <div class="post-meta">Shared ${esc(p.publishedDate)} · post ${p.id} · <a href="${esc(p.facebookUrl)}" target="_blank" rel="noopener">Facebook ↗</a></div>
+    ${imgs.length ? `<div class="post-figs">${imgs.map(im => `<button type="button" class="post-fig" data-post="${p.id}" data-image="${im.id}" aria-label="${esc(im.caption || 'Open photo')}"><img src="${media(im.id)}" alt="${esc(im.alt || im.caption || 'Archive image')}" loading="lazy"></button>`).join('')}</div>` : ''}
+    <div class="post-body ${open ? 'open' : ''}" data-body="${p.id}" ${bodies[p.id] ? 'data-filled="1"' : ''}>${bodies[p.id] || `<p>${esc(p.excerpt)}</p>`}</div>
+    <div class="post-acts"><button type="button" class="linkbtn" data-fold="${p.id}" aria-expanded="${open}">${open ? 'Show less' : 'Read the whole post'}</button><button type="button" class="linkbtn" data-post="${p.id}">Open with photos</button></div>
+  </article>`; }).join('')}</div>`;
+  const fill = (box) => { if (box.dataset.filled) return; box.dataset.filled = '1'; const id = box.dataset.body; fetchPost(id).then(t => { if (t != null) box.innerHTML = bodies[id] = postBodyHTML(t); fitFold(box); }); };
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); fill(e.target); } }), { rootMargin: '600px 0px' });
+  // a post short enough to show whole needs no fold
+  const fitFold = (box) => { const short = box.scrollHeight <= parseFloat(getComputedStyle(box).fontSize) * 9.6 + 2; box.classList.toggle('short', short); const btn = f.querySelector(`[data-fold="${box.dataset.body}"]`); if (btn) btn.hidden = short; };
+  f.querySelectorAll('[data-body]').forEach(b => { io.observe(b); if (b.dataset.filled) fitFold(b); });
+  f.querySelectorAll('[data-fold]').forEach(b => b.addEventListener('click', () => {
+    const id = b.dataset.fold, box = f.querySelector(`[data-body="${id}"]`), open = !opened.has(id);
+    open ? opened.add(id) : opened.delete(id);
+    box.classList.toggle('open', open); b.setAttribute('aria-expanded', open); b.textContent = open ? 'Show less' : 'Read the whole post';
+    fill(box);
+    if (!open) { const card = b.closest('.post'); if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: 'start' }); }
+  }));
 }
 function buildList(st, f) {
   const rg = range(st), tab = st.list || 'events';

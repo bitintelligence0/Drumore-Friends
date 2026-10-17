@@ -1,6 +1,6 @@
 // Reading pages: one person's story, profiles, Stories, About, and the source viewer.
 import { S, go, href, relOf, select } from './store.js';
-import { esc, fmtDate, mid, faceHTML, cropCSS, media, provTab, eviChip, placeLabel, personName, sourcesHTML, lifeText, oldStyle } from './lib.js';
+import { esc, fmtDate, mid, faceHTML, cropCSS, media, provTab, eviChip, placeLabel, personName, sourcesHTML, lifeText, oldStyle, postTitle, fetchPost, postBodyHTML, postRestText } from './lib.js';
 
 const backHTML = (st) => {
   const y = st.year || (st.event && S.idx.events[st.event]?.date.sortYear) || null;
@@ -126,7 +126,6 @@ function newsletter() {
 }
 
 // ---------- source viewer ----------
-const textCache = {};
 export async function renderViewer(host, st) {
   if (!st.post) { host.innerHTML = ''; document.body.style.overflow = ''; return; }
   const post = S.idx.posts[st.post];
@@ -144,8 +143,8 @@ export async function renderViewer(host, st) {
           <div class="handpick" role="group" aria-label="Handwriting style"><button type="button" data-hand="a" aria-pressed="true">A · Everyday hand</button><button type="button" data-hand="b" aria-pressed="false">B · Chancery hand</button></div>
           <div class="ruled" id="vRuled"><div class="hand">${tr.entries.map(en => `<span class="dt">${esc(en.label)}</span>${fmtTr(en.text)}`).join(' ')}</div><div class="tab d"><i></i>Drawn <span>· transcription, 2026</span></div></div>
           <p style="font-size:13px;color:#A9B5AF;margin-top:10px">${esc(tr.note)}</p>` : ''}
-        <div><div class="k">Beth’s post, from the local archive</div><div class="posttext" id="vText">Loading…</div></div>
-        <dl><dt>Post</dt><dd>${post.id} · ${esc(post.title)}</dd><dt>Shared</dt><dd>${esc(post.publishedDate)}</dd><dt>Original</dt><dd><a href="${esc(post.facebookUrl)}" target="_blank" rel="noopener">Facebook ↗</a></dd>${cur ? `<dt>Image</dt><dd><a href="${esc(cur.originalUrl)}" target="_blank" rel="noopener">Original photo ↗</a></dd>` : ''}<dt>Status</dt><dd>${esc(post.curationStatus)}</dd></dl>
+        <div><div class="k">Beth’s post, from the local archive</div><h3 class="post-title">${esc(postTitle(post))}</h3><div class="posttext post-body open" id="vText"><p>Loading…</p></div></div>
+        <dl><dt>Post</dt><dd>${post.id}</dd>${post.summaryTitleStatus ? `<dt>Title</dt><dd>${esc(post.summaryTitleStatus)}</dd>` : ''}<dt>Shared</dt><dd>${esc(post.publishedDate)}</dd><dt>Original</dt><dd><a href="${esc(post.facebookUrl)}" target="_blank" rel="noopener">Facebook ↗</a></dd>${cur ? `<dt>Image</dt><dd><a href="${esc(cur.originalUrl)}" target="_blank" rel="noopener">Original photo ↗</a></dd>` : ''}<dt>Status</dt><dd>${esc(post.curationStatus)}</dd></dl>
       </div></div></div></div>`;
   const closeV = () => go({ post: null, image: null });
   host.querySelector('#vClose').addEventListener('click', closeV);
@@ -153,9 +152,12 @@ export async function renderViewer(host, st) {
   host.querySelectorAll('[data-img]').forEach(b => b.addEventListener('click', () => go({ image: b.dataset.img }, { replace: true })));
   host.querySelectorAll('[data-hand]').forEach(b => b.addEventListener('click', () => { host.querySelectorAll('[data-hand]').forEach(x => x.setAttribute('aria-pressed', x === b)); host.querySelector('#vRuled').classList.toggle('chancery', b.dataset.hand === 'b'); }));
   host.querySelector('#vClose').focus();
-  const t = textCache[post.id] ??= await fetch(`/source/${post.id}`).then(r => r.ok ? r.text() : 'The local archive text is not available.').catch(() => 'The local archive text is not available.');
+  const t = await fetchPost(post.id);
   const target = host.querySelector('#vText');
-  if (target) target.textContent = t.replace(/\[Facebook source\]\([^)]*\)/, '').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[Original photo\]\([^)]*\)/g, '').replace(/\n{3,}/g, '\n\n').trim();
+  if (!target) return;
+  if (t == null) { target.innerHTML = '<p>The local archive text is not available.</p>'; return; }
+  const rest = postRestText(t);
+  target.innerHTML = postBodyHTML(t) + (rest ? `<details class="post-rest"><summary>Photo captions and comments, as captured</summary><div>${esc(rest)}</div></details>` : '');
 }
 function fmtTr(s) {
   return esc(s).replace(/\[([^\]]+)\]/g, '<span class="ed">$1</span>').replace(/\{([^}]+)\}/g, '<span class="unc" title="Uncertain reading">$1</span>').replace(/~([^~]+)~/g, '<s>$1</s>').replace(/\n\n/g, '<br><br>');

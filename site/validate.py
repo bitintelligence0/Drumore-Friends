@@ -25,6 +25,8 @@ for e in DATA['events']:
  for pid,source in zip(e['sourcePostIds'],e['sourceUrls']): assert next(x for x in DATA['posts'] if x['id']==pid)['facebookUrl']==source
 for post in DATA['posts']:
  assert datetime.date.fromisoformat(post['publishedDate'])
+ assert isinstance(post.get('summaryTitle'),str) and 0<len(post['summaryTitle'])<=90,(post['id'],'needs a summary title of at most 90 characters')
+ assert 'review' in post.get('summaryTitleStatus',''),(post['id'],'summary title needs a review status')
  f=ARCHIVE/post['archiveFile'];assert f.is_file(),f
  sections=re.split(r'(?=^## )',f.read_text(),flags=re.M); entries=[s for s in sections if s.startswith('## ')];part=entries[post['ordinal']-1]
  assert post['facebookUrl'] in part,(post['id'],'source text mismatch')
